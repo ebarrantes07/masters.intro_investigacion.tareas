@@ -1,0 +1,70 @@
+\documentclass[conference]{IEEEtran}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+%\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{watermark}
+\usepackage{subfig}
+
+%\documentclass{article} % o la clase que uses
+
+% Paquetes para bibliografía
+\usepackage[hyphens]{url}
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex} % cambió a bibtex para evitar necesidad de biber
+
+% Especificar el archivo de bibliografía
+\addbibresource{referencias.bib}
+
+
+% Configuración de idioma y codificación
+\selectlanguage{spanish}
+
+% Información del documento
+\title{Introducción a la Investigación:\\Tarea Corta 2}
+
+\author{
+\IEEEauthorblockN{Emmanuel Barrantes Vargas}\
+\IEEEauthorblockN{Isaac Francisco Moreno Fuentes}\\
+\IEEEauthorblockA{Tecnológico de Costa Rica\\
+Maestría en Ciencia de la Computación}
+}
+
+\begin{document}
+
+% Título
+\maketitle
+
+% Abstract
+\begin{abstract}
+Este documento presenta dos conceptos relacionados con la investigación: ejemplos de herramientas que se pueden utilizar para encontrar papers, y un comentario alrededor de la taxonomía de Bloom en la era de IA. 
+\end{abstract}
+
+% Palabras clave
+\begin{IEEEkeywords}
+Herramientas, búsqueda, papers, taxonomía de Bloom, IA
+\end{IEEEkeywords}
+
+% Introducción
+%\section{Definiciones}
+
+% Incluir todas las secciones
+\input{herramientas}
+\input{taxonomia_bloom}
+\input{declaracion_transparencia}
+% Bibliografía
+\nocite{*}
+\printbibliography
+
+\end{document}

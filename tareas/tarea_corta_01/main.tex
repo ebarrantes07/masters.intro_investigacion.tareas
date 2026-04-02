@@ -1,0 +1,75 @@
+\documentclass[conference]{IEEEtran}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{watermark}
+\usepackage{subfig}
+
+%\documentclass{article} % o la clase que uses
+
+% Paquetes para bibliografía
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % si escribes en español
+\usepackage[hyphens]{url}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+
+% Especificar el archivo de bibliografía
+\addbibresource{referencias.bib}
+
+
+% Configuración de idioma y codificación
+\selectlanguage{spanish}
+
+% Información del documento
+\title{Introducción a la Investigación:\\Tarea Corta 1}
+
+\author{
+\IEEEauthorblockN{Emmanuel Barrantes Vargas}\
+\IEEEauthorblockN{Isaac Francisco Moreno Fuentes}\\
+\IEEEauthorblockA{Tecnológico de Costa Rica\\
+Maestría en Ciencia de la Computación}
+}
+
+\begin{document}
+
+% Título
+\maketitle
+
+% Abstract
+\begin{abstract}
+Este documento presenta el resultado de la investigación realizada alrededor de los conceptos de Revisión Sistemática de Literatura (Systematic Literature Review) y Estudio de Mapeo Sistemático (Systematic Mapping Study), su definición, principales diferencias, y explicación básica de ambos procesos.
+\end{abstract}
+
+% Palabras clave
+\begin{IEEEkeywords}
+Revisión Sistemática de Literatura, Revisión Sistemática de Literatura
+\end{IEEEkeywords}
+
+% Introducción
+%\section{Definiciones}
+
+% Incluir todas las secciones
+\input{estudio_mapeo_sistematico}
+\input{revision_sistematica_literatura}
+\input{diferencias_sms_slr}
+\input{proceso_metodologico}
+\input{ejemplos}
+\input{conclusiones}
+
+% Bibliografía
+\printbibliography
+
+\end{document}

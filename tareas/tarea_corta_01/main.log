@@ -1,0 +1,1052 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.2)  2 APR 2026 13:56
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_corta_01/main.tex
+(c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_corta_01/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen148
+\@IEEEtrantmpdimenB=\dimen149
+\@IEEEtrantmpdimenC=\dimen150
+\@IEEEtrantmpcountA=\count275
+\@IEEEtrantmpcountB=\count276
+\@IEEEtrantmpcountC=\count277
+\@IEEEtrantmptoksA=\toks17
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 503.
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen151
+-- This is a 10 point document.
+LaTeX Encoding Info:    Redeclaring text command \textunderscore (encoding ?) on input line 937.
+\CLASSINFOnormalsizebaselineskip=\dimen152
+\CLASSINFOnormalsizeunitybaselineskip=\dimen153
+\IEEEnormaljot=\dimen154
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+\IEEEquantizedlength=\dimen155
+\IEEEquantizedlengthdiff=\dimen156
+\IEEEquantizedtextheightdiff=\dimen157
+\IEEEilabelindentA=\dimen158
+\IEEEilabelindentB=\dimen159
+\IEEEilabelindent=\dimen160
+\IEEEelabelindent=\dimen161
+\IEEEdlabelindent=\dimen162
+\IEEElabelindent=\dimen163
+\IEEEiednormlabelsep=\dimen164
+\IEEEiedmathlabelsep=\dimen165
+\IEEEiedtopsep=\skip49
+\c@section=\count278
+\c@subsection=\count279
+\c@subsubsection=\count280
+\c@paragraph=\count281
+\c@IEEEsubequation=\count282
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+\c@figure=\count283
+\c@table=\count284
+\@IEEEeqnnumcols=\count285
+\@IEEEeqncolcnt=\count286
+\@IEEEsubeqnnumrollback=\count287
+\@IEEEquantizeheightA=\dimen166
+\@IEEEquantizeheightB=\dimen167
+\@IEEEquantizeheightC=\dimen168
+\@IEEEquantizeprevdepth=\dimen169
+\@IEEEquantizemultiple=\count288
+\@IEEEquantizeboxA=\box53
+\@IEEEtmpitemindent=\dimen170
+\IEEEPARstartletwidth=\dimen171
+\c@IEEEbiography=\count289
+\@IEEEtranrubishbin=\box54
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count290
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+\U@D=\dimen172
+\l@unhyphenated=\language79
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count291
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex)
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 4330.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks20
+\es@quotdepth=\count292
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 6.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 6.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen173
+)) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen174
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count293
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count294
+\leftroot@=\count295
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count296
+\DOTSCASE@=\count297
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen175
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count298
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count299
+\dotsspace@=\muskip17
+\c@parentequation=\count300
+\dspbrk@lvl=\count301
+\tag@help=\toks22
+\row@=\count302
+\column@=\count303
+\maxfields@=\count304
+\andhelp@=\toks23
+\eqnshift@=\dimen176
+\alignsep@=\dimen177
+\tagshift@=\dimen178
+\tagwidth@=\dimen179
+\totwidth@=\dimen180
+\lineht@=\dimen181
+\@envbody=\toks24
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen182
+\Gin@req@width=\dimen183
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen184
+\ar@mcellbox=\box57
+\extrarowheight=\dimen185
+\NC@list=\toks27
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box58
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip57
+\multirow@cntb=\count305
+\multirow@dima=\skip58
+\bigstrutjot=\dimen186
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count306
+\mult@box=\box59
+\multicol@leftmargin=\dimen187
+\c@unbalance=\count307
+\c@collectmore=\count308
+\doublecol@number=\count309
+\multicoltolerance=\count310
+\multicolpretolerance=\count311
+\full@width=\dimen188
+\page@free=\dimen189
+\premulticols=\dimen190
+\postmulticols=\dimen191
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box60
+\last@line=\box61
+\mc@boxedresult=\box62
+\maxbalancingoverflow=\dimen192
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@firstbox=\box65
+\mult@gfirstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\c@minrows=\count312
+\c@columnbadness=\count313
+\c@finalcolumnbadness=\count314
+\last@try=\dimen193
+\multicolovershoot=\dimen194
+\multicolundershoot=\dimen195
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count315
+\g__mc_curr_col_int=\count316
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks28
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/ncctools\watermark.sty
+Package: watermark 2004/12/09 v1.1 Watermarks (NCC)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen196
+\captionmargin=\dimen197
+\caption@leftmargin=\dimen198
+\caption@rightmargin=\dimen199
+\caption@width=\dimen256
+\caption@indent=\dimen257
+\caption@parindent=\dimen258
+\caption@hangindent=\dimen259
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count317
+\c@continuedfloat=\count318
+)
+\c@KVtest=\count319
+\sf@farskip=\skip75
+\sf@captopadj=\dimen260
+\sf@capskip=\skip76
+\sf@nearskip=\skip77
+\c@subfigure=\count320
+\c@subfigure@save=\count321
+\c@lofdepth=\count322
+\c@subtable=\count323
+\c@subtable@save=\count324
+\c@lotdepth=\count325
+\sf@top=\skip78
+\sf@bottom=\skip79
+)
+
+c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_corta_01/main.tex:26: LaTeX Error: Option clash for package url.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \usepackage
+                [breaklinks=true]{hyperref}
+The package url has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [hyphens]
+Adding the global options:
+  ,hyphens
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count326
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count327
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen261
+\Hy@linkcounter=\count328
+\Hy@pagecounter=\count329
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count330
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count331
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen262
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count332
+\Field@Width=\dimen263
+\Fld@charsize=\dimen264
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count333
+\c@Item=\count334
+\c@Hfootnote=\count335
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count336
+\c@bookmark@seq@number=\count337
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip80
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count338
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+
+C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty:213: Package biblatex Error: Incompatible package 'cite'.
+
+See the biblatex package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 \blx@packageincompatibility
+                                 
+The 'cite' package and biblatex are incompatible.
+
+\c@tabx@nest=\count339
+\c@listtotal=\count340
+\c@listcount=\count341
+\c@liststart=\count342
+\c@liststop=\count343
+\c@citecount=\count344
+\c@citetotal=\count345
+\c@multicitecount=\count346
+\c@multicitetotal=\count347
+\c@instcount=\count348
+\c@maxnames=\count349
+\c@minnames=\count350
+\c@maxitems=\count351
+\c@minitems=\count352
+\c@citecounter=\count353
+\c@maxcitecounter=\count354
+\c@savedcitecounter=\count355
+\c@uniquelist=\count356
+\c@uniquename=\count357
+\c@refsection=\count358
+\c@refsegment=\count359
+\c@maxextratitle=\count360
+\c@maxextratitleyear=\count361
+\c@maxextraname=\count362
+\c@maxextradate=\count363
+\c@maxextraalpha=\count364
+\c@abbrvpenalty=\count365
+\c@highnamepenalty=\count366
+\c@lownamepenalty=\count367
+\c@maxparens=\count368
+\c@parenlevel=\count369
+\blx@tempcnta=\count370
+\blx@tempcntb=\count371
+\blx@tempcntc=\count372
+\c@blx@maxsection=\count373
+\blx@maxsegment@0=\count374
+\blx@notetype=\count375
+\blx@parenlevel@text=\count376
+\blx@parenlevel@foot=\count377
+\blx@sectionciteorder@0=\count378
+\blx@sectionciteorderinternal@0=\count379
+\blx@entrysetcounter=\count380
+\blx@biblioinstance=\count381
+\labelnumberwidth=\skip81
+\labelalphawidth=\skip82
+\biblabelsep=\skip83
+\bibitemsep=\skip84
+\bibnamesep=\skip85
+\bibinitsep=\skip86
+\bibparsep=\skip87
+\bibhang=\skip88
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language80
+\c@mincomprange=\count382
+\c@maxcomprange=\count383
+\c@mincompwidth=\count384
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count385
+\c@savedafterword=\count386
+\c@annotator=\count387
+\c@savedannotator=\count388
+\c@author=\count389
+\c@savedauthor=\count390
+\c@bookauthor=\count391
+\c@savedbookauthor=\count392
+\c@commentator=\count393
+\c@savedcommentator=\count394
+\c@editor=\count395
+\c@savededitor=\count396
+\c@editora=\count397
+\c@savededitora=\count398
+\c@editorb=\count399
+\c@savededitorb=\count400
+\c@editorc=\count401
+\c@savededitorc=\count402
+\c@foreword=\count403
+\c@savedforeword=\count404
+\c@holder=\count405
+\c@savedholder=\count406
+\c@introduction=\count407
+\c@savedintroduction=\count408
+\c@namea=\count409
+\c@savednamea=\count410
+\c@nameb=\count411
+\c@savednameb=\count412
+\c@namec=\count413
+\c@savednamec=\count414
+\c@translator=\count415
+\c@savedtranslator=\count416
+\c@shortauthor=\count417
+\c@savedshortauthor=\count418
+\c@shorteditor=\count419
+\c@savedshorteditor=\count420
+\c@labelname=\count421
+\c@savedlabelname=\count422
+\c@institution=\count423
+\c@savedinstitution=\count424
+\c@lista=\count425
+\c@savedlista=\count426
+\c@listb=\count427
+\c@savedlistb=\count428
+\c@listc=\count429
+\c@savedlistc=\count430
+\c@listd=\count431
+\c@savedlistd=\count432
+\c@liste=\count433
+\c@savedliste=\count434
+\c@listf=\count435
+\c@savedlistf=\count436
+\c@location=\count437
+\c@savedlocation=\count438
+\c@organization=\count439
+\c@savedorganization=\count440
+\c@origlocation=\count441
+\c@savedoriglocation=\count442
+\c@origpublisher=\count443
+\c@savedorigpublisher=\count444
+\c@publisher=\count445
+\c@savedpublisher=\count446
+\c@language=\count447
+\c@savedlanguage=\count448
+\c@origlanguage=\count449
+\c@savedoriglanguage=\count450
+\c@pageref=\count451
+\c@savedpageref=\count452
+\shorthandwidth=\skip89
+\shortjournalwidth=\skip90
+\shortserieswidth=\skip91
+\shorttitlewidth=\skip92
+\shortauthorwidth=\skip93
+\shorteditorwidth=\skip94
+\locallabelnumberwidth=\skip95
+\locallabelalphawidth=\skip96
+\localshorthandwidth=\skip97
+\localshortjournalwidth=\skip98
+\localshortserieswidth=\skip99
+\localshorttitlewidth=\skip100
+\localshortauthorwidth=\skip101
+\localshorteditorwidth=\skip102
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count453
+\c@textcitetotal=\count454
+\c@textcitemaxnames=\count455
+\c@biburlbigbreakpenalty=\count456
+\c@biburlbreakpenalty=\count457
+\c@biburlnumpenalty=\count458
+\c@biburlucpenalty=\count459
+\c@biburllcpenalty=\count460
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count461
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count462
+\c@bbx:relatedtotal=\count463
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count464
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 34.
+
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count465
+\@quotereset=\count466
+(main.aux
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+
+-- Lines per column: 56 (exact).
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count467
+\scratchdimen=\dimen265
+\scratchbox=\box105
+\nofMPsegments=\count468
+\nofMParguments=\count469
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count470
+\MPscratchDim=\dimen266
+\MPnumerator=\count471
+\makeMPintoPDFobject=\count472
+\everyMPtoPDFconversion=\toks30
+) (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 46.
+ (main.out) (main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 46.
+Package biblatex Info: Reference segment=0 on input line 46.
+(estudio_mapeo_sistematico.tex
+
+LaTeX Warning: Citation 'definicion_sms' on page 1 undefined on input line 3.
+
+) (revision_sistematica_literatura.tex
+
+LaTeX Warning: Citation 'kitchenham2007guidelines' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation 'kitchenham2009slr' on page 1 undefined on input line 2.
+
+) (diferencias_sms_slr.tex
+
+LaTeX Warning: Citation 'kitchenham2009slr' on page 1 undefined on input line 5.
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 3--6
+[]\OT1/ptm/m/n/10 Aunque am-bos m[]eto-dos son pro-ce-sos sis-tem[]ati-cos y
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 3--6
+\OT1/ptm/m/n/10 re-pro-du-ci-bles, di-fie-ren prin-ci-pal-men-te en su al-can-ce y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+(C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+ (C:\Users\ebarr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 7238) in paragraph at lines 12--12
+[]|\OT1/ptm/b/n/8 Estudio de Ma-peo Sis-
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 13--13
+[]|\OT1/ptm/m/n/8 Clasificar y ca-te-go-ri-zar un
+ []
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 13--13
+\OT1/ptm/m/n/8 cam-po de in-ves-ti-ga-ci[]on e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\OT1/ptm/b/n/8 Evaluaci[]on de
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 17--17
+[]|\OT1/ptm/m/n/8 Obligatoria y ri-gu-ro-sa, es
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\OT1/ptm/b/n/8 Prop[]osi-to
+ []
+
+
+Overfull \hbox (38.82928pt too wide) in paragraph at lines 10--21
+ [][] 
+ []
+
+) (proceso_metodologico.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+LaTeX Warning: Citation 'definicion_sms' on page 1 undefined on input line 6.
+
+[1{C:/Users/ebarr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+LaTeX Warning: Citation 'kitchenham2009slr' on page 2 undefined on input line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 29--30
+[]\OT1/ptm/m/n/10 Este es el n[]ucleo de am-bas me-to-do-log[]^^Pas, aun-que
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 29--30
+\OT1/ptm/m/n/10 am-bas tie-nen una es-truc-tu-ra si-mi-lar ge-ne-ral, di-fie-ren
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+) (ejemplos.tex
+
+LaTeX Warning: Citation 'ejemplo_sms' on page 2 undefined on input line 2.
+
+
+LaTeX Warning: Citation 'ejemplo_slr' on page 2 undefined on input line 2.
+
+) (conclusiones.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+)
+
+LaTeX Warning: Empty bibliography on input line 73.
+
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[2] (main.aux
+LaTeX Info: Redefining \sptext on input line 22.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+LaTeX Info: Redefining \sptext on input line 23.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0F64F9E88539C06B11E4271DE918D674;1275.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21975 strings out of 467867
+ 388053 string characters out of 5418335
+ 1262414 words of memory out of 5000000
+ 50601 multiletter control sequences out of 15000+600000
+ 663047 words of font info for 105 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,11n,79p,1021b,2007s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 70051 bytes).
+PDF statistics:
+ 77 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+
