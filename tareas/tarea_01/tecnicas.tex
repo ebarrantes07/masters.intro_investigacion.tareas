@@ -1,0 +1,163 @@
+\section{Técnicas Básicas}
+
+Esta sección detalla las herramientas fundamentales para controlar formato, tipografía y estructura en \LaTeX.
+
+\subsection{Párrafos y Separación de Texto}
+
+Los párrafos se crean automáticamente al dejar una línea en blanco entre bloques de texto\cite{latex_project}. Por ejemplo:
+
+\begin{verbatim}
+Este es el primer párrafo.
+
+Este es el segundo párrafo.
+\end{verbatim}
+
+\begin{tcolorbox}[title=Salida,colback=white!10,colframe=black,fonttitle=\bfseries]
+Este es el primer párrafo.
+
+Este es el segundo párrafo.
+\end{tcolorbox}
+
+También se pueden usar \texttt{\textbackslash\textbackslash} para saltos de línea forzosos dentro de un mismo párrafo:
+
+\begin{verbatim}
+Esta es la primera línea.\\
+Continuamos en la siguiente línea.
+\end{verbatim}
+
+\begin{tcolorbox}[title=Salida,colback=white!10,colframe=black,fonttitle=\bfseries]
+Esta es la primera línea.\\
+Continuamos en la segunda línea.
+\end{tcolorbox}
+
+Tanto la sangría como el espacio entre párrafos se pueden configurar con \texttt{\textbackslash setlength}:
+
+\begin{verbatim}
+\setlength{\parindent}{1.25cm} 
+\setlength{\parskip}{1em}
+\end{verbatim}
+
+El primer comando establece la sangría de párrafo a 1.25 cm, mientras que el segundo agrega un espacio vertical de 1 em entre párrafos.
+
+\subsection{Efectos de Letra y Tipografía}
+
+\LaTeX ofrece comandos para modificar el estilo de texto, como negrita, itálica y monoespaciado \cite{latex_fontguide}. A continuación se muestran los comandos básicos:
+
+\begin{itemize}
+    \item \textbf{Negrita}: \texttt{\textbackslash textbf\{texto\}}
+    \item \textit{Itálica}: \texttt{\textbackslash textit\{texto\}}
+    \item \texttt{Monoespaciado}: \texttt{\textbackslash texttt\{texto\}}
+    \item \textsf{Sans-serif}: \texttt{\textbackslash textsf\{texto\}}
+    \item \textsc{Pequeñas mayúsculas}: \texttt{\textbackslash textsc\{texto\}}
+    \item \emph{Énfasis contextual}: \texttt{\textbackslash emph\{texto\}}
+\end{itemize}
+
+Asimismo, se pueden cambiar las familias de fuentes completas:
+
+\begin{itemize}
+    \item \textbf{Roman}: \texttt{\textbackslash rmfamily\{texto\}}
+    \item \textbf{Sans-serif}: \texttt{\textbackslash sffamily\{texto\}}
+    \item \textbf{Monoespaciado}: \texttt{\textbackslash ttfamily\{texto\}}
+\end{itemize}
+
+\subsection{Tildes y Caracteres Especiales}
+
+Para escribir caracteres acentuados en español, se recomienda usar UTF-8 con \texttt{\textbackslash usepackage[utf8]\{inputenc\}}. Esto permite escribir directamente:
+
+\begin{verbatim}
+Café, mañana, pingüino
+\end{verbatim}
+
+Sin embargo, también es posible usar comandos de acentuación y obtener el mismo resultado:
+
+\begin{verbatim}
+Caf\'{e}, ma\\~{n}ana, ping\"{u}ino
+\end{verbatim}
+
+\subsection{Títulos, Subtítulos y Estructura}
+
+\LaTeX proporciona comandos para organizar el documento en secciones, subsecciones y niveles inferiores \cite{latex_project}. La sintaxis general es:
+
+\begin{verbatim}
+\section{Título principal}           % Nivel 1
+\subsection{Subtítulo}               % Nivel 2
+\subsubsection{Sub-subtítulo}        % Nivel 3
+\paragraph{Título párrafo}           % Nivel 4
+\subparagraph{Sub-párrafo}           % Nivel 5
+\end{verbatim}
+
+\subsection{Encabezados, Pies de Página y Marcas de Agua}
+
+Se pueden configurar encabezados y pies de página con fancyhdr \cite{fancyhdr}:
+
+\begin{verbatim}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Trabajo \LaTeX{} 2026} 
+\fancyhead[R]{\thepage} 
+\fancyfoot[C]{\small Costa Rica}
+\renewcommand{\headrulewidth}{0.4pt}
+\end{verbatim}
+
+También se puede usar draftwatermark \cite{draftwatermark} para agregar marcas de agua:
+
+\begin{verbatim}
+\usepackage{draftwatermark}
+\SetWatermarkText{\textbf{DRAFT}}
+\SetWatermarkScale{0.3}
+\SetWatermarkColor{rgb}{0.8,0.8,0.8}
+\end{verbatim}
+
+\subsection{Referencias y Citas}
+
+Para citar fuentes, se recomienda usar BibLaTeX con un archivo .bib \cite{biblatex}. Ejemplo de cita:
+
+\begin{verbatim}
+\cite{latex}
+\end{verbatim}
+
+La referencia se define en un archivo .bib de la siguiente forma:
+
+\begin{verbatim}
+@online{latex,
+  author = {LaTeX Project Team},
+  title = {LaTeX2e User's Guide},
+  year = {2025},
+  url = {https://www.latex-project.org},
+  urldate = {2026-04-03}
+}
+\end{verbatim}
+
+\subsection{Saltos de Página y Control de Flujo}
+
+Los siguientes comandos controlan el flujo del documento:
+
+\begin{itemize}
+    \item \textbf{\textbackslash newpage}: Salto de página forzoso
+    \item \textbf{\textbackslash clearpage}: Salto de página con colocación de figuras pendientes (tablas, gráficos)
+    \item \textbf{\textbackslash pagebreak}: Sugerencia suave para salto de página
+    \item \textbf{\textbackslash newcolumn}: Salto de columna dentro de multicols
+    \item \textbf{\textbackslash columnbreak}: Salto de columna forzoso
+\end{itemize}
+
+\subsection{Columnas de Página con multicol}
+
+Se puede dividir el texto en múltiples columnas usando el paquete multicol \cite{multicol}. Esto es útil para formatos de revista o boletines:
+
+\begin{verbatim}
+\usepackage{multicol}
+\begin{multicols}{2}
+Columna izquierda con texto largo...
+
+Columna derecha continúa automáticamente.
+\end{multicols}
+\end{verbatim}
+
+\begin{tcolorbox}[title=Salida,colback=white!10,colframe=black,fonttitle=\bfseries]
+\begin{multicols}{2}
+Columna izquierda con texto largo...
+
+Columna derecha continúa automáticamente.
+\end{multicols}
+\end{tcolorbox}

@@ -1,0 +1,46 @@
+\section{Estilos de Documento en LaTeX}
+
+\LaTeX{} utiliza \texttt{\textbackslash documentclass} para definir el tipo de documento. Cada clase produce un formato específico para publicaciones académicas, tesis o presentaciones. Esta flexibilidad es una ventaja clave sobre editores WYSIWYG (What You See Is What You Get) \cite{latex_project}.
+
+\subsection{Opciones Comunes de Documentclass}
+
+La sintaxis general es \cite{latex_project}:
+
+\begin{verbatim}
+\documentclass[10pt,a4paper,twoside]{article}
+%               │      │      └─ Doble cara
+%               │      └──────── Tamaño papel
+%               └─────────────── Tamaño letra
+\end{verbatim}
+
+\subsection{Clases Estándar de \LaTeX}
+
+Algunas clases comunes incluyen \cite{latex_project}:
+
+\begin{itemize}
+  \item \textbf{article}: Artículos científicos
+  \item \textbf{report}: Tesis, informes largos
+  \item \textbf{book}: Libros académicos
+  \item \textbf{letter}: Correspondencia formal
+  \item \textbf{beamer}: Presentaciones
+\end{itemize}
+
+\subsection{Estilos Académicos Específicos}
+
+Además de las clases estándar, existen estilos específicos para journals y conferencias:
+
+\begin{itemize}
+  \item \textbf{IEEEtran}: Publicaciones de la IEEE (journals y conferencias) \cite{ieeetran_doc}\
+  \item \textbf{acmart}: Conferencias de la ACM \cite{acmart_class}
+  \item \textbf{amsart}: Publicaciones de la AMS \cite{amslatex}
+  \item \textbf{svjour3}: Publicaciones de Springer \cite{springer_svjour}
+\end{itemize}
+
+\subsection{Ejemplo Práctico: IEEE Transactions}
+
+\begin{verbatim}
+% IEEE Conference
+\documentclass[conference]{IEEEtran}
+\usepackage{cite,amsmath,graphicx,xcolor}
+\usepackage[spanish]{babel}
+\end{verbatim}

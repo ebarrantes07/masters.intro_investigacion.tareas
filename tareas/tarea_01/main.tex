@@ -1,0 +1,73 @@
+\documentclass[conference]{IEEEtran}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{watermark}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\usepackage{fontspec}
+\usepackage{multicol}
+\setmonofont{Consolas}
+
+% Paquetes para bibliografía
+\usepackage[hyphens]{url}
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex} % cambió a bibtex para evitar necesidad de biber
+
+% Especificar el archivo de bibliografía
+\addbibresource{referencias.bib}
+
+% Paquete para enlaces
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=red]{hyperref}
+
+% Configuración de idioma y codificación
+\selectlanguage{spanish}
+
+% Información del documento
+\title{Introducción a la Investigación\\Tarea 1: \LaTeX}
+
+\author{
+    \IEEEauthorblockN{Emmanuel Barrantes Vargas}
+    \IEEEauthorblockN{Isaac Francisco Moreno Fuentes}\\
+    \IEEEauthorblockA{Tecnológico de Costa Rica\\
+                      Maestría en Ciencia de la Computación}
+}
+
+\begin{document}
+
+% Título
+\maketitle
+
+% Abstract
+\begin{abstract}
+\end{abstract}
+
+% Palabras clave
+\begin{IEEEkeywords}
+LaTeX
+\end{IEEEkeywords}
+
+% Incluir todas las secciones
+\input{historia}
+\input{impacto_academico}
+\input{estilos}
+\input{tecnicas}
+\input{figuras}
+
+% Bibliografía
+\nocite{*}
+\clearpage
+\printbibliography
+
+\end{document}

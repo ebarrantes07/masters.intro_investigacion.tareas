@@ -1,0 +1,35 @@
+\section{Historia de \LaTeX}
+\LaTeX surgió como respuesta a las limitaciones de los sistemas de procesamiento de texto tradicionales en la década de 1970, cuando los científicos enfrentaban problemas para formatear documentos matemáticos complejos en impresoras de matriz de puntos. Donald Knuth, frustrado por el retraso en la tipografía de su libro \emph{The Art of Computer Programming}, desarrolló TeX en 1978 como un lenguaje de programación para tipografía de alta precisión \cite{knuth_texbook}.
+
+Leslie Lamport extendió TeX en 1985 creando \LaTeX, una capa de macros que permitía a usuarios no programadores producir documentos profesionales mediante comandos descriptivos en lugar de código bajo nivel \cite{lamport_latex}.
+
+\subsection{Cronología Histórica}
+
+\begin{table}[h]
+    \centering
+    \caption{Cronología clave en el desarrollo de \LaTeX \cite{latex_project}}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{llp{4.5cm}}
+            \toprule
+            \textbf{Año} & \textbf{Evento} & \textbf{Impacto} \\
+            \midrule
+                1978 & Donald Knuth inicia TeX \cite{knuth_texbook} & Base algorítmica para tipografía matemática \\
+                1982 & TeX v1.0 liberado & Primera versión estable \\
+                1985 & Leslie Lamport lanza LaTeX 2.09 \cite{lamport_latex} & Separación contenido/formato \\
+                1994 & LaTeX2e (actual) \cite{latex_project} & Extensibilidad con paquetes \\
+                1996 & pdfTeX integra PDF \cite{wiki_latex} & Salida directa PDF \\
+                2004 & XeTeX soporta Unicode \cite{wiki_latex} & Soporte internacional \\
+                2010 & LuaTeX para scripting & Modernización del motor \\
+                2018 & LaTeX3 (LTR) desarrollo & Estructura orientada a objetos \\
+                2020s & Overleaf y TeX Live cloud & Colaboración masiva \\
+            \bottomrule
+        \end{tabular}
+}
+
+\label{tab:cronologia}
+\end{table}
+
+\subsection{Milestones Técnicos}
+La transición de \LaTeX 2.09 a 2e en 1994 introdujo el sistema de paquetes (\texttt{*.sty}), permitiendo extensiones modulares como \texttt{graphicx} para imágenes y \texttt{amsmath} para ecuaciones avanzadas \cite{latex_project}. En 1996, pdfTeX revolucionó la salida al generar PDF directamente, eliminando PostScript intermedio \cite{wiki_latex}.
+
+La adopción de Unicode via XeLaTeX (2004) y LuaTeX (2010) habilitó soporte para español, chino y árabe, crucial para usuarios globales \cite{wiki_latex}. Plataformas como Overleaf (2014) democratizaron \LaTeX, con más de 10 millones de usuarios en 2026 \cite{overleaf_whatislatex}.
