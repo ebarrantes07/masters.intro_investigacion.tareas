@@ -1,0 +1,148 @@
+\section{Ecuaciones Matemáticas}
+
+\LaTeX{} con \texttt{amsmath} ofrece el sistema más avanzado mundial para matemáticas académicas \cite{amsmath_manual}.
+
+\subsection{Ecuación Simple}
+
+El bloque \texttt{equation} genera ecuaciones numeradas automáticamente:
+
+\begin{equation}
+E = mc^2 \label{eq:einstein_real}
+\end{equation}
+
+Para generar la ecuación \eqref{eq:einstein_real}, se utiliza el siguiente código:
+
+\begin{verbatim}
+\begin{equation}
+E = mc^2 \label{eq:einstein}
+\end{equation}
+\end{verbatim}
+
+
+\subsection{Ecuaciones Múltiples Alineadas}
+
+Es posible alinear varias ecuaciones en un solo bloque usando \texttt{align}. Las ecuaciones se alinean alrededor del símbolo \texttt{\&} y se numeran automáticamente \cite{amsmath_manual}:
+
+\begin{align}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_0} \label{eq:gauss_real} \\
+\nabla \cdot \mathbf{B} &= 0 \label{eq:gauss_mag_real} \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \label{eq:faraday_real} \\
+\nabla \times \mathbf{B} &= \mu_0\mathbf{J}+\mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t} \label{eq:ampere_real}
+\end{align}
+
+El ejemplo anterior muestra las ecuaciones de Maxwell (Eqs.~\eqref{eq:gauss_real}--\eqref{eq:ampere_real}) que se pueden escribir con el siguiente código \cite{amsmath_manual}:
+
+\begin{verbatim}
+\begin{align}
+\nabla \cdot \mathbf{E} &= 
+\frac{\rho}{\epsilon_0} \label{eq:gauss} \\
+\nabla \cdot \mathbf{B} &= 
+0 \label{eq:gauss_mag} \\
+\nabla \times \mathbf{E} &= 
+-\frac{\partial \mathbf{B}}{\partial t} 
+\label{eq:faraday} \\
+\nabla \times \mathbf{B} &= 
+\mu_0\mathbf{J}+\mu_0\epsilon_0
+\frac{\partial\mathbf{E}}
+{\partial t} \label{eq:ampere}
+\end{align}
+\end{verbatim}
+
+Como se puede observar, existen comandos específicos para símbolos matemáticos avanzados como \texttt{\textbackslash nabla} (del operador nabla), \texttt{\textbackslash cdot} (producto escalar), \texttt{\textbackslash times} (producto vectorial), y operadores de derivada parcial \texttt{\textbackslash partial}, y fracciones \texttt{\textbackslash frac} \cite{amsmath_manual}.
+
+También es posible suprimir la numeración de líneas intermedias usando \texttt{\textbackslash notag} o \texttt{\textbackslash nonumber}:
+
+\begin{align}
+P &= \frac{1}{2\pi} \int_0^{2\pi} f(\theta) \, d\theta \notag \\
+&= \lim_{n\to\infty} \frac{1}{n} \sum_{k=1}^n f\left(\frac{2\pi k}{n}\right) \label{eq:promedio_real} \\
+&= \mathbb{E}[f(X)] \notag
+\end{align}
+
+El código para generar la ecuación anterior \eqref{eq:promedio_real} es el siguiente:
+
+\begin{verbatim}
+\begin{align}
+P &= \frac{1}{2\pi} \int_0^{2\pi} 
+f(\theta) \, d\theta \notag \\
+&= \lim_{n\to\infty} \frac{1}{n} \sum_{k=1}^n 
+f\left(\frac{2\pi k}{n}\right) \label{eq:promedio} \\
+&= \mathbb{E}[f(X)] \notag
+\end{align}
+\end{verbatim}
+
+
+\subsection{Matrices y Sistemas Lineales}
+
+\LaTeX también permite escribir matrices de forma sencilla usando entornos como \texttt{bmatrix} para matrices con corchetes \cite{amsmath_manual}:
+
+\begin{equation}
+\mathbf{A}\mathbf{x} = \mathbf{b}, \quad
+\mathbf{A} = \begin{bmatrix}
+1 & 2 & 0 \\
+3 & 0 & 1 \\
+0 & 2 & 4
+\end{bmatrix},
+\quad \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
+\label{eq:sistema_matrices_real}
+\end{equation}
+
+La ecuación anterior \eqref{eq:sistema_matrices_real} se puede escribir con el siguiente código:
+
+\begin{verbatim}
+\begin{equation}
+\mathbf{A}\mathbf{x} = \mathbf{b}, \quad
+\mathbf{A} = \begin{bmatrix}
+1 & 2 & 0 \\
+3 & 0 & 1 \\
+0 & 2 & 4
+\end{bmatrix},
+\quad \mathbf{x} = \begin{bmatrix} 
+x_1 \\ x_2 \\ x_3 \end{bmatrix}
+\label{eq:sistema_matrices}
+\end{equation}
+\end{verbatim}
+
+\subsection{Ecuaciones con Casos y Subecuaciones}
+
+Utilizando el entorno \texttt{cases}, es posible escribir funciones definidas por casos \cite{amsmath_manual}:
+
+\begin{equation}
+f(x) = \begin{cases}
+x^2 & x \geq 0 \\
+-x^2 & x < 0
+\end{cases} \label{eq:casos_real}
+\end{equation}
+
+El siguiente código genera la función definida por casos de la ecuación \eqref{eq:casos_real}:
+
+\begin{verbatim}
+\begin{equation}
+f(x) = \begin{cases}
+x^2 & x \geq 0 \\
+-x^2 & x < 0
+\end{cases} \label{eq:casos}
+\end{equation}
+\end{verbatim}
+
+Por último, el entorno \texttt{subequations} permite agrupar varias ecuaciones bajo una numeración común \cite{amsmath_manual}:
+
+\begin{subequations}\label{eq:sistema_completo_real}
+\begin{align}
+\frac{dx}{dt} &= ax + by \label{eq:x_real} \\
+\frac{dy}{dt} &= cx + dy \label{eq:y_real}
+\end{align}
+\end{subequations}
+
+El sistema de ecuaciones (\ref{eq:x_real})--(\ref{eq:y_real}) se puede escribir con el siguiente código:
+
+\begin{verbatim}
+\begin{subequations}\label{eq:sistema_completo}
+\begin{align}
+\frac{dx}{dt} &= ax + by \label{eq:x} \\
+\frac{dy}{dt} &= cx + dy \label{eq:y}
+\end{align}
+\end{subequations}
+\end{verbatim}
+
+
+

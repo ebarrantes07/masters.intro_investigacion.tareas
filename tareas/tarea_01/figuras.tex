@@ -66,6 +66,8 @@ María Gómez & 30 & Alajuela \\
 \end{table}
 \end{verbatim}
 
+Para definir la posición de un elemento flotante, se utilizan las opciones \texttt{h} (here), \texttt{t} (top), \texttt{b} (bottom) y \texttt{p} (page of floats). Por ejemplo, \texttt{[ht]} indica que LaTeX intentará colocar la tabla aquí o en la parte superior de la página.
+
 \subsection{Manejo de Gráficos e Imágenes}
 
 Para incluir gráficos e imágenes, se utiliza el paquete \texttt{graphicx} \cite{graphicx}. Este paquete permite insertar imágenes en formatos comunes como PNG, JPEG y PDF, y ofrece opciones para escalar, rotar y recortar las imágenes.
@@ -103,39 +105,77 @@ La Figura \ref{fig:ejemplo_imagen} se escaló al 45\% del ancho del texto, pero 
 
 \subsubsection{Subfiguras Múltiples}
 
+A través del paquete \texttt{subcaption} \cite{subcaption}, es posible incluir varias subfiguras dentro de una figura principal, cada una con su propio título y etiqueta. Esto es útil para comparar diferentes configuraciones o resultados en un mismo bloque visual, como se muestra a continuación:
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{ia_2020.png}
+\caption{IA en 2020}
+\label{fig:ia_2020}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=\textwidth]{ia_2023.png}
+\caption{IA en 2023}
+\label{fig:ia_2023}
+\end{subfigure}
+\caption{Comparativa de proyecciones de IA.}
+\label{fig:comparativa_ia}
+\end{figure}
+
+
+Para incluir la Figura \ref{fig:comparativa_ia} con subfiguras, se utiliza el siguiente código:
 
 
 \begin{verbatim}
 \usepackage{subcaption}
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}{0.45\textwidth}
 \includegraphics[width=\textwidth]{fig1}
-\caption{Configuración A}
-\label{fig:sub1}
+\caption{IA en 2020}
+\label{fig:ia_2020}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
 \includegraphics[width=\textwidth]{fig2}
-\caption{Configuración B}
-\label{fig:sub2}
+\caption{IA en 2023}
+\label{fig:ia_2023}
 \end{subfigure}
-\caption{Comparativa experimental}
-\label{fig:completa}
+\caption{Comparativa de proyecciones de IA.}
+\label{fig:comparativa_ia}
 \end{figure}
 \end{verbatim}
 
 \subsubsection{Gráficos con TikZ (Vectoriales)}
+
+Una de las principales fortalezas de \LaTeX{} es la capacidad de crear gráficos vectoriales directamente en el documento utilizando el paquete \texttt{tikz} \cite{tikz_manual}. Esto permite generar gráficos de alta calidad que se escalan sin pérdida de resolución, ideales para diagramas, funciones matemáticas y visualizaciones personalizadas:
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\draw[thick,->] (0,0) -- (7,0) node[right]{$x$};
+\draw[thick,->] (0,-3) -- (0,3) node[above]{$y$};
+\draw[domain=0:7,smooth,blue,thick] 
+    plot (\x, {sin(\x r)*1.5});
+\node at (2,1.8) {$\sin(x)$};
+\end{tikzpicture}
+\caption{Función seno generada con TikZ.}
+\label{fig:tikz}
+\end{figure}
+
+La función seno en la Figura \ref{fig:tikz} se creó con el siguiente código:
 
 \begin{verbatim}
 \usepackage{tikz}
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
-\draw[thick,->] (0,0) -- (4,0) node[right]{$x$};
-\draw[thick,->] (0,0) -- (0,3) node[above]{$y$};
-\draw[domain=0:3.5,smooth,blue,thick] 
-    plot (\x, {sin(\x r)*1.5+0.5});
+\draw[thick,->] (0,0)--(7,0) node[right]{$x$};
+\draw[thick,->] (0,-3)--(0,3) node[above]{$y$};
+\draw[domain=0:7,smooth,blue,thick] 
+    plot (\x, {sin(\x r)*1.5});
 \node at (2,1.8) {$\sin(x)$};
 \end{tikzpicture}
 \caption{Función seno generada con TikZ.}
@@ -143,34 +183,87 @@ La Figura \ref{fig:ejemplo_imagen} se escaló al 45\% del ancho del texto, pero 
 \end{figure}
 \end{verbatim}
 
-\subsection{Posicionamiento de Flotantes}
+\subsection{Figuras y Tablas Lado a Lado: minipage}
 
-\begin{verbatim}
+El entorno \texttt{minipage} permite combinar figuras y tablas en una sola unidad visual \cite{latex_project}.
 
-\begin{figure}[htbp!]    % ! fuerza posición
+\begin{figure}[ht]
+\begin{minipage}{0.15\textwidth}
 \centering
-% Figura aquí
+\begin{tikzpicture}[scale=0.4]
+\draw[thick,->](0,0)--(14,0) node[right]{t};
+\draw[thick,->](0,-3)--(0,5) node[above]{V};
+\draw[domain=0:4,smooth,green,thick] plot (\x, {\x});
+\draw[domain=4:6,smooth,blue,thick] plot (\x, {4});
+\draw[domain=6:9,smooth,red,thick] plot (\x, {16-2*\x});
+\draw[domain=9:10,smooth,blue,thick] plot (\x, {-2});
+\draw[domain=10:12,smooth,green,thick] plot (\x, {\x-12});
+\end{tikzpicture}
+\caption*{Gráfico}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
+\centering
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+\textbf{Tiempo} & \textbf{Velocidad} \\
+\midrule
+4s & 4m/s \\
+6s & 4m/s \\
+8s & 0m/s \\
+9s & -2m/s \\
+10s & -2m/s \\
+12s & 0m/s \\
+\bottomrule
+\end{tabular}
+\caption*{Datos}
+\end{minipage}
+\caption{Observación de gráfico y tabla lado a lado.}
+\label{fig:ejemplo_minipage}
 \end{figure}
 
-% Posiciones:
-% h = here (aquí)
-% t = top (arriba página)
-% b = bottom (abajo página) 
-% p = page (página flotante)
-\end{verbatim}
-
-\subsection{Ejemplo IEEE: Tabla* y Figure* (2 columnas)}
+La Figura \ref{fig:ejemplo_minipage} se creó con el siguiente código:
 
 \begin{verbatim}
-\begin{table*}
+\begin{figure}[ht]
+\begin{minipage}{0.15\textwidth}
 \centering
-\caption{Tabla ancha IEEE (abarca 2 columnas)}
-% Tabla grande aquí
-\end{table*}
-
-\begin{figure*}[t]
+\begin{tikzpicture}[scale=0.4]
+\draw[thick,->](0,0)--(14,0) node[right]{t};
+\draw[thick,->](0,-3)--(0,5) node[above]{V};
+\draw[domain=0:4,smooth,green,thick] 
+plot (\x, {\x});
+\draw[domain=4:6,smooth,blue,thick] 
+plot (\x, {4});
+\draw[domain=6:9,smooth,red,thick] 
+plot (\x, {16-2*\x});
+\draw[domain=9:10,smooth,blue,thick] 
+plot (\x, {-2});
+\draw[domain=10:12,smooth,green,thick] 
+plot (\x, {\x-12});
+\end{tikzpicture}
+\caption*{Gráfico}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
 \centering
-\includegraphics[width=\textwidth]{grafico_grande}
-\caption{Figura ancha IEEE}
-\end{figure*}
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+\textbf{Tiempo} & \textbf{Velocidad} \\
+\midrule
+4s & 4m/s \\
+6s & 4m/s \\
+8s & 0m/s \\
+9s & -2m/s \\
+10s & -2m/s \\
+12s & 0m/s \\
+\bottomrule
+\end{tabular}
+\caption*{Datos}
+\end{minipage}
+\caption{Observación de gráfico y tabla lado a lado.}
+\label{fig:ejemplo_minipage}
+\end{figure}
 \end{verbatim}

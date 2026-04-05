@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1775277889.90155 "main.aux" "main.bbl" "main" 1775277894.41315 0
-  "./main-blx.bib" 1775277892 343 bf1f0c75b5bafd473925320ac9611e26 ""
-  "./referencias.bib" 1775271658 4017 7a04a30e2cfd87b54e0837b85faec18c ""
+["bibtex main"] 1775427812.00539 "main.aux" "main.bbl" "main" 1775427882.27725 0
+  "./main-blx.bib" 1775427879 343 bf1f0c75b5bafd473925320ac9611e26 ""
+  "./referencias.bib" 1775362365 4420 8b31d0c3092faaeebc3999dbcbbcbee2 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/bibtex/bst/biblatex/biblatex.bst" 1752408733 65510 9a2a51799b543ff279b8ea2dd91ec499 ""
-  "main.aux" 1775277892 11381 8199a8efee398694aa4a3ca12cb4bbd3 "xelatex"
+  "main.aux" 1775427878 15037 8c5fa4a024f873f3f14a24f5bcee61b8 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1775277893.77467 "main.xdv" "main.pdf" "main" 1775277894.42219 0
-  "main.xdv" 1775277892 194476 045c6c8132bfd6d00b91afb91b9bd449 "xelatex"
+["xdvipdfmx"] 1775427880.82558 "main.xdv" "main.pdf" "main" 1775427882.29118 0
+  "main.xdv" 1775427879 268372 9d3cf71c8ecba2aff4c731875fd44322 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1775277890.17451 "c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_01/main.tex" "main.xdv" "main" 1775277894.41367 0
+["xelatex"] 1775427875.28313 "c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_01/main.tex" "main.xdv" "main" 1775427882.27764 0
   "C:/Users/ebarr/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1775173240 27177066 d1ec37ac06547a8c4486dd45dee3015a ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136793854 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -134,6 +134,7 @@
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579093635 6253 f1cb470c9199e7110a27851508ed7a5c ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
+  "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty" 1696169587 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg" 1712234901 7068 06f8d141725d114847527a66439066b6 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def" 1712234901 22135 0975a49eeaed232aa861e9425ffb2e7c ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty" 1712234901 62767 e79d6d7a989e7da62dcf3d0a65c1faee ""
@@ -180,7 +181,6 @@
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
-  "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/subfig/subfig.sty" 1121306210 22049 9ef165ca6df8815c92e693146a376c92 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/tcolorbox/tcolorbox.sty" 1764333206 108907 22d0f1983935b2026bb960e8244facba ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1761901070 33142 efe8f4750fc02524935e7423b4bdef69 ""
@@ -188,17 +188,20 @@
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/ebarr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_01/main.tex" 1775273612 1629 1946cf3d0349f77849778898580ed349 ""
+  "c:/Users/ebarr/Development/masters/intro_investigacion/masters.intro_investigacion/tareas/tarea_01/main.tex" 1775362365 1715 9152be7331a4e160ffe672f66814abcc ""
+  "ecuaciones.tex" 1775427874 4930 a12ce00a922df206f76fa753d0f7895f ""
   "ejemplo_imagen.jpg" 1775277178 34144 deb9b46d3d893be6da4a9aea0d2196db ""
   "estilos.tex" 1775265639 1801 57c31d08a1e8352023e92c16ebf65b62 ""
-  "figuras.tex" 1775277885 5329 48599d05a090d00ab8dc863594dddac7 ""
+  "figuras.tex" 1775361873 8739 57296473a5975d2d68040df75bb7caa4 ""
   "historia.tex" 1775271815 2670 1524d567ad1a52299158ecf02ea8e014 ""
+  "ia_2020.png" 1775354438 468606 5cde65a421b4229694b94c16ae9dae14 ""
+  "ia_2023.png" 1775354447 453254 5a5cedc1c47c646c3e88537c2abc95a9 ""
   "impacto_academico.tex" 1775271865 1885 0181c868055e398da899e77e5ae463e6 ""
-  "main.aux" 1775277892 11381 8199a8efee398694aa4a3ca12cb4bbd3 "xelatex"
-  "main.bbl" 1775277890 13270 fa7b313fa6d2f57111791ebdb0f7debf "bibtex main"
-  "main.out" 1775277892 6132 b49791d4dd02c8205ee25f375823da44 "xelatex"
-  "main.run.xml" 1775277892 2558 b68c473a29fd33cacd9513dfeba48ff9 "xelatex"
-  "main.tex" 1775273612 1629 1946cf3d0349f77849778898580ed349 ""
+  "main.aux" 1775427878 15037 8c5fa4a024f873f3f14a24f5bcee61b8 "xelatex"
+  "main.bbl" 1775427812 14573 e2e9cd22523b1201be0ef300eeef6a6b "bibtex main"
+  "main.out" 1775427879 6870 fa5dc9ed055d8eac9e0668d9e26b8633 "xelatex"
+  "main.run.xml" 1775427879 2558 b68c473a29fd33cacd9513dfeba48ff9 "xelatex"
+  "main.tex" 1775362365 1715 9152be7331a4e160ffe672f66814abcc ""
   "tecnicas.tex" 1775271283 5576 6413e364356986cc0936fe101cd271d2 ""
   (generated)
   "main-blx.bib"

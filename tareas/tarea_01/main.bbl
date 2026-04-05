@@ -430,29 +430,6 @@
     \field{urlyear}{2026}
   \endentry
 
-  \entry{booktabs}{online}{}{}
-    \name{author}{1}{}{%
-      {{hash=FS}{%
-         family={Fear},
-         familyi={F\bibinitperiod},
-         given={Simon},
-         giveni={S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{FS1}
-    \strng{fullhash}{FS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Booktabs Manual}
-    \verb{url}
-    \verb https://ctan.org/pkg/booktabs
-    \endverb
-    \field{year}{2025}
-    \field{urlday}{03}
-    \field{urlmonth}{04}
-    \field{urlyear}{2026}
-  \endentry
-
   \entry{subcaption}{online}{}{}
     \name{author}{1}{}{%
       {{hash=SA}{%
@@ -495,6 +472,75 @@
     \endverb
     \field{year}{2026}
     \field{urlday}{03}
+    \field{urlmonth}{04}
+    \field{urlyear}{2026}
+  \endentry
+
+  \entry{amsmath_manual}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SAM}{%
+         family={Society},
+         familyi={S\bibinitperiod},
+         given={American\bibnamedelima Mathematical},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SAM1}
+    \strng{fullhash}{SAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{AMS-Math User's Guide (Short Version)}
+    \verb{url}
+    \verb https://ctan.org/pkg/amsmath
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{04}
+    \field{urlmonth}{04}
+    \field{urlyear}{2026}
+  \endentry
+
+  \entry{booktabs}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=FS}{%
+         family={Fear},
+         familyi={F\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FS1}
+    \strng{fullhash}{FS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Booktabs Manual}
+    \verb{url}
+    \verb https://ctan.org/pkg/booktabs
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{03}
+    \field{urlmonth}{04}
+    \field{urlyear}{2026}
+  \endentry
+
+  \entry{amsfonts}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SAM}{%
+         family={Society},
+         familyi={S\bibinitperiod},
+         given={American\bibnamedelima Mathematical},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SAM1}
+    \strng{fullhash}{SAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{AMSFonts User's Guide}
+    \verb{url}
+    \verb https://ctan.org/pkg/amsfonts
+    \endverb
+    \field{year}{2025}
+    \field{urlday}{04}
     \field{urlmonth}{04}
     \field{urlyear}{2026}
   \endentry
