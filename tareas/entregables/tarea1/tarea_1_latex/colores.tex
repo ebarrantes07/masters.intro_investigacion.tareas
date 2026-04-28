@@ -1,0 +1,161 @@
+\section{Manejo de Colores}
+
+\LaTeX ofrece diversas opciones para incorporar color en documentos, desde texto simple hasta elementos complejos como tablas y figuras.
+
+Esta sección aborda cómo \LaTeX permite integrar color en diversos elementos, desde texto simple hasta estructuras complejas.
+
+\subsection{Paquetes para Color}
+El paquete \texttt{xcolor} se identifica como la opción más moderna y completa. Ofrece diversas opciones de carga para ampliar la paleta disponible:
+
+\begin{verbatim}
+\usepackage[dvipsnames,svgnames,
+x11names,table]{xcolor}
+\end{verbatim}
+
+Opciones del paquete:
+\begin{itemize}
+    \item \texttt{dvipsnames}: 68 colores predefinidos
+    \item \texttt{svgnames}: 150+ nombres de colores SVG
+    \item \texttt{x11names}: Nombres de colores X11
+    \item \texttt{table}: Soporte para colores en tablas
+\end{itemize}
+
+\subsection{Texto con Color}
+Para aplicar color al texto, se utilizan comandos como \texttt{textcolor} para fragmentos específicos o \texttt{color} para párrafos completos.
+
+Los colores básicos incluyen negro, blanco, rojo, verde, azul, amarillo, cian y magenta, además de opciones extendidas como Maroon, ForestGreen y RoyalBlue.
+
+\subsubsection{Comandos Básicos}
+\begin{verbatim}
+\textcolor{red}{Texto en rojo}
+\textcolor{blue}{Texto en azul}
+\textcolor{green}{Texto en verde}
+
+{\color{brown} Este párrafo es café.}
+\end{verbatim}
+
+Lo que produce el siguiente resultado: \textcolor{red}{Texto en rojo}, \textcolor{blue}{Texto en azul}, \textcolor{green}{Texto en verde}. {\color{brown} Este párrafo es café.}
+
+\subsubsection{Colores Predefinidos}
+Colores básicos: black, white, red, green, blue, yellow, cyan, magenta
+
+Colores extendidos (dvipsnames): 
+\begin{itemize}
+    \item \textcolor{Maroon}{Maroon}, \textcolor{ForestGreen}{ForestGreen}, \textcolor{RoyalBlue}{RoyalBlue}
+    \item \textcolor{Orange}{Orange}, \textcolor{Purple}{Purple}, \textcolor{Brown}{Brown}
+    \item \textcolor{Pink}{Pink}, \textcolor{Lime}{Lime}, \textcolor{Teal}{Teal}
+\end{itemize}
+
+\subsection{Definición de Colores Personalizados}
+
+\subsubsection{Modelos de Color}
+A la hora de trabajar en \LaTeX hay dos maneras de generar colores personalizados en caso que los incluidos en los paquetes no cumplan con los requerimientos.
+
+Tanto el RGB decimal como el clásico con un máximo de 256 por color pueden producir los mismos resultados, solamente que están definidos en una escala en la que en uno el blanco está definido en binario por el (1,1,1) y en otra por el (256,256,256) \cite{latex_fontguide}.\\
+
+\textbf{RGB (Red, Green, Blue):}
+\begin{verbatim}
+\definecolor{verde_perico}{RGB}{34,139,34}
+\end{verbatim}
+
+\definecolor{verde_perico}{RGB}{34,139,34}
+\textcolor{verde_perico}{Texto en verde personalizado}
+
+\textbf{RGB decimal (0-1):}
+\begin{verbatim}
+\definecolor{micolor}{rgb}{0.8,0.2,0.6}
+\textcolor{micolor}{Color rosa personalizado}
+\end{verbatim}
+
+\definecolor{micolor}{rgb}{0.8,0.2,0.6}
+\textcolor{micolor}{Color rosa personalizado}
+
+\textbf{Escala de grises:}
+\begin{verbatim}
+\definecolor{gris}{gray}{0.7}
+\textcolor{gris}{Texto en gris}
+\end{verbatim}
+
+\definecolor{gris}{gray}{0.7}
+\textcolor{gris}{Texto en gris}
+
+\subsection{Fondos de Color}
+Se dispone de dos comandos principales para resaltar texto con fondos:
+
+\begin{itemize}
+    \item \texttt{colorbox}: Crea un fondo de color simple tras el texto.
+    \item \texttt{fcolorbox}: Permite añadir un borde de color adicional al fondo.
+\end{itemize}
+
+\begin{verbatim}
+\colorbox{yellow}{Texto con fondo amarillo}
+\end{verbatim}
+
+Resultado: \colorbox{yellow}{Texto con fondo amarillo} 
+
+
+\begin{verbatim}
+\fcolorbox{red}{yellow}{Con borde rojo}
+\end{verbatim}
+
+Resultado: \fcolorbox{red}{yellow}{Con borde rojo} 
+
+\subsection{Colores en Tablas}
+Es posible colorear tanto celdas individuales usando el comando cellcolor como filas completas con rowcolor \cite{latex_fontguide}. 
+
+Esto facilita la organización visual de los datos, permitiendo destacar encabezados o productos específicos.
+
+\subsubsection{Celdas Individuales}
+\begin{verbatim}
+\begin{tabular}{|l|c|r|}
+\hline
+Normal & \cellcolor{yellow}Amarillo &
+Normal \\
+\cellcolor{brown}Café & Normal &
+\cellcolor{pink}Rosa \\
+\hline
+\end{tabular}
+\end{verbatim}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+Normal & \cellcolor{yellow}Amarillo & Normal \\
+\cellcolor{brown}Café & Normal & \cellcolor{pink}Rosa \\
+\hline
+\end{tabular}
+\caption{Tabla con celdas coloreadas}
+\end{table}
+
+\subsubsection{Filas Completas}
+\begin{verbatim}
+\begin{tabular}{|l|c|c|}
+\hline
+\rowcolor{lightgray}
+\textbf{Producto} & \textbf{Precio}
+& \textbf{Stock} \\
+\hline
+Laptop & \$899 & 15 \\
+\rowcolor{yellow}
+Mouse & \$25 & 2 \\
+Teclado & \$45 & 8 \\
+\hline
+\end{tabular}
+\end{verbatim}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\rowcolor{lightgray}
+\textbf{Producto} & \textbf{Precio} & \textbf{Stock} \\
+\hline
+Laptop & \$899 & 15 \\
+\rowcolor{yellow}
+Mouse & \$25 & 2 \\
+Teclado & \$45 & 8 \\
+\hline
+\end{tabular}
+\caption{Tabla con filas coloreadas}
+\end{table}
