@@ -17,7 +17,9 @@
                 "-synctex=1",
                 "%DOC%"
             ],
-            "env": {}
+            "env": {
+                "PATH": "/Library/TeX/texbin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+            }
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",

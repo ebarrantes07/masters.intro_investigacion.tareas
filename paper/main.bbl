@@ -38,66 +38,20 @@
   \url{https://www.mep.go.cr/sites/default/files/2026-02/GuiaDocenteIA.pdf}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Ley7600}
+\bibitem{MEP2022stats}
 \BIBentryALTinterwordspacing
-{Asamblea Legislativa de Costa Rica}, ``Ley n{\textdegree} 7600: Igualdad de
-  oportunidades para las personas con discapacidad,'' Sistema Costarricense de
-  Informaci{\'o}n Jur{\'i}dica, 1996. [Online]. Available:
-  \url{https://www.pgrweb.go.cr/scij/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Ley8661}
-\BIBentryALTinterwordspacing
-------, ``Ley n{\textdegree} 8661: Convenci{\'o}n sobre los derechos de las
-  personas con discapacidad,'' Sistema Costarricense de Informaci{\'o}n
-  Jur{\'i}dica, 2008. [Online]. Available: \url{https://www.pgrweb.go.cr/scij/}
+------, ``Servicios de educaci{\'o}n especial 2014--2021,'' Departamento de
+  An{\'a}lisis Estad{\'i}stico, MEP, San Jos{\'e}, Costa Rica, Tech. Rep.,
+  2022. [Online]. Available:
+  \url{https://www.mep.go.cr/sites/default/files/2024-05/serviciosdeeducacionespecial-2014-2021.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ley8968}
 \BIBentryALTinterwordspacing
-------, ``Ley n{\textdegree} 8968: Protecci{\'o}n de la persona frente al
-  tratamiento de sus datos personales,'' Sistema Costarricense de
-  Informaci{\'o}n Jur{\'i}dica, 2011. [Online]. Available:
+{Asamblea Legislativa de Costa Rica}, ``Ley n{\textdegree} 8968: Protecci{\'o}n
+  de la persona frente al tratamiento de sus datos personales,'' Sistema
+  Costarricense de Informaci{\'o}n Jur{\'i}dica, 2011. [Online]. Available:
   \url{https://www.pgrweb.go.cr/scij/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{MEP2017politica}
-\BIBentryALTinterwordspacing
-{Consejo Superior de Educaci{\'o}n de Costa Rica}, ``La persona: Centro del
-  proceso educativo y sujeto transformador de la sociedad,'' Ministerio de
-  Educaci{\'o}n P{\'u}blica de Costa Rica, San Jos{\'e}, Costa Rica, Tech.
-  Rep., 2017. [Online]. Available:
-  \url{https://www.mep.go.cr/sites/default/files/2022-06/politicaeducativa.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{MEP2022stats}
-\BIBentryALTinterwordspacing
-{Ministerio de Educaci{\'o}n P{\'u}blica de Costa Rica}, ``Servicios de
-  educaci{\'o}n especial 2014--2021,'' Departamento de An{\'a}lisis
-  Estad{\'i}stico, MEP, San Jos{\'e}, Costa Rica, Tech. Rep., 2022. [Online].
-  Available:
-  \url{https://www.mep.go.cr/sites/default/files/2024-05/serviciosdeeducacionespecial-2014-2021.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{MEP2025plan}
-------, ``Plan institucional mep 2025--2026,'' MEP, San Jos{\'e}, Costa Rica,
-  Tech. Rep., 2025.
-
-\bibitem{MICITT2024}
-\BIBentryALTinterwordspacing
-{Ministerio de Ciencia, Innovaci{\'o}n, Tecnolog{\'i}a y Telecomunicaciones
-  (MICITT)}, ``Estrategia nacional de inteligencia artificial de costa rica
-  2024--2027,'' MICITT, San Jos{\'e}, Costa Rica, Tech. Rep., 2024. [Online].
-  Available:
-  \url{https://www.micitt.go.cr/sites/default/files/2024-10/Estrategia\%20Nacional\%20de\%20Inteligencia\%20Artificial\%20de\%20Costa\%20Rica\%20ESP.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{MICITT2025}
-\BIBentryALTinterwordspacing
-------, ``Plan de acci{\'o}n de la estrategia nacional de inteligencia
-  artificial de costa rica,'' MICITT, San Jos{\'e}, Costa Rica, Tech. Rep.,
-  2025. [Online]. Available:
-  \url{https://www.micitt.go.cr/sites/default/files/2025-10/Plan\%20de\%20Acci\%C3\%B3n\%20ENIA.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ahmed2025}
@@ -105,12 +59,6 @@ S.~Ahmed, M.~S. Rahman, M.~S. Kaiser, and A.~S. M.~S. Hosen, ``Advancing
   personalized and inclusive education for students with disability through
   artificial intelligence: Perspectives, challenges, and opportunities,''
   \emph{Digital}, vol.~5, no.~2, p.~11, 2025.
-
-\bibitem{Bloom1956}
-B.~S. Bloom, \emph{Taxonomy of Educational Objectives: The Classification of
-  Educational Goals. Handbook I: Cognitive Domain}.\hskip 1em plus 0.5em minus
-  0.4em\relax New York: David McKay Company, Inc., 1956, fuente original de la
-  taxonomía basada en sustantivos.
 
 \bibitem{Farhah2025}
 \BIBentryALTinterwordspacing
@@ -151,6 +99,12 @@ A.~S.~M. Jaya and M.~H. F.~M. Fauadi, ``{AISTY}: An explainable {AI}-driven
   \url{https://repository.gyaanarth.com/ijriss/9/10/aisty-an-explainable-ai-driven-vision-based-adaptive-learning-system-for-children-with-autism-spectrum-disorder-1663}
 \BIBentrySTDinterwordspacing
 
+\bibitem{bloom1956}
+B.~S. Bloom, \emph{Taxonomy of Educational Objectives: The Classification of
+  Educational Goals. Handbook I: Cognitive Domain}.\hskip 1em plus 0.5em minus
+  0.4em\relax New York: David McKay Company, Inc., 1956, fuente original de la
+  taxonomía basada en sustantivos.
+
 \bibitem{Das2020}
 S.~Das, S.~K. Das~Mandal, and A.~Basu, ``Identification of cognitive learning
   complexity of assessment questions using multi-class text classification,''
@@ -172,18 +126,13 @@ E.~F. Bravo~Condoy, R.~O. Bravo~Loaiza, M.~K. Rivera~G{\'a}rate, and C.~J.
   Cavezas~Fern{\'a}ndez, ``Inteligencia artificial y tecnolog{\'i}as emergentes
   en el aprendizaje personalizado,'' \emph{Preprint}, 2025.
 
-\bibitem{UNESCO2024}
+\bibitem{MICITT2024}
 \BIBentryALTinterwordspacing
-{UNESCO}, ``Global education monitoring report 2024: Technology in education --
-  a tool on whose terms?'' UNESCO, Paris, France, Tech. Rep., 2024. [Online].
-  Available: \url{https://www.unesco.org/gem-report/en/2023}
-\BIBentrySTDinterwordspacing
-
-\bibitem{WorldBank2024}
-\BIBentryALTinterwordspacing
-{World Bank}, ``Costa rica: Education transformation project,'' World Bank
-  Group, Washington, D.C., USA, Tech. Rep., 2024. [Online]. Available:
-  \url{https://www.worldbank.org/en/country/costarica}
+{Ministerio de Ciencia, Innovaci{\'o}n, Tecnolog{\'i}a y Telecomunicaciones
+  (MICITT)}, ``Estrategia nacional de inteligencia artificial de costa rica
+  2024--2027,'' MICITT, San Jos{\'e}, Costa Rica, Tech. Rep., 2024. [Online].
+  Available:
+  \url{https://www.micitt.go.cr/sites/default/files/2024-10/Estrategia\%20Nacional\%20de\%20Inteligencia\%20Artificial\%20de\%20Costa\%20Rica\%20ESP.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{tec2025politicasIA}

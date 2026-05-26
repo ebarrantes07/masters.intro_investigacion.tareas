@@ -1,325 +1,191 @@
 % ============================================================
-%  SECCIÓN II: ANTECEDENTES — VERSIÓN EXPANDIDA
+%  SECCIÓN II: ANTECEDENTES
 %  Estilo: IEEE Transactions
 %  Paper: IA para Educación Inclusiva y Personalizada en CR
 % ============================================================
 
 \section{Antecedentes}
 
-La problemática de la educación inclusiva en Costa Rica no es reciente ni
-aislada; se inscribe en un patrón estructural documentado a lo largo de
-sucesivos informes nacionales e internacionales. Esta sección organiza los
-antecedentes en cuatro ejes: (A) el marco legal e institucional que obliga
-al Estado a garantizar la inclusión educativa; (B) el diagnóstico actualizado
-del sistema educativo costarricense; (C) los esfuerzos previos en tecnología
-educativa y sus limitaciones; y (D) el estado del arte en IA aplicada a la
-educación inclusiva y personalizada.
+Esta sección organiza los antecedentes en cinco ejes: (A) los requisitos del
+dominio que delimitan el espacio de diseño del sistema; (B) el estado del arte en
+sistemas tutores inteligentes y aprendizaje adaptativo para estudiantes con
+discapacidad; (C) los avances en computación afectiva aplicados a entornos
+educativos; (D) la clasificación cognitiva automatizada mediante modelos de
+lenguaje alineados con la Taxonomía de Bloom; y (E) la brecha específica que
+esta investigación busca llenar.
 
 % ------------------------------------------------------------
-\subsection{Marco Legal e Institucional para la Inclusión Educativa}
+\subsection{Requisitos del Dominio}
 % ------------------------------------------------------------
 
-El fundamento jurídico de la educación inclusiva en Costa Rica descansa en
-tres instrumentos normativos complementarios. En primer lugar, la
-\textit{Ley N\textsuperscript{o} 7600: Igualdad de Oportunidades para las
-Personas con Discapacidad}~\cite{Ley7600} establece, desde 1996, la
-obligación del Estado de garantizar el acceso, la permanencia y la promoción
-de estudiantes con discapacidad en el sistema educativo regular, prohibiendo
-cualquier forma de discriminación y exigiendo la provisión de apoyos y
-adecuaciones curriculares. En segundo lugar, la \textit{Ley N\textsuperscript{o}
-8661}~\cite{Ley8661}, que ratifica la Convención sobre los Derechos de las
-Personas con Discapacidad de la ONU, refuerza el enfoque de derechos y sitúa
-la inclusión como un imperativo de justicia social y no como una concesión
-administrativa. En tercer lugar, la \textit{Ley N\textsuperscript{o} 8968 de
-Protección de Datos Personales}~\cite{Ley8968} regula el tratamiento de
-información sensible, lo que resulta directamente relevante para cualquier
-sistema de IA que recopile datos sobre el estado emocional, el rendimiento
-o las condiciones de aprendizaje del estudiantado.
+Las Aulas Integradas del MEP atienden a estudiantes con discapacidades
+heterogéneas dentro del sistema regular costarricense. Las estadísticas de
+educación especial del MEP~\cite{MEP2022stats} registran que menos del 35\,\%
+de los estudiantes en estos servicios alcanza la alfabetización, cifra que
+cuantifica la magnitud del problema de aprendizaje y establece la línea base
+que un sistema de IA debe ser capaz de medir y superar. Tres restricciones
+normativas y operativas condicionan directamente el diseño técnico de cualquier
+solución en este contexto.
 
-A nivel de política educativa, el \textit{Consejo Superior de Educación}
-aprobó en 2017 la política \textit{``La persona: centro del proceso educativo
-y sujeto transformador de la sociedad''}~\cite{MEP2017politica}, que
-reorienta el currículo costarricense hacia el desarrollo de competencias para
-el siglo XXI, la atención a la diversidad y la incorporación ética de la
-tecnología. Esta política constituye el marco pedagógico dentro del cual
-cualquier intervención con IA debe inscribirse.
+Primero, la \textit{Ley N\textsuperscript{o} 8968 de Protección de Datos
+Personales}~\cite{Ley8968} impone requisitos de privacidad sobre el tratamiento
+de datos emocionales y cognitivos, restringiendo las arquitecturas que deleguen
+procesamiento sensible en servicios de nube sin garantías de anonimización.
+Segundo, el \textit{Décimo Informe Estado de la Educación 2025}~\cite{PEN2025}
+documenta un desgaste emocional significativo en el 41\,\% del profesorado,
+lo que implica que el sistema debe minimizar la carga administrativa sobre el
+docente de apoyo para ser operativamente viable. Tercero, la heterogeneidad de
+perfiles cognitivos y emocionales en las Aulas Integradas exige un motor de
+adaptación capaz de personalizar en tiempo real sin intervención manual
+continua. Estos tres factores ---privacidad, carga docente y diversidad de
+perfiles--- constituyen los requisitos funcionales y no funcionales que delimitan
+el espacio de diseño de la propuesta.
 
 % ------------------------------------------------------------
-\subsection{Diagnóstico del Sistema Educativo Costarricense}
+\subsection{Sistemas Tutores Inteligentes y Aprendizaje Adaptativo}
 % ------------------------------------------------------------
 
-El \textit{Décimo Informe Estado de la Educación 2025}~\cite{PEN2025},
-publicado por el Programa Estado de la Nación (PEN) del Consejo Nacional de
-Rectores (CONARE), ofrece el diagnóstico más actualizado y comprehensivo del
-sistema educativo costarricense. Sus hallazgos son alarmantes en tres
-dimensiones que justifican directamente la presente investigación.
+Los Sistemas Tutores Inteligentes (ITS, por sus siglas en inglés) constituyen
+la familia arquitectónica más consolidada para la personalización del aprendizaje
+mediado por computadora. Un ITS integra cuatro módulos funcionales: el
+\textit{modelo del dominio} (representación del conocimiento a enseñar), el
+\textit{modelo del estudiante} (estado cognitivo y afectivo inferido), el
+\textit{módulo pedagógico} (estrategias de selección y secuenciación de
+contenido) y la \textit{interfaz de interacción}~\cite{Ahmed2025}. La evolución
+de estos sistemas hacia arquitecturas de aprendizaje profundo y aprendizaje por
+refuerzo ha extendido su capacidad de adaptación a poblaciones con necesidades
+educativas especiales.
 
-\textbf{Rezago en competencias básicas.} Los resultados de las pruebas PISA
-2022 revelan que el estudiantado costarricense presenta niveles de comprensión
-lectora y razonamiento matemático equivalentes a los de estudiantes de
-primaria, con un retroceso de hasta diez años en comparación con los
-estándares esperados para el nivel secundario~\cite{PEN2025}. Este rezago
-es desproporcionadamente mayor en la población estudiantil con discapacidad
-o necesidades educativas especiales, quienes enfrentan una doble barrera:
-la brecha de aprendizaje preexistente y la insuficiencia de los apoyos
-pedagógicos disponibles.
+Ahmed et al.~\cite{Ahmed2025} proponen un marco de aprendizaje personalizado en
+tiempo real que emplea algoritmos de aprendizaje por refuerzo para ajustar
+dinámicamente el contenido, el ritmo y la dificultad de las lecciones según el
+estado emocional, el estilo de aprendizaje y el progreso cognitivo del
+estudiante. Su revisión abarca herramientas asistivas desde lectores de pantalla
+y reconocimiento de actividad humana hasta robots de apoyo para estudiantes con
+TEA, y sitúa la Taxonomía de Bloom como eje de monitoreo cognitivo continuo
+dentro del modelo del estudiante~\cite{Ahmed2025}. Complementariamente,
+Farhah et al.~\cite{Farhah2025} examinan arquitecturas que integran IA
+generativa con componentes de accesibilidad y personalización: su análisis
+detalla cómo las señales de detección emocional y las estrategias conductuales
+adaptativas se incorporan al módulo pedagógico para ajustar el andamiaje
+cognitivo de forma individualizada ~\cite{Farhah2025}.
 
-\textbf{Desarticulación institucional y ``pobreza de la evaluación''.}
-El informe documenta una sucesión de decisiones fragmentadas que han
-debilitado programas estratégicos sin ofrecer sustitutos efectivos. La
-discontinuación en 2023 del \textit{Plan Integral de Nivelación Académica
-(PINA)} sin evaluaciones técnicas previas, y el fracaso de la
-\textit{``Ruta de la Educación''} —que nunca logró formalizarse en un
-documento con presupuesto ni metas medibles— son ejemplos paradigmáticos
-de esta desarticulación~\cite{PEN2025}. Paralelamente, la implementación
-de pruebas nacionales estandarizadas de baja calidad técnica ha configurado
-una ``pobreza de la evaluación'' que sobreestima las capacidades estudiantiles
-y oculta el rezago real, impidiendo que el sistema genere información
-accionable para la personalización del aprendizaje.
-
-\textbf{Debilitamiento del acompañamiento docente en tecnología.}
-El desmantelamiento del \textit{Programa Nacional de Informática Educativa
-MEP-FOD (PRONIE-MEP-FOD)} ha dejado al sistema sin una política clara de
-inclusión digital y acompañamiento pedagógico en tecnología~\cite{PEN2025}.
-Este vacío es especialmente crítico en el contexto de las Aulas Integradas y
-los Servicios de Apoyo Educativo, donde la disponibilidad de herramientas
-tecnológicas adaptadas es más urgente. Adicionalmente, el informe reporta que
-el 41\,\% del profesorado costarricense experimenta niveles significativos de
-desgaste emocional, lo que reduce aún más la capacidad del docente de apoyo
-para diseñar e implementar estrategias de personalización manual~\cite{PEN2025}.
-
-En cuanto a la magnitud del problema en educación especial, las
-\textit{Estadísticas de Servicios de Educación Especial 2014--2021} del
-MEP~\cite{MEP2022stats} documentan que, en los Servicios de Apoyo Educativo
-—que atienden a la gran mayoría de los estudiantes con discapacidad dentro del
-sistema regular—, apenas el 55\,\% de los estudiantes matriculados se
-encontraba alfabetizado en 2019, cifra que ascendió marginalmente al 57\,\%
-en 2020. En los servicios de Atención Directa (Aulas Integradas), el
-porcentaje de estudiantes alfabetizados no superaba el 35\,\% en el mismo
-período, lo que evidencia la profundidad de la brecha de aprendizaje en la
-población objetivo de esta investigación~\cite{MEP2022stats}.
-
-% ------------------------------------------------------------
-\subsection{Esfuerzos Previos en Tecnología Educativa y sus Limitaciones}
-% ------------------------------------------------------------
-
-Costa Rica cuenta con una tradición reconocida en la incorporación de
-tecnología en la educación. Sin embargo, los modelos predominantes han
-mostrado limitaciones estructurales que los hacen insuficientes para abordar
-la personalización profunda requerida por el estudiantado con discapacidad.
-
-El modelo histórico del \textit{PRONIE-MEP-FOD}, operativo desde la década
-de 1990, se centró en la dotación de infraestructura (laboratorios de
-cómputo) y en el uso de software educativo genérico. Aunque este programa
-democratizó el acceso a la tecnología, su enfoque fue fundamentalmente pasivo
-—consumo de contenido— y no adaptativo~\cite{PEN2025}. Los materiales
-digitales no se ajustaban al ritmo, estilo de aprendizaje ni estado emocional
-del estudiante, reproduciendo en el entorno digital las mismas limitaciones
-de la instrucción presencial tradicional.
-
-En paralelo, el MEP ha promovido la elaboración de \textit{Programas
-Educativos Individualizados (PEI)} como mecanismo de personalización para
-estudiantes con necesidades educativas especiales. Si bien el PEI representa
-un avance conceptual significativo —al reconocer la necesidad de rutas de
-aprendizaje diferenciadas—, su implementación práctica enfrenta la saturación
-administrativa que documenta el \textit{Décimo Informe}~\cite{PEN2025}: los
-docentes de apoyo dedican una proporción desproporcionada de su tiempo a la
-elaboración y actualización de estos documentos, en detrimento del tiempo de
-interacción directa con los estudiantes.
-
-Más recientemente, el \textit{Plan MEP 2025--2026}~\cite{MEP2025plan}
-contempla la integración de herramientas digitales y plataformas de
-aprendizaje en línea como parte de la estrategia de recuperación de
-aprendizajes post-pandemia. No obstante, este plan no especifica mecanismos
-técnicos de personalización adaptativa para la población con discapacidad,
-dejando un vacío operativo que la presente investigación busca abordar.
-
-% ------------------------------------------------------------
-\subsection{Política Nacional de IA y su Articulación con la Educación}
-% ------------------------------------------------------------
-
-En el plano de la política tecnológica, Costa Rica ha dado pasos concretos
-hacia la institucionalización de la inteligencia artificial. La
-\textit{Estrategia Nacional de Inteligencia Artificial 2024--2027
-(ENIA)}~\cite{MICITT2024}, publicada por el Ministerio de Ciencia,
-Innovación, Tecnología y Telecomunicaciones (MICITT), establece como
-objetivo central promover el uso ético, seguro y responsable de la IA,
-procurando beneficios para la ciudadanía y alineándose con las prioridades
-nacionales de desarrollo sostenible. La estrategia reconoce explícitamente
-la educación como uno de los sectores prioritarios para la adopción de IA,
-e identifica la equidad e inclusión como principios transversales de
-cualquier implementación~\cite{MICITT2024}.
-
-El \textit{Plan de Acción ENIA 2025}~\cite{MICITT2025} operacionaliza estos
-principios mediante líneas de acción específicas orientadas a la formación
-de talento humano, el desarrollo de capacidades institucionales y la
-promoción de un ecosistema de IA ético. Este plan proporciona el marco
-normativo dentro del cual la integración de IA en las Aulas Integradas del
-MEP debe inscribirse para garantizar su alineación con la política pública
-nacional.
-
-La publicación de la \textit{Guía para Docentes: Inteligencia Artificial en
-clase}~\cite{MEP2026} por parte del MEP, en colaboración con UNESCO, las
-Naciones Unidas y la Universidad Latinoamericana de Ciencia y Tecnología
-(ULACIT), representa el primer esfuerzo sistemático por traducir la ENIA al
-aula costarricense. La guía propone un marco de uso ético de la IA,
-identifica herramientas recomendadas para distintos contextos pedagógicos y
-subraya la importancia de la equidad, la accesibilidad y la preservación del
-vínculo pedagógico humano~\cite{MEP2026}. Sin embargo, la guía no establece
-protocolos técnicos específicos para la personalización adaptativa en
-contextos de educación especial, lo que constituye precisamente la brecha
-que esta investigación pretende llenar.
-
-% ------------------------------------------------------------
-\subsection{Estado del Arte en IA para Educación Inclusiva y Personalizada}
-% ------------------------------------------------------------
-
-A nivel internacional, la investigación sobre IA aplicada a la educación
-inclusiva ha avanzado de manera acelerada en la última década, articulándose
-en cuatro líneas temáticas que convergen en la propuesta de la presente
-investigación: (i) sistemas adaptativos de aprendizaje para estudiantes con
-discapacidad, (ii) detección del estado emocional y carga cognitiva en
-entornos educativos mediados por IA, (iii) integración de la Taxonomía de
-Bloom en sistemas de seguimiento cognitivo automatizado, y (iv) desafíos de
-implementación en contextos de países en desarrollo y América Latina.
-
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\subsubsection{Sistemas Adaptativos de IA para Estudiantes con Discapacidad}
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-El trabajo seminal de Ahmed et al.~\cite{Ahmed2025} constituye el referente
-teórico central de esta propuesta. Los autores identifican un amplio espectro
-de herramientas asistivas impulsadas por IA y aprendizaje automático (ML)
-—desde lectores de pantalla y sistemas de reconocimiento de actividad humana
-hasta robots humanoides para el apoyo de estudiantes con trastornos del
-espectro autista— y proponen un \textit{marco de aprendizaje personalizado
-en tiempo real} que utiliza algoritmos de aprendizaje reforzado para adaptar
-dinámicamente los contenidos, el ritmo y la dificultad de las lecciones.
-El sistema incorpora la \textit{Taxonomía de Bloom}~\cite{Bloom1956} como
-eje de monitoreo cognitivo continuo y señala que los factores de estado
-emocional, estilo de aprendizaje y progreso del estudiante son determinantes
-para una personalización genuinamente inclusiva~\cite{Ahmed2025}.
-
-Complementando este marco, Farhah et al.~\cite{Farhah2025} revisan la
-integración de la IA generativa en sistemas de aprendizaje adaptativo y
-detallan arquitecturas que combinan características de personalización y
-accesibilidad para estudiantes con discapacidad. Su estudio enfatiza la
-incorporación de señales de detección emocional y estrategias conductuales
-adaptativas para ajustar la instrucción y el andamiaje cognitivo según las
-necesidades individuales del estudiante, aportando criterios de ingeniería
-y evaluación directamente aplicables al diseño de un prototipo para las
-Aulas Integradas del MEP~\cite{Farhah2025}.
-
-Desde una perspectiva de diseño de sistemas para educación especial,
-Jadán-Guerrero et al.~\cite{Jadan2024} sintetizan evidencia sobre sistemas
-tutores inteligentes y soluciones de computación afectiva desarrolladas
-específicamente para este contexto. Los autores reportan patrones de diseño
-y evidencia de casos que demuestran una mayor personalización del contenido
-cuando se incorporan señales afectivas en tiempo real, al tiempo que
-subrayan el rol indispensable del docente como mediador de la interacción
-tecnológica~\cite{Jadan2024}. Por su parte, Bhimavarapu~\cite{Bhimavarapu2025}
-implementa una red neuronal artificial bicapa (\textit{Bi-Stacked ANN})
-alimentada con características demográficas, académicas y de autopercepción
-de la discapacidad, logrando producir recomendaciones individualizadas de
-acceso y apoyos de aprendizaje. La metodología de selección de características
+Jadán-Guerrero et al.~\cite{Jadan2024} sintetizan patrones de diseño verificados
+en educación especial y reportan que la incorporación de señales afectivas en
+tiempo real incrementa de manera consistente la personalización del contenido.
+Los autores también enfatizan el rol del docente como mediador indispensable de
+la interacción tecnológica, requisito que se traduce en exigencias concretas
+sobre la interfaz de explicabilidad del sistema~\cite{Jadan2024}. Desde la
+perspectiva del perfilado del estudiante, Bhimavarapu~\cite{Bhimavarapu2025}
+implementa una red neuronal artificial bicapa (\textit{Bi-Stacked ANN}) que
+produce recomendaciones individualizadas a partir de características demográficas,
+académicas y de autopercepción de la discapacidad; la selección de características
 mediante optimización por enjambre de partículas (PSO) ofrece un enfoque
-replicable para perfilar las necesidades del estudiantado costarricense con
-discapacidad y orientar políticas institucionales de inclusión~\cite{Bhimavarapu2025}.
+replicable para construir el modelo del estudiante en contextos con datos
+escasos~\cite{Bhimavarapu2025}.
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\subsubsection{Detección del Estado Emocional y Carga Cognitiva en IA Educativa}
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Una limitación estructural de los enfoques previos en el contexto costarricense
+es que el modelo histórico de tecnología educativa se centró en la provisión de
+infraestructura y software genérico, sin incorporar mecanismos de adaptación
+dinámica ni modelos del estudiante~\cite{PEN2025}. Este modelo pasivo reproduce
+en el entorno digital las mismas restricciones de la instrucción presencial
+uniforme, subrayando la necesidad de una arquitectura ITS genuinamente adaptativa.
 
-La dimensión afectiva del aprendizaje ha emergido como uno de los factores
-más críticos para la efectividad de los sistemas tutores inteligentes (ITS),
-particularmente en poblaciones con dificultades de aprendizaje. Dutt y
-Ahuja~\cite{Dutt2024} desarrollaron intervenciones de tutoría inteligente
-para estudiantes con dificultades de aprendizaje y midieron experimentalmente
-las emociones inducidas y la carga cognitiva durante el uso del ITS. Sus
-resultados vinculan directamente los estados emocionales positivos y la
-reducción de la carga cognitiva con mejoras en la usabilidad y el compromiso
-del estudiante, aportando evidencia empírica de que la adaptación emocional
-no es un complemento opcional sino un componente funcional del sistema~\cite{Dutt2024}.
+% ------------------------------------------------------------
+\subsection{Computación Afectiva en Entornos de Aprendizaje}
+% ------------------------------------------------------------
 
-En la misma línea, el sistema AISTY~\cite{AISTY2024} combina estimación de
-atención y afecto basada en visión computacional con componentes de IA
-explicable (XAI) para adaptar el ritmo y la interacción en niños con trastorno
-del espectro autista (TEA). El sistema monitorea la atención y los estados
-emocionales inferidos a partir de señales visuales para ajustar las tareas
-y los apoyos en tiempo real, mientras que los mecanismos de explicabilidad
-permiten que padres y docentes comprendan las decisiones del sistema. Este
-enfoque centrado en la transparencia algorítmica resulta especialmente
-relevante para el contexto costarricense, donde la confianza institucional
-y la participación de las familias son condicionantes clave para la adopción
-de tecnología en el aula~\cite{AISTY2024}.
+La computación afectiva estudia el diseño de sistemas capaces de detectar,
+interpretar y responder a los estados emocionales del usuario. En el contexto
+educativo, la integración de módulos afectivos en los ITS ha pasado de ser una
+extensión opcional a un componente funcional central, dado que el estado
+emocional del estudiante incide directamente sobre la carga cognitiva y la
+eficacia del aprendizaje.
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\subsubsection{Taxonomía de Bloom e IA: Seguimiento Cognitivo Automatizado}
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Dutt y Ahuja~\cite{Dutt2024} ofrecen evidencia empírica directa de esta relación:
+en un experimento con estudiantes con dificultades de aprendizaje interactuando
+con un ITS, midieron las emociones inducidas y la carga cognitiva durante la
+sesión. Sus resultados muestran que los estados emocionales positivos y la
+reducción de la carga cognitiva correlacionan con mejoras en la usabilidad y el
+compromiso del estudiante, validando que la adaptación emocional es un componente
+que afecta métricas de rendimiento medibles del sistema~\cite{Dutt2024}.
 
-La Taxonomía de Bloom~\cite{Bloom1956} ha experimentado una revitalización
-significativa en el contexto de la educación mediada por IA, al proveer un
-marco jerárquico que permite operacionalizar el progreso cognitivo del
-estudiante en niveles medibles y accionables por algoritmos de adaptación.
+El sistema AISTY~\cite{AISTY2024} ilustra una arquitectura concreta orientada a
+educación especial: combina estimación de atención y afecto basada en visión
+computacional con componentes de IA explicable (XAI) para adaptar el ritmo de
+interacción en niños con TEA. El módulo de visión monitorea señales faciales y
+de movimiento para inferir estados emocionales en tiempo real y ajustar tareas
+dinámicamente; simultáneamente, los mecanismos de XAI generan reportes
+interpretables para docentes y familias, abordando el problema de la caja negra
+que típicamente obstaculiza la adopción institucional de IA~\cite{AISTY2024}.
 
-Das et al.~\cite{Das2020} compararon un clasificador LDA etiquetado y un
-clasificador de texto multiclase basado en BERT para asignar automáticamente
-niveles cognitivos de Bloom a preguntas de evaluación, utilizando un conjunto
-de más de 3.000 ítems y alcanzando precisiones del 83\,\% y 89\,\%
-respectivamente. Esta capacidad de clasificación automática de la complejidad
-cognitiva ofrece una base replicable para construir herramientas diagnósticas
-alineadas con los indicadores de logro del currículo del MEP, permitiendo
-que el sistema identifique en qué nivel de Bloom se encuentra cada estudiante
-y ajuste el material de manera dinámica~\cite{Das2020}.
+Técnicamente, los enfoques de detección emocional más empleados en ITS se
+agrupan en tres categorías: (i) basados en visión computacional, mediante análisis
+de expresiones faciales con redes convolucionales (CNN) o transformers de
+visión; (ii) basados en señales fisiológicas, como variabilidad del ritmo
+cardíaco o conductancia de la piel; y (iii) multimodales, que combinan varias
+fuentes para incrementar la robustez de la inferencia~\cite{Ahmed2025, AISTY2024}.
+En el contexto de las Aulas Integradas, la disponibilidad de hardware limita la
+viabilidad de las modalidades fisiológicas, orientando el diseño hacia enfoques
+de visión o multimodales de bajo costo de despliegue.
 
-En el ámbito de la práctica docente, Barros et al.~\cite{Barros2025}
-desarrollaron un estudio de investigación-acción en el que guiaron a docentes
-en la planificación de lecciones secuenciadas según la Taxonomía de Bloom,
-apoyadas por \textit{prompts} de IA generativa. Los resultados reportan un
-fortalecimiento de la autonomía estudiantil y un mayor compromiso cognitivo
-de orden superior en educación fundamental, y la metodología de desarrollo
-profesional docente propuesta constituye un modelo operativo transferible al
-contexto de formación de los docentes de apoyo del MEP~\cite{Barros2025}.
-De manera complementaria, Kwan et al.~\cite{Kwan2025} examinan rediseños del
-aula invertida (\textit{flipped classroom}) en los que la IA generativa
-produce actividades previas a la clase alineadas con Bloom y soporta tareas
-de orden superior durante la sesión presencial, incluyendo bucles de
-retroalimentación formativa. El modelo de interacción estudiante-docente-IA
-propuesto ofrece un esquema de integración directamente aplicable a los flujos
-de trabajo pedagógico en las Aulas Integradas~\cite{Kwan2025}.
+% ------------------------------------------------------------
+\subsection{Clasificación Cognitiva Automatizada: NLP y Taxonomía de Bloom}
+% ------------------------------------------------------------
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\subsubsection{IA para el Aprendizaje Personalizado en Países en Desarrollo
-y América Latina}
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+La Taxonomía de Bloom~\cite{bloom1956} provee una jerarquía de seis niveles
+cognitivos ---recordar, comprender, aplicar, analizar, evaluar y crear--- que
+permite operacionalizar el progreso del estudiante en categorías discretas
+y accionables por algoritmos de adaptación. Al incorporarse como estructura
+de referencia en el modelo del estudiante de
+un ITS, la progresión cognitiva se convierteen una variable de
+estado discreta que el módulo pedagógico puede monitorear y utilizar para
+tomar decisiones de ajuste de contenido.
 
-La literatura sobre implementación de IA educativa en contextos de recursos
-limitados y en América Latina es aún incipiente, pero creciente. Bravo
-Condoy et al.~\cite{BravoCondoy2025} realizaron un estudio de métodos mixtos
-en instituciones públicas ecuatorianas —contexto socioeconómico comparable
-al costarricense— utilizando encuestas y entrevistas para mapear percepciones,
-infraestructura y barreras de formación docente que afectan la adopción de
-aprendizaje personalizado basado en IA. Sus resultados muestran interés
-generalizado entre los actores del sistema, pero identifican la preparación
-docente insuficiente y el acceso desigual a la tecnología como restricciones
-primarias~\cite{BravoCondoy2025}. Esta evidencia regional es directamente
-pertinente para anticipar y mitigar desafíos similares en el despliegue del
-protocolo propuesto en escuelas costarricenses, especialmente en zonas rurales
-con menor conectividad.
+Das et al.~\cite{Das2020} demostraron la viabilidad técnica de la clasificación
+automática de ítems de evaluación en los niveles de Bloom mediante dos enfoques
+de procesamiento del lenguaje natural: un clasificador LDA etiquetado y un
+clasificador de texto multiclase basado en BERT. Evaluados sobre un corpus de
+más de 3.000 ítems, estos modelos alcanzaron precisiones del 83\,\% y 89\,\%
+respectivamente~\cite{Das2020}. Estos resultados sientan las bases técnicas para
+construir un componente de seguimiento cognitivo automatizado capaz de mapear
+las respuestas del estudiante a indicadores de logro curriculares sin
+intervención manual del docente.
 
-Desde una perspectiva global, el \textit{Informe de Seguimiento de la
-Educación en el Mundo 2024} de la UNESCO~\cite{UNESCO2024} advierte que la
-tecnología educativa —incluida la IA— corre el riesgo de ampliar las brechas
-existentes si no se implementa con un diseño explícitamente inclusivo y con
-mecanismos de gobernanza que protejan los derechos de los estudiantes más
-vulnerables. El informe subraya que menos del 10\,\% de los países de
-ingresos medios cuentan con marcos normativos específicos para el uso de IA
-en educación especial, situando a Costa Rica —con su ENIA~\cite{MICITT2024}
-y su Guía Docente IA~\cite{MEP2026}— en una posición de relativa vanguardia
-regional, aunque con brechas de implementación técnica aún por cerrar.
-Complementariamente, el \textit{Banco Mundial}~\cite{WorldBank2024} ha
-identificado la personalización del aprendizaje mediada por tecnología como
-una de las intervenciones con mayor potencial para acelerar la recuperación
-de aprendizajes post-pandemia en la región, con énfasis en la necesidad de
-soluciones de bajo costo y alta escalabilidad adaptadas a las realidades
-institucionales de cada país.
+En el plano de la generación de contenido, Barros et al.~\cite{Barros2025}
+documentan un estudio de investigación-acción en el que docentes emplearon
+\textit{prompts} de IA generativa para diseñar lecciones secuenciadas según
+Bloom, obteniendo mayor compromiso cognitivo de orden superior~\cite{Barros2025}.
+Kwan et al.~\cite{Kwan2025} examinan rediseños del aula invertida en los que la
+IA generativa produce actividades previas a la clase alineadas con Bloom y
+retroalimentación formativa automatizada durante la sesión presencial. El modelo
+de interacción estudiante-docente-IA que proponen ofrece un esquema de flujo de
+trabajo pedagógico aplicable a las Aulas Integradas, donde la automatización de
+tareas repetitivas de evaluación es una restricción crítica de diseño~\cite{Kwan2025}.
+
+% ------------------------------------------------------------
+\subsection{Brecha Identificada en la Literatura}
+% ------------------------------------------------------------
+
+La revisión de los antecedentes evidencia tres líneas de investigación activas
+---ITS adaptativos, computación afectiva y clasificación cognitiva con NLP--- que
+han sido desarrolladas predominantemente de forma aislada o con integraciones
+parciales. Aunque Ahmed et al.~\cite{Ahmed2025} y Farhah et al.~\cite{Farhah2025}
+señalan la necesidad de combinar múltiples componentes, ningún sistema documentado
+integra de forma cohesiva y validada: (i) un motor adaptativo basado en
+aprendizaje por refuerzo, (ii) un módulo de detección emocional en tiempo real,
+y (iii) un clasificador cognitivo NLP alineado con la Taxonomía de Bloom, todo
+ello bajo restricciones simultáneas de privacidad de datos, conectividad limitada
+y alta diversidad de perfiles propias de la educación especial en América Latina.
+
+Bravo Condoy et al.~\cite{BravoCondoy2025} confirman que la preparación docente
+insuficiente y el acceso desigual a la tecnología son los obstáculos primarios
+para la adopción de IA educativa en contextos comparables al costarricense, lo
+que subraya que las restricciones operativas del entorno deben incorporarse desde
+la fase de diseño arquitectónico y no tratarse como consideraciones de
+implementación tardía. La guía docente del MEP~\cite{MEP2026} y la Estrategia
+Nacional de IA~\cite{MICITT2024} proporcionan el marco normativo disponible en
+el país, pero ninguno especifica protocolos técnicos para la personalización
+adaptativa en educación especial. Esta brecha ---entre el marco normativo vigente
+y la arquitectura técnica requerida--- define con precisión el problema de
+investigación que se aborda en las secciones siguientes.

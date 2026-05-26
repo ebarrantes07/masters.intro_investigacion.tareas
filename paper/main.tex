@@ -15,11 +15,14 @@
 \usepackage{multirow}
 \usepackage[hyphens]{url}
 \usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\usepackage{booktabs}
 
 % ===================
 % Title and Authors
 % ===================
-\title{Introducción a la Investigaci\'on:\\ Paper de Investigaci\'on}
+\title{MAIA: Arquitectura de Referencia para Tutor\'ia Inteligente Adaptativa en Educaci\'on Inclusiva Costarricense}
 
 \author{
     Emmanuel~Barrantes~Vargas,~\\
@@ -35,12 +38,27 @@
 
 % Abstract
 \begin{abstract}
-Este paper propone un Marco de Aprendizaje Inclusivo y Adaptativo basado en IA para las Aulas Integradas de Costa Rica. El D\'ecimo Informe Estado de la Educaci\'on (2025) evidencia un grave rezago acad\'emico y tasas de alfabetizaci\'on inferiores al 35\,\% en esta poblaci\'on, agravados por la desarticulaci\'on institucional y el desgaste docente. Apoyado en el marco legal vigente, la Estrategia Nacional de IA y evidencia internacional sobre sistemas tutores inteligentes y computaci\'on afectiva, se propone un sistema que integre detecci\'on emocional, seguimiento cognitivo mediante la Taxonom\'ia de Bloom y principios de Dise\~no Universal para el Aprendizaje, con el fin de personalizar la ense\~nanza y fortalecer la inclusi\'on educativa.
+Este paper propone el Marco de Aprendizaje Inclusivo y Adaptativo (MAIA),
+una arquitectura de referencia para sistemas tutores inteligentes orientados
+a las Aulas Integradas del MEP costarricense. El D\'ecimo Informe Estado de
+la Educaci\'on (2025) documenta que menos del 35\,\% de los estudiantes en
+estos servicios alcanza la alfabetizaci\'on y que el 41\,\% del profesorado
+reporta desgaste emocional significativo. El MAIA integra tres componentes
+t\'ecnicos: detecci\'on emocional multimodal en tiempo real mediante redes
+convolucionales y transformers de visi\'on, clasificaci\'on cognitiva
+automatizada alineada con la Taxonom\'ia de Bloom mediante BERT ajustado
+finamente, y un motor de adaptaci\'on por aprendizaje por refuerzo con
+control docente en el bucle (\textit{human-in-the-loop}). Dise\~nado bajo
+restricciones de privacidad (Ley N\textsuperscript{o}\,8968) y hardware
+limitado, el sistema establece como indicadores objetivo una precisi\'on de
+clasificaci\'on cognitiva $\geq$ 85\,\% y de detecci\'on afectiva
+$\geq$ 80\,\%, con operaci\'on aut\'onoma en al menos el 70\,\% de las
+sesiones.
 \end{abstract}
 
 % Keywords
 \begin{IEEEkeywords}
-Inteligencia artificial, educaci\'on inclusiva, aprendizaje adaptativo, taxonom\'ia de Bloom, computaci\'on afectiva, Dise\~no Universal para el Aprendizaje, Costa Rica
+sistemas tutores inteligentes, computaci\'on afectiva, taxonom\'ia de Bloom, aprendizaje por refuerzo, human-in-the-loop, educaci\'on inclusiva, Costa Rica
 \end{IEEEkeywords}
 
 % ===================
