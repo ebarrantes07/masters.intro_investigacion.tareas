@@ -10,7 +10,7 @@
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
-            "command": "latexmk",
+            "command": "/Library/TeX/texbin/latexmk",
             "args": [
                 "-xelatex",
                 "-interaction=nonstopmode",
