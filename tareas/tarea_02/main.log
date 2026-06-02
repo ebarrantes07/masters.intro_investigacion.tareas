@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.2)  1 JUN 2026 18:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.2)  1 JUN 2026 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,13 +974,17 @@ Package hyperref Info: Link coloring ON on input line 46.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
- (tesis_1.tex) (tesis_2.tex) (tesis_3.tex)
-(tesis_4.tex) (declaracion_transparencia.tex) [1{C:/Users/ebarr/AppData/Local/M
-iKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ebarr/AppData/Local/Programs/MiKTeX
-/fonts/enc/dvips/base/8r.enc}
+ (tesis_1.tex
+Underfull \hbox (badness 1424) in paragraph at lines 4--5
+[]\OT1/ptm/m/it/10 Exploring Emo-tion Re-cog-ni-tion of Stu-dents in Vir-tual
+ []
+
+[1{C:/Users/ebarr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/eb
+arr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-]
+]) (tesis_2.tex)
+(tesis_3.tex) (tesis_4.tex) (declaracion_transparencia.tex) [2]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1005,26 +1009,27 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 9E6C61E001A4DD6079D8F9E41CC27BE0;1330.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21774 strings out of 467867
- 384142 string characters out of 5418335
- 1020765 words of memory out of 5000000
- 50432 multiletter control sequences out of 15000+600000
- 655952 words of font info for 87 fonts, out of 8000000 for 9000
+ 21811 strings out of 467867
+ 384630 string characters out of 5418335
+ 1041765 words of memory out of 5000000
+ 50452 multiletter control sequences out of 15000+600000
+ 658195 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,79p,1852b,2005s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,8n,79p,1898b,2005s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
 b><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.p
 fb><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.p
-fb>
-Output written on main.pdf (1 page, 31896 bytes).
+fb><C:/Users/ebarr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on main.pdf (2 pages, 72162 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
