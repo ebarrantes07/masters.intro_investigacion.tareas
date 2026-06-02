@@ -7,14 +7,14 @@
 Cristian Arias Chaves, Universidad de Costa Rica.
 
 \subsection{Resumen}
-La tesis diseña, implementa y valida un método para ejecutar aplicaciones de computación paralela basadas en MPI (\textit{Message Passing Interface}) dentro de un clúster de Kubernetes. El método resuelve los requisitos técnicos de MPI en un entorno contenedorizado (IPs y DNS estables, almacenamiento compartido, ambiente de ejecución uniforme) mediante una combinación de recursos nativos de Kubernetes: \textit{StatefulSets}, servicios \textit{headless}, volúmenes persistentes con BeeGFS e imágenes de contenedor auto-contenidas. El método es automatizado mediante un Operador de Kubernetes desarrollado en Go usando el \textit{Operator SDK}, con dos Definiciones de Recursos Personalizados (CRDs): \texttt{MpiCluster} y \texttt{MpiJob}. La validación se realiza mediante cuatro experimentos: prueba funcional básica (``Hola Mundo'' de MPI), medición del tiempo de creación del clúster, medición del rendimiento de entrada/salida de red y disco, y evaluación del rendimiento de ejecución de aplicaciones con los \textit{benchmarks} MiniFE, MiniMD y MiniXyce de la suite Mantevo. Los tres tipos de imágenes de contenedor probadas (MPICH, OpenMPI y MPICH+SLURM) demuestran que el clúster de trabajo en Kubernetes puede crearse en aproximadamente 21 segundos por nodo, con rendimientos de E/S y de ejecución de aplicaciones superiores al 70\% del rendimiento de un clúster físico equivalente en todos los casos.
+La tesis diseña, implementa y valida un método para ejecutar aplicaciones de computación paralela basadas en MPI (\textit{Message Passing Interface}) dentro de un clúster de Kubernetes. El método resuelve los requisitos técnicos de MPI en un entorno contenedorizado (IPs y DNS estables, almacenamiento compartido, ambiente de ejecución uniforme) mediante una combinación de recursos nativos de Kubernetes: \textit{StatefulSets}, servicios \textit{headless}, volúmenes persistentes con BeeGFS e imágenes de contenedor auto-contenidas. El método es automatizado mediante un Operador de Kubernetes desarrollado en Go usando el \textit{Operator SDK}, con dos Definiciones de Recursos Personalizados (CRDs): \texttt{MpiCluster} y \texttt{MpiJob}. La validación se realiza mediante cuatro experimentos: prueba funcional básica (``Hola Mundo'' de MPI), medición del tiempo de creación del clúster, medición del rendimiento de entrada/salida de red y disco, y evaluación del rendimiento de ejecución de aplicaciones con los \textit{benchmarks} MiniFE, MiniMD y MiniXyce de la suite Mantevo. Los tres tipos de imágenes de contenedor probadas (MPICH, OpenMPI y MPICH+SLURM) demuestran que el clúster de trabajo en Kubernetes puede crearse en aproximadamente 21 segundos por nodo, con rendimientos de E/S y de ejecución de aplicaciones superiores al 70\% del rendimiento de un clúster físico equivalente en todos los casos \cite{arias2024}.
 
 \subsection{Problema que busca resolver}
 Los clústeres HPC (\textit{High Performance Computing}) tradicionales son infraestructura cara, rígida y especializada que requiere inversión de capital significativa y personal técnico dedicado. Kubernetes se ha convertido en el estándar de orquestación de contenedores en la nube, pero no fue diseñado para los requisitos específicos de la computación paralela con MPI: los \textit{deployments} de Kubernetes no garantizan IPs ni DNS estables entre nodos (requisito de MPI para el intercambio de mensajes), no proveen almacenamiento compartido de forma nativa, y la configuración del ambiente de ejecución para cada aplicación paralela debe realizarse manualmente. No existe un método estandarizado, reproducible y productivo para desplegar y gestionar trabajos MPI en Kubernetes, lo que crea una barrera entre el ecosistema moderno de la nube y la comunidad de computación de alto rendimiento.
 
 \subsection{Objetivos}
 
-Objetivo General: Diseñar e implementar un método que permita la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes, con un rendimiento de E/S y de ejecución de aplicaciones no inferior al 70\% respecto a un clúster físico equivalente, y con un tiempo de creación e inicialización de cada nodo del clúster de trabajo no superior a 1 minuto.
+Objetivo General: Diseñar e implementar un método que permita la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes, con un rendimiento de E/S y de ejecución de aplicaciones no inferior al 70\% respecto a un clúster físico equivalente, y con un tiempo de creación e inicialización de cada nodo del clúster de trabajo no superior a 1 minuto \cite{arias2024}.
 
 Objetivos Específicos:
 \begin{enumerate}
@@ -28,7 +28,7 @@ Objetivos Específicos:
 
 \subsection{Hipótesis}
 
-La tesis formula explícitamente tres hipótesis cuantitativas en el Capítulo 1, lo que permite una evaluación objetiva de los resultados:
+La tesis formula explícitamente tres hipótesis cuantitativas, lo que permite una evaluación objetiva de los resultados:
 
 \begin{enumerate}
     \item \textit{El tiempo de creación e inicialización de cada nodo del clúster de trabajo no superará 1 minuto (60 segundos), y el tiempo total para iniciar la ejecución de una aplicación de computación paralela será igual o menor a $1 \times N$ minutos, donde $N$ es el número de nodos del clúster de trabajo.} Confirmada: el tiempo promedio fue de aproximadamente 21 segundos por nodo para las tres imágenes evaluadas.
@@ -38,9 +38,11 @@ La tesis formula explícitamente tres hipótesis cuantitativas en el Capítulo 1
     \item \textit{El rendimiento de ejecución de aplicaciones de computación paralela basadas en MPI en el clúster de trabajo de Kubernetes superará el 70\% del rendimiento alcanzado en el clúster físico de Vultr.} Confirmada: todos los benchmarks alcanzaron rendimientos promedios superiores al 84\% en escalamiento fuerte y al 91\% en escalamiento débil.
 \end{enumerate}
 
-Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran superado 60 segundos, si el rendimiento de E/S o de ejecución hubiera caído por debajo del 70\%, o si el sistema hubiera fallado en ejecutar correctamente las aplicaciones MPI.
+Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran superado 60 segundos, si el rendimiento de E/S o de ejecución hubiera caído por debajo del 70\%, o si el sistema hubiera fallado en ejecutar correctamente las aplicaciones MPI \cite{arias2024}.
 
 \subsection{Resumen de la metodología empleada}
+
+La metodología empleada por \cite{arias2024} se describe a continuación:
 
 \begin{itemize}
     \item \textbf{Diseño del método:} Se utilizan \textit{StatefulSets} (en lugar de \textit{Deployments}) combinados con un servicio \textit{headless} para garantizar DNS e IPs estables a cada nodo. El almacenamiento compartido se implementa con BeeGFS (sistema de archivos paralelo de alto rendimiento) montado como volumen persistente. Los recursos se aíslan en un \textit{namespace} con cuotas. Cada nodo ejecuta una imagen de contenedor auto-contenida que incluye el sistema operativo, servidor SSH, y las librerías de MPI requeridas.
@@ -62,6 +64,8 @@ Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran
 \end{itemize}
 
 \subsection{Principales resultados}
+
+Los principales hallazgos reportados por \cite{arias2024} son:
 
 \begin{itemize}
     \item \textbf{Tiempo de creación:} Las tres imágenes lograron tiempos promedio de $\approx$21 segundos por nodo (MPICH: 21.58s, OpenMPI: 21.13s, SLURM: 21.13s), muy por debajo del límite de 60 segundos. El primer nodo tardó más ($\approx$26--29s) por ser el encargado de generar las claves SSH del clúster.

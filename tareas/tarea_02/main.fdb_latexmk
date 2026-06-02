@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex main"] 1780367579.76673 "main.aux" "main.bbl" "main" 1780367581.07533 0
-  "./main-blx.bib" 1780367580.72999 343 bf1f0c75b5bafd473925320ac9611e26 ""
-  "./referencias.bib" 1780361364.42392 33 bd478e3e294b396d1c5cb66e3c70d6c9 ""
+["bibtex main"] 1780369159.83937 "main.aux" "main.bbl" "main" 1780369290.68272 0
+  "./main-blx.bib" 1780369290.47873 343 bf1f0c75b5bafd473925320ac9611e26 ""
+  "./referencias.bib" 1780368475.08686 1416 4112a934e50b66146ed11bca3e273800 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1752177141 65510 9a2a51799b543ff279b8ea2dd91ec499 ""
-  "main.aux" 1780367580.72317 5746 35167e117faa3a9a515c0dfe4de823e6 "xelatex"
+  "main.aux" 1780369290.47255 6561 cd23c64a08870c0707724800d986ad17 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
 ["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0 -1
-  "main.xdv" 1780367580.7305 411272 589f57d475e4b1157c0694b89ee884a9 "xelatex"
+  "main.xdv" 1780369290.4792 426248 157b856192101e23131f7f9f847860aa "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1780367579.86847 "/Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02/main.tex" "main.xdv" "main" 1780367581.07547 2
-  "/Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02/main.tex" 1780367578.06379 1422 8b38d150c0bed4fb380026c90e0d4155 ""
+["xelatex"] 1780369289.81346 "/Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02/main.tex" "main.xdv" "main" 1780369290.68285 2
+  "/Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02/main.tex" 1780369159.62657 1400 40fd4c22d05ab6de9769bf1a693e68d0 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -118,15 +118,15 @@
   "/usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1779596402 5957147 039bbbfa59e3ab0f47a51a762d6c0ad2 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
   "declaracion_transparencia.tex" 1780361364.42276 554 b06d4bb00b08782fb4e2b1165e0e0605 ""
-  "main.aux" 1780367580.72317 5746 35167e117faa3a9a515c0dfe4de823e6 "xelatex"
-  "main.bbl" 1780367579.86659 520 47390d0fec917a8062f60a58a9b6d248 "bibtex main"
-  "main.out" 1780367580.72919 5347 50b4c3da6ec1ba54424341c578e30aa7 "xelatex"
-  "main.run.xml" 1780367580.73045 2558 b342689e9acdbfc6babb59c585453e85 "xelatex"
-  "main.tex" 1780367578.06379 1422 8b38d150c0bed4fb380026c90e0d4155 ""
-  "tesis_1.tex" 1780367367.70953 6758 2761cf4fc1717d890ba46b96e47be05e ""
-  "tesis_2.tex" 1780367390.8316 13174 84e0b66e30d1c1511d27dc87e0f980b3 ""
-  "tesis_3.tex" 1780367435.45835 9677 c87d3b3440389313d4e232c505dfc1d4 ""
-  "tesis_4.tex" 1780367456.27311 12365 ca98163b27a4e84608a0b071af880670 ""
+  "main.aux" 1780369290.47255 6561 cd23c64a08870c0707724800d986ad17 "xelatex"
+  "main.bbl" 1780369159.91615 3617 91e47db5c4adf517af1ea44217878237 "bibtex main"
+  "main.out" 1780369290.47802 5347 50b4c3da6ec1ba54424341c578e30aa7 "xelatex"
+  "main.run.xml" 1780369290.47915 2558 b68c473a29fd33cacd9513dfeba48ff9 "xelatex"
+  "main.tex" 1780369159.62657 1400 40fd4c22d05ab6de9769bf1a693e68d0 ""
+  "tesis_1.tex" 1780368475.08702 6891 81a787c6084a5168cbbbd3c0941d3e3d ""
+  "tesis_2.tex" 1780368475.08725 13186 eb7ee99ff039e7e5937390de8ba31bca ""
+  "tesis_3.tex" 1780369289.46524 9969 3ddc767175e0651a21740ef9fe150836 ""
+  "tesis_4.tex" 1780368475.08807 12377 9ef44c440141b462be6c1c48df45e7b0 ""
   (generated)
   "main-blx.bib"
   "main.aux"

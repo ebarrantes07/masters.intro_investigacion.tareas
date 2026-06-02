@@ -1,20 +1,24 @@
 \section{Tesis 3}
 
 \subsection{Título}
-\textit{Automatic Spanish Text Complexity} (Complejidad Automática de Texto en Español) \cite{romero2024}.
+\textit{Automatic Spanish Text Complexity Detection in Financial Documents with Low Data Availability} (Detección Automática de Complejidad de Texto en Español en Documentos Financieros con Baja Disponibilidad de Datos) \cite{romero2024}.
 
 \subsection{Autor}
 Mario Alberto Romero Sandoval, Instituto Tecnológico de Costa Rica.
 
 \subsection{Resumen}
-La tesis propone una metodología para la detección automática de complejidad de texto en español utilizando modelos de transformers, evaluando el impacto de la calidad y cantidad de datos de entrenamiento, y explorando la aumentación de datos mediante Grandes Modelos de Lenguaje (LLMs) para paliar la escasez de pares etiquetados en español. Se utiliza BETO (implementación española de BERT) como modelo base y se compara contra un clasificador de Bosque Aleatorio con TF-IDF (\textit{RF-TF-IDF}) como línea base. Dos experimentos principales evalúan: (1) el impacto de la fuente de los datos de simplificación (manual, GPT-3, mT5 y Tuner) sobre el rendimiento del clasificador, y (2) el efecto de combinar conjuntos de datos manuales pequeños con datos aumentados de forma artificial. Los resultados muestran que los datos generados manualmente producen clasificadores significativamente superiores (F1$\approx$0.83) frente a los generados por LLMs como GPT-3 (F1$\approx$0.74), mT5 (F1$\approx$0.65) y Tuner (F1$\approx$0.55), y que la aumentación de datos solo es beneficiosa cuando el conjunto semilla es muy pequeño (aproximadamente 97 segmentos de texto).
+``El acceso a la información es un derecho humano fundamental en la sociedad moderna. Sin embargo, no todos tenemos el mismo acceso a la información, y una de las razones es que no comprendemos todo de la misma manera. El nivel educativo, la edad, las discapacidades y el contexto cultural pueden influir en la forma en que un texto es leído y comprendido por el público.
+
+Ser capaz de discriminar entre segmentos de texto complejos y simples tiene numerosas aplicaciones: desde mejorar la eficiencia de los sistemas de simplificación, hasta aplicaciones educativas que ayudan a determinar si un texto es apropiado para el nivel de un estudiante determinado, y también a supervisar si las instituciones se están comunicando correctamente con el público.
+
+En este trabajo se explorarán diferentes métodos y técnicas para la clasificación de textos en función de su complejidad, concretamente texto en español, así como métodos para resolver la escasez de datos en la tarea de discriminación de complejidad de texto en español. En particular, se centrará en el aprovechamiento de modelos de lenguaje existentes y el aprendizaje por transferencia para lograr y medir el impacto de datos aumentados mediante la generación de datos sintéticos en el problema de la discriminación de complejidad de texto.'' \cite{romero2024}
 
 \subsection{Problema que busca resolver}
 El campo de la simplificación automática de texto en español carece de conjuntos de datos etiquetados con pares de segmentos complejos y simples, los cuales son indispensables para entrenar clasificadores modernos de aprendizaje profundo. La mayoría de los enfoques existentes se centran en inglés u otros idiomas, y no existen modelos especializados para la clasificación de complejidad textual en español. Esta escasez de datos constituye un cuello de botella fundamental para el desarrollo de herramientas que permitan a poblaciones con comprensión lectora limitada (personas con impedimento visual, lectores no especializados) acceder a información financiera o técnica compleja. La pregunta central es si la generación automática de datos de simplificación mediante LLMs puede compensar la falta de datos etiquetados por humanos.
 
 \subsection{Objetivos}
 
-Objetivo General: Desarrollar y evaluar métodos de detección automática de complejidad de texto en español usando aprendizaje profundo y técnicas de aumentación de datos.
+Objetivo General: Desarrollar y evaluar métodos de detección automática de complejidad de texto en español usando aprendizaje profundo y técnicas de aumentación de datos \cite{romero2024}.
 
 Objetivos Específicos:
 \begin{enumerate}
@@ -27,7 +31,7 @@ Objetivos Específicos:
 
 \subsection{Hipótesis}
 
-La tesis enuncia explícitamente dos hipótesis en la Sección 3.3, lo cual es un aspecto metodológico destacable:
+La tesis enuncia explícitamente dos hipótesis, lo cual es un aspecto metodológico destacable:
 
 Hipótesis 1: \textit{Las capacidades de generación de texto de GPT-3 pueden utilizarse como fuente de texto aumentado para abordar la baja disponibilidad de datos de pares etiquetados de segmentos complejos y simples, proporcionando resultados similares al usarlo para ajustar modelos.}
 
@@ -35,9 +39,11 @@ Esta hipótesis fue rechazada: se encontró una diferencia estadística clara en
 
 Hipótesis 2: \textit{El aprendizaje por transferencia en modelos pre-entrenados, usando datos aumentados, proporcionará mejoras en el rendimiento del modelo (F1-score) en comparación con modelos entrenados con datos pequeños pero generados manualmente.}
 
-Esta hipótesis fue confirmada parcialmente: la aumentación de datos beneficia al modelo únicamente cuando el conjunto semilla es muy pequeño (aproximadamente 97 segmentos). Para conjuntos semilla de tamaño mayor, agregar datos aumentados no tiene efecto estadísticamente significativo o incluso degrada el rendimiento.
+Esta hipótesis fue confirmada parcialmente: la aumentación de datos beneficia al modelo únicamente cuando el conjunto semilla es muy pequeño (aproximadamente 97 segmentos). Para conjuntos semilla de tamaño mayor, agregar datos aumentados no tiene efecto estadísticamente significativo o incluso degrada el rendimiento \cite{romero2024}.
 
 \subsection{Resumen de la metodología empleada}
+
+La metodología empleada por \cite{romero2024} se describe a continuación:
 
 \begin{itemize}
     \item \textbf{Conjunto de datos semilla:} 5.314 pares de segmentos de texto complejo/simple, extraídos de documentos de educación financiera y etiquetados manualmente por 6 anotadores humanos usando 21 atributos de simplificación. El corpus fue diseñado originalmente para personas con impedimento visual.
@@ -46,12 +52,14 @@ Esta hipótesis fue confirmada parcialmente: la aumentación de datos beneficia 
 
     \item \textbf{Modelos evaluados:} BETO (implementación española de BERT) para ajuste fino por transferencia, y RF+TF-IDF como línea base.
 
-    \item \textbf{Experimento 1 (Capítulo 4):} Comparación de las 4 fuentes de datos × 2 modelos × 20 tamaños de conjunto × validación cruzada K=10. Total: 1.600 ejecuciones. División 90\%/10\% entrenamiento/prueba.
+    \item \textbf{Experimento 1:} Comparación de las 4 fuentes de datos × 2 modelos × 20 tamaños de conjunto × validación cruzada K=10. Total: 1.600 ejecuciones. División 90\%/10\% entrenamiento/prueba.
 
-    \item \textbf{Experimento 2 (Capítulo 5):} Evaluación del impacto de la aumentación: 10 tamaños de conjunto semilla × 16 tamaños de datos aumentados × 3 repeticiones = 480 configuraciones. Validación estadística con ANOVA ($p = 0.05$).
+    \item \textbf{Experimento 2:} Evaluación del impacto de la aumentación: 10 tamaños de conjunto semilla × 16 tamaños de datos aumentados × 3 repeticiones = 480 configuraciones. Validación estadística con ANOVA ($p = 0.05$).
 \end{itemize}
 
 \subsection{Principales resultados}
+
+Los principales hallazgos reportados por \cite{romero2024} son:
 
 \begin{itemize}
     \item \textbf{Superioridad de los datos manuales:} Con BETO, el conjunto manual alcanzó F1$\approx$0.83, seguido por GPT-3 (F1$\approx$0.74), mT5 (F1$\approx$0.65) y Tuner (F1$\approx$0.55). La diferencia estadística entre todos los pares de fuentes fue confirmada (valor-$p > 0.99$), rechazando la Hipótesis 1.
