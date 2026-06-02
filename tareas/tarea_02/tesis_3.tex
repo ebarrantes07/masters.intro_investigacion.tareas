@@ -1,0 +1,80 @@
+\section{Tesis 3}
+
+\subsection{Título}
+\textit{Automatic Spanish Text Complexity} (Complejidad Automática de Texto en Español). Trabajo Final de Graduación para optar por el grado de Maestría en Computación, Instituto Tecnológico de Costa Rica, 2023.
+
+\subsection{Autor}
+Mario Alberto Romero Sandoval.
+
+\subsection{Resumen}
+La tesis propone una metodología para la detección automática de complejidad de texto en español utilizando modelos de transformers, evaluando el impacto de la calidad y cantidad de datos de entrenamiento, y explorando la aumentación de datos mediante Grandes Modelos de Lenguaje (LLMs) para paliar la escasez de pares etiquetados en español. Se utiliza BETO (implementación española de BERT) como modelo base y se compara contra un clasificador de Bosque Aleatorio con TF-IDF (\textit{RF-TF-IDF}) como línea base. Dos experimentos principales evalúan: (1) el impacto de la fuente de los datos de simplificación (manual, GPT-3, mT5 y Tuner) sobre el rendimiento del clasificador, y (2) el efecto de combinar conjuntos de datos manuales pequeños con datos aumentados de forma artificial. Los resultados muestran que los datos generados manualmente producen clasificadores significativamente superiores (F1$\approx$0.83) frente a los generados por LLMs como GPT-3 (F1$\approx$0.74), mT5 (F1$\approx$0.65) y Tuner (F1$\approx$0.55), y que la aumentación de datos solo es beneficiosa cuando el conjunto semilla es muy pequeño (aproximadamente 97 segmentos de texto).
+
+\subsection{Problema que busca resolver}
+El campo de la simplificación automática de texto en español carece de conjuntos de datos etiquetados con pares de segmentos complejos y simples, los cuales son indispensables para entrenar clasificadores modernos de aprendizaje profundo. La mayoría de los enfoques existentes se centran en inglés u otros idiomas, y no existen modelos especializados para la clasificación de complejidad textual en español. Esta escasez de datos constituye un cuello de botella fundamental para el desarrollo de herramientas que permitan a poblaciones con comprensión lectora limitada (personas con impedimento visual, lectores no especializados) acceder a información financiera o técnica compleja. La pregunta central es si la generación automática de datos de simplificación mediante LLMs puede compensar la falta de datos etiquetados por humanos.
+
+\subsection{Objetivos}
+
+\textbf{Objetivo General:} Desarrollar y evaluar métodos de detección automática de complejidad de texto en español usando aprendizaje profundo y técnicas de aumentación de datos.
+
+\textbf{Objetivos Específicos:}
+\begin{enumerate}
+    \item Construir y/o identificar fuentes de datos para entrenar un modelo de aprendizaje profundo de detección de complejidad textual en español.
+    \item Medir el impacto del tamaño del conjunto de datos y el uso de segmentos generados automáticamente en el problema de detección de complejidad textual en español.
+    \item Proponer una metodología de aumentación de datos para un clasificador de segmentos de texto usando LLMs.
+    \item Evaluar los efectos del ajuste fino (\textit{fine-tuning}) de modelos de clasificación con datos aumentados como forma de mejorar los resultados del aprendizaje por transferencia cuando se usan únicamente conjuntos de datos pequeños.
+    \item Contrastar los resultados de usar modelos pre-entrenados como BETO/BERT como base para el aprendizaje por transferencia.
+\end{enumerate}
+
+\subsection{Hipótesis}
+
+La tesis enuncia explícitamente dos hipótesis en la Sección 3.3, lo cual es un aspecto metodológico destacable:
+
+\textbf{Hipótesis 1:} \textit{Las capacidades de generación de texto de GPT-3 pueden utilizarse como fuente de texto aumentado para abordar la baja disponibilidad de datos de pares etiquetados de segmentos complejos y simples, proporcionando resultados similares al usarlo para ajustar modelos.}
+
+Esta hipótesis fue \textbf{rechazada}: se encontró una diferencia estadística clara entre todas las fuentes de datos (valor-$p > 0.99$), confirmando que los datos manuales producen modelos significativamente superiores a los entrenados con datos generados por LLMs.
+
+\textbf{Hipótesis 2:} \textit{El aprendizaje por transferencia en modelos pre-entrenados, usando datos aumentados, proporcionará mejoras en el rendimiento del modelo (F1-score) en comparación con modelos entrenados con datos pequeños pero generados manualmente.}
+
+Esta hipótesis fue \textbf{confirmada parcialmente}: la aumentación de datos beneficia al modelo únicamente cuando el conjunto semilla es muy pequeño (aproximadamente 97 segmentos). Para conjuntos semilla de tamaño mayor, agregar datos aumentados no tiene efecto estadísticamente significativo o incluso degrada el rendimiento.
+
+\subsection{Resumen de la metodología empleada}
+
+\begin{itemize}
+    \item \textbf{Conjunto de datos semilla:} 5.314 pares de segmentos de texto complejo/simple, extraídos de documentos de educación financiera y etiquetados manualmente por 6 anotadores humanos usando 21 atributos de simplificación. El corpus fue diseñado originalmente para personas con impedimento visual.
+
+    \item \textbf{Conjuntos de datos aumentados:} Se generaron tres versiones alternativas del mismo corpus: (1) \textbf{GPT-3}: simplificaciones generadas por ChatGPT de OpenAI sin instrucciones personalizadas; (2) \textbf{mT5}: modelo T5 multilingüe pre-entrenado; (3) \textbf{Tuner}: sistema de simplificación léxica basado en reglas para lenguas románicas.
+
+    \item \textbf{Modelos evaluados:} BETO (implementación española de BERT) para ajuste fino por transferencia, y RF+TF-IDF como línea base.
+
+    \item \textbf{Experimento 1 (Capítulo 4):} Comparación de las 4 fuentes de datos × 2 modelos × 20 tamaños de conjunto × validación cruzada K=10. Total: 1.600 ejecuciones. División 90\%/10\% entrenamiento/prueba.
+
+    \item \textbf{Experimento 2 (Capítulo 5):} Evaluación del impacto de la aumentación: 10 tamaños de conjunto semilla × 16 tamaños de datos aumentados × 3 repeticiones = 480 configuraciones. Validación estadística con ANOVA ($p = 0.05$).
+\end{itemize}
+
+\subsection{Principales resultados}
+
+\begin{itemize}
+    \item \textbf{Superioridad de los datos manuales:} Con BETO, el conjunto manual alcanzó F1$\approx$0.83, seguido por GPT-3 (F1$\approx$0.74), mT5 (F1$\approx$0.65) y Tuner (F1$\approx$0.55). La diferencia estadística entre todos los pares de fuentes fue confirmada (valor-$p > 0.99$), rechazando la Hipótesis 1.
+
+    \item \textbf{Saturación del modelo:} Todos los modelos alcanzan un punto de saturación alrededor de 2.000 segmentos de entrenamiento. El modelo entrenado con datos manuales continúa mejorando hasta aproximadamente 4.000 segmentos, lo que indica una mayor riqueza estructural y semántica respecto a los datos sintéticos.
+
+    \item \textbf{Aumentación útil solo en conjuntos pequeños:} La aumentación de datos con GPT-3 mejora el rendimiento del clasificador únicamente cuando el conjunto semilla contiene aproximadamente 97 segmentos. Con un conjunto semilla de 97 segmentos y 478 segmentos aumentados, se encontró diferencia estadística significativa ($p = 0.05$). Para conjuntos semilla $\geq 492$ segmentos, agregar datos aumentados provoca una degradación del rendimiento.
+
+    \item \textbf{Calidad sobre cantidad:} Los resultados muestran una tendencia clara: cuanto mejor es la fuente de datos de aumentación (Tuner $<$ mT5 $<$ GPT-3 $<$ Manual), mayor es el rendimiento máximo alcanzable. La calidad de la simplificación importa más que el volumen de datos generados.
+\end{itemize}
+
+\subsection{Crítica de la tesis}
+
+\textbf{Aspectos positivos:}
+
+El diseño experimental de la tesis es especialmente riguroso: las hipótesis están formuladas explícitamente y de forma verificable, se emplean pruebas estadísticas formales (ANOVA) para validar los resultados, y se utilizan múltiples configuraciones de datos para obtener conclusiones robustas. La innovación de explorar LLMs como fuentes de datos aumentados para NLP en español es relevante y oportuna. El corpus semilla, construido con 21 atributos de simplificación y anotadores humanos especializados, es una contribución metodológica significativa. La elección de BETO como modelo base es bien justificada y la comparación contra RF-TF-IDF como línea base es apropiada.
+
+\textbf{Aspectos negativos o mejorables:}
+
+En primer lugar, el documento está escrito íntegramente en inglés, lo cual es inusual para un trabajo de graduación de una institución costarricense cuya audiencia natural es hispanohablante y cuyo dominio de aplicación es precisamente el español. Esta decisión no se justifica en el texto.
+
+En segundo lugar, el corpus de evaluación proviene exclusivamente de documentos de educación financiera, lo que restringe significativamente la generalización de los resultados a otros dominios como salud, educación o tecnología. No se puede saber si los hallazgos se mantienen para textos de dominios distintos.
+
+En tercer lugar, GPT-3 se utilizó para generar simplificaciones sin ninguna instrucción personalizada ni las 21 reglas de simplificación empleadas por los anotadores humanos. Es posible que resultados más favorables se hubieran obtenido con \textit{prompting} especializado, lo que significa que la hipótesis 1 podría haberse explorado con mayor equidad metodológica.
+
+Finalmente, la tesis no incluye análisis de error cualitativo, matrices de confusión por clase ni ejemplos de segmentos mal clasificados, lo que dificulta entender en qué tipos de textos falla el modelo. Tampoco se valida el sistema con usuarios finales (personas con impedimento visual) para confirmar que el clasificador efectivamente apoya la tarea de simplificación en la práctica.

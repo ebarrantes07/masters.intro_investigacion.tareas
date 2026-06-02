@@ -1,0 +1,77 @@
+\section{Tesis 2}
+
+\subsection{Título}
+\textit{Adaptive Intelligent User Interfaces With Emotion Recognition} (Interfaces de Usuario Inteligentes y Adaptativas con Reconocimiento de Emociones).
+
+\subsection{Autor}
+Fatma Nasoz. Disertación doctoral presentada en la School of Computer Science, College of Engineering and Computer Science, University of Central Florida, Orlando, Florida. Verano 2004. Directora de tesis: Dr. Christine L. Lisetti.
+
+\subsection{Resumen}
+``El enfoque de esta disertación es la creación de Interfaces de Usuario Inteligentes y Adaptativas para facilitar una comunicación natural y enriquecida durante la Interacción Humano-Computadora, reconociendo los estados afectivos de los usuarios (es decir, las emociones experimentadas por ellos) y respondiendo a esas emociones mediante la adaptación a la situación actual a través de un modelo de usuario afectivo creado para cada usuario. Se diseñaron y realizaron experimentos controlados en un entorno de laboratorio y en un entorno de Realidad Virtual para recolectar señales de datos fisiológicos de participantes que experimentaban emociones específicas. Se implementaron algoritmos (k-Vecinos más Cercanos [KNN], Análisis de Función Discriminante [DFA], Retropropagación de Marquardt [MBP] y Retropropagación Resiliente [RBP]) para analizar las señales de datos recolectadas y encontrar patrones fisiológicos únicos de las emociones. Se realizó un Experimento de Elicitación de Emociones con Clips de Películas para elicitar Tristeza, Enojo, Sorpresa, Miedo, Frustración y Diversión de los participantes. En general, los tres algoritmos KNN, DFA y MBP pudieron reconocer emociones con una precisión del 72.3\%, 75.0\% y 84.1\%, respectivamente. Se realizó un experimento en un Simulador de Conducción para elicitar emociones relacionadas con la conducción (pánico/miedo, frustración/enojo y aburrimiento/somnolencia). Los algoritmos KNN, MBP y RBP se utilizaron para clasificar las señales fisiológicas por emociones correspondientes. En general, KNN pudo clasificar estas tres emociones con un 66.3\%, MBP con un 76.7\% y RBP con un 91.9\% de precisión. La adaptación de la interfaz se diseñó para proporcionar retroalimentación multimodal a los usuarios sobre su estado afectivo actual y para responder a los estados emocionales negativos de los usuarios con el fin de disminuir los posibles impactos negativos de esas emociones. Se empleó la formalización de Redes de Creencias Bayesianas para desarrollar el Modelo de Usuario que permite al sistema inteligente adaptarse apropiadamente al contexto y situación actuales considerando factores dependientes del usuario, como rasgos de personalidad y preferencias.''
+
+\subsection{Problema que busca resolver}
+La tesis aborda la brecha fundamental que existe en la Interacción Humano-Computadora (HCI): los sistemas informáticos son incapaces de percibir y responder a los estados emocionales de sus usuarios. Los seres humanos son afectados continuamente por sus emociones, las cuales influyen en procesos cognitivos clave como el aprendizaje, la toma de decisiones, la motivación y el desempeño. Sin embargo, las interfaces digitales convencionales ignoran completamente esta dimensión afectiva.
+
+El problema se manifiesta con especial gravedad en tres dominios de aplicación: (1) la \textbf{seguridad vial}, donde emociones como el enojo, la frustración y la somnolencia son causas principales de accidentes de tránsito; (2) el \textbf{aprendizaje y entrenamiento}, donde la ansiedad y la frustración reducen la capacidad de aprender y la autoeficacia; y (3) la \textbf{telemedicina}, donde la ausencia de canales afectivos en la comunicación médico-paciente remota dificulta el diagnóstico y el tratamiento. En todos estos contextos, una interfaz que pueda reconocer las emociones del usuario y adaptarse en consecuencia mejoraría significativamente la experiencia, la seguridad y los resultados.
+
+\subsection{Objetivos}
+
+\textbf{Objetivo General:} Diseñar y construir un Sistema Inteligente Adaptativo que reconozca los estados afectivos de sus usuarios a partir de señales fisiológicas no invasivas y que, mediante un modelo de usuario, adapte la interfaz de forma personalizada para mejorar la Interacción Humano-Computadora en aplicaciones de seguridad vial, entrenamiento y telemedicina.
+
+\textbf{Objetivos Específicos:}
+\begin{enumerate}
+    \item Diseñar experimentos controlados para elicitar emociones específicas, recolectar señales fisiológicas de los participantes y registrar sus expresiones faciales; incluyendo un experimento en laboratorio con estímulos multimodales y un experimento de simulador de conducción en Realidad Virtual.
+    \item Analizar las señales fisiológicas medidas implementando algoritmos de aprendizaje automático (KNN, DFA, MBP, RBP) para identificar patrones fisiológicos únicos asociados a cada emoción.
+    \item Utilizar los patrones identificados para reconocer las emociones del usuario y desarrollar interfaces de usuario afectivas inteligentes que proporcionen retroalimentación apropiada sobre el estado emocional del usuario.
+    \item Crear modelos de usuario e integrarlos con las interfaces desarrolladas, empleando Redes de Creencias Bayesianas, para adaptar el sistema a la emoción, la personalidad, la edad y el género del usuario en el contexto y la aplicación actuales.
+\end{enumerate}
+
+\subsection{Hipótesis}
+
+La hipótesis no se enuncia de manera explícita en la tesis. Sin embargo, mediante ingeniería inversa a partir de los experimentos realizados, se puede inferir la siguiente hipótesis subyacente: \textit{Las señales fisiológicas del Sistema Nervioso Autónomo (respuesta galvánica de la piel, frecuencia cardíaca y temperatura cutánea), capturadas mediante dispositivos portátiles no invasivos, contienen patrones únicos para cada emoción que pueden ser identificados por algoritmos de aprendizaje automático con suficiente precisión como para alimentar un sistema adaptativo de interfaz de usuario que, al integrar un modelo de usuario basado en Redes de Creencias Bayesianas, sea capaz de elegir respuestas personalizadas apropiadas al estado emocional del usuario.}
+
+Esta hipótesis habría sido refutada si los algoritmos de aprendizaje automático hubieran mostrado precisiones cercanas al azar (es decir, alrededor del 16.7\% para seis clases), o si los patrones fisiológicos encontrados no hubieran sido estadísticamente distinguibles entre emociones. Los resultados confirmaron la hipótesis: el mejor algoritmo (MBP) alcanzó el 84.1\% de precisión en el experimento de laboratorio y RBP alcanzó el 91.9\% en el experimento de conducción, muy por encima del nivel aleatorio.
+
+\subsection{Resumen de la metodología empleada}
+
+La investigación empleó una metodología experimental en dos fases, apoyada en el sistema MAUI (\textit{Multimodal Affective User Interface}), herramienta de investigación desarrollada en el laboratorio de la directora de tesis.
+
+\begin{itemize}
+    \item \textbf{Instrumentación:} Se utilizó la pulsera BodyMedia SenseWear Armband (dispositivo portátil inalámbrico no invasivo) junto con la banda pectoral Polar para recolectar señales fisiológicas: Respuesta Galvánica de la Piel (GSR), Frecuencia Cardíaca, Temperatura, Movimiento y Flujo de Calor.
+
+    \item \textbf{Experimento 1 --- Elicitación de emociones con clips de películas:} Se realizó un estudio piloto con 20 participantes para seleccionar los clips más efectivos de la base de datos de Gross y Levenson. Posteriormente se recolectaron datos de participantes expuestos a seis emociones (Tristeza, Enojo, Sorpresa, Miedo, Frustración y Diversión) mediante estímulos multimodales (videos, imágenes, música y problemas matemáticos). Los datos se analizaron con tres algoritmos: KNN, DFA y MBP.
+
+    \item \textbf{Experimento 2 --- Simulador de conducción en Realidad Virtual:} Se diseñó un escenario de conducción virtual con eventos de tráfico que inducían tres emociones relacionadas con la conducción: Pánico/Miedo, Frustración/Enojo y Aburrimiento/Somnolencia. Se añadió el algoritmo RBP (Retropropagación Resiliente) como alternativa al MBP, con una arquitectura de red neuronal de 12 nodos de entrada (características extraídas), 17 nodos en la capa oculta y 3 nodos de salida.
+
+    \item \textbf{Modelado de usuario:} Se emplearon Redes de Creencias Bayesianas (BBN) implementadas en Visual C++ usando la API Netica para modelar al usuario. El modelo incluye como nodos: la emoción reconocida, los rasgos de personalidad (Modelo de Cinco Factores: Neuroticismo, Extraversión, Apertura, Amabilidad y Consciencia), la edad, el género, la frecuencia de experimentar la emoción y la acción óptima de la interfaz. El modelo permite que el sistema adapte su respuesta de forma personalizada.
+\end{itemize}
+
+\subsection{Principales resultados}
+
+\begin{itemize}
+    \item \textbf{Experimento 1 (6 emociones, laboratorio):} Los tres algoritmos lograron clasificar exitosamente las emociones a partir de señales fisiológicas. KNN obtuvo 72.3\%, DFA 75.0\% y MBP 84.1\% de precisión global, todos muy por encima del nivel aleatorio (16.7\% para 6 clases).
+
+    \item \textbf{Experimento 2 (3 emociones relacionadas con conducción, Realidad Virtual):} El algoritmo RBP demostró ser el más eficaz, alcanzando 91.9\% de precisión global, superando a MBP (76.7\%) y KNN (66.3\%). Por emoción, RBP clasificó Pánico/Miedo con 89.7\%, Frustración/Enojo con 96.7\% y Aburrimiento/Somnolencia con 88.9\%.
+
+    \item \textbf{Superioridad de RBP:} Para el problema de reconocimiento de emociones relacionadas con la conducción, el algoritmo RBP demostró consistentemente mayor capacidad de generalización que MBP, siendo su adopción una de las contribuciones metodológicas clave de la tesis.
+
+    \item \textbf{Modelo de usuario con BBN:} El sistema demostró su capacidad de seleccionar acciones de interfaz diferenciadas según la combinación de emoción reconocida, personalidad, edad y género. Por ejemplo, ante un conductor enojado mayor de 25 años, mujer y con rasgo de Consciencia alto, la acción óptima elegida fue sugerir una técnica de relajación (74.3\%); mientras que para un conductor enojado menor de 25 años, hombre y con rasgo Neurótico, la acción elegida fue hacer un chiste (58.1\%).
+
+    \item \textbf{Sistema MAUI funcional:} Se implementó y demostró el sistema completo con avatar antropomórfico capaz de espejear las emociones del usuario (felicidad, tristeza, enojo), reconocer al usuario por su cara y adaptar la interfaz a sus preferencias previamente almacenadas.
+\end{itemize}
+
+\subsection{Crítica de la tesis}
+
+\textbf{Aspectos positivos:}
+
+La tesis presenta una propuesta ambiciosa e integradora que combina de forma coherente múltiples disciplinas: aprendizaje automático, psicología de las emociones, Realidad Virtual y modelado de usuario. El alcance del trabajo es notable: no se limita a reconocer emociones, sino que cierra el ciclo completo hasta la adaptación de la interfaz, lo cual le otorga un valor práctico evidente. El uso de la pulsera BodyMedia SenseWear es un aporte metodológico destacado; según la propia autora, fue el primer grupo de investigación en utilizarla con fines de reconocimiento de emociones. La inclusión de un experimento en Realidad Virtual (simulador de conducción) es también una fortaleza, ya que aporta validez ecológica adicional. La estructura de la tesis es clara y sigue una progresión lógica bien construida.
+
+\textbf{Aspectos negativos o mejorables:}
+
+En primer lugar, la hipótesis nunca se enuncia de forma explícita, lo que dificulta evaluar con precisión qué estaba probando la investigación. Una tesis doctoral debe formular claramente sus afirmaciones verificables. En segundo lugar, los tamaños de muestra son reducidos y no se reportan con detalle suficiente en todas las secciones; esto limita la validez estadística de los resultados y su generalización a poblaciones más amplias.
+
+En tercer lugar, el modelo de usuario con Redes de Creencias Bayesianas se presenta como funcional, pero la autora reconoce que las probabilidades condicionales del modelo no fueron calibradas por expertos en psicología ni en seguridad vial, sino que se utilizaron valores arbitrarios para demostrar la viabilidad del enfoque. Esto es una limitación importante que no siempre queda clara para el lector no experto.
+
+En cuarto lugar, el Capítulo 6 se denomina ``Visualización de los Resultados'' (\textit{Visualization of the Results}), lo que resulta confuso: en realidad es una descripción de las capacidades del sistema MAUI con capturas de pantalla, más que una presentación analítica de resultados. Esta denominación no sigue la convención estándar de tesis y puede inducir a error.
+
+Finalmente, la tesis no incluye ninguna discusión sobre las implicaciones éticas del monitoreo continuo de señales fisiológicas y emocionales de los usuarios, aspecto que resulta relevante incluso para un trabajo del año 2004 y que ha adquirido mucha mayor importancia en la actualidad, dado el contexto de vigilancia digital y privacidad de datos. Esta omisión representa una debilidad de contenido que no está justificada por las limitaciones del área de conocimiento de la época.
