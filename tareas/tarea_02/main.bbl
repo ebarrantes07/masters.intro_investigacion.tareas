@@ -16,5 +16,113 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global/global}\enddatalist
+\datalist[entry]{none/global//global/global/global}
+  \entry{shomoye2024}{thesis}{}{}
+    \name{author}{1}{}{%
+      {{hash=SMA}{%
+         family={Shomoye},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima Abidemi},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMA1}
+    \strng{fullhash}{SMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Exploring Emotion Recognition of Students in Virtual Reality
+  Classrooms Through Convolutional Neural Networks and Transfer Learning
+  Techniques}
+    \list{location}{1}{%
+      {Calgary, Alberta, Canada}%
+    }
+    \list{institution}{1}{%
+      {University of Calgary}%
+    }
+    \field{type}{Master of Science Thesis}
+    \field{month}{01}
+    \field{year}{2024}
+  \endentry
+
+  \entry{nasoz2004}{thesis}{}{}
+    \name{author}{1}{}{%
+      {{hash=NF}{%
+         family={Nasoz},
+         familyi={N\bibinitperiod},
+         given={Fatma},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NF1}
+    \strng{fullhash}{NF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Adaptive Intelligent User Interfaces With Emotion
+  Recognition}
+    \verb{url}
+    \verb https://stars.library.ucf.edu/etd/146
+    \endverb
+    \list{location}{1}{%
+      {Orlando, Florida, USA}%
+    }
+    \list{institution}{1}{%
+      {University of Central Florida}%
+    }
+    \field{type}{phdthesis}
+    \field{month}{08}
+    \field{year}{2004}
+  \endentry
+
+  \entry{romero2024}{thesis}{}{}
+    \name{author}{1}{}{%
+      {{hash=RSMA}{%
+         family={Romero\bibnamedelima Sandoval},
+         familyi={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={Mario\bibnamedelima Alberto},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RSMA1}
+    \strng{fullhash}{RSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Automatic Spanish Text Complexity Detection in Financial
+  Documents with Low Data Availability}
+    \list{location}{1}{%
+      {San José, Costa Rica}%
+    }
+    \list{institution}{1}{%
+      {Instituto Tecnológico de Costa Rica}%
+    }
+    \field{type}{Tesis de Maestría en Computación}
+    \field{month}{05}
+    \field{year}{2024}
+  \endentry
+
+  \entry{arias2024}{thesis}{}{}
+    \name{author}{1}{}{%
+      {{hash=ACC}{%
+         family={Arias\bibnamedelima Chaves},
+         familyi={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={Cristian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ACC1}
+    \strng{fullhash}{ACC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Método para la administración de cargas de trabajo de
+  computación paralela en un clúster de Kubernetes}
+    \list{location}{1}{%
+      {San José, Costa Rica}%
+    }
+    \list{institution}{1}{%
+      {Instituto Tecnológico de Costa Rica}%
+    }
+    \field{type}{Tesis de Magíster Scientiae en Computación}
+    \field{month}{06}
+    \field{year}{2024}
+  \endentry
+\enddatalist
 \endinput
