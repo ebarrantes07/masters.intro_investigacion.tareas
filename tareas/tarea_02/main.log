@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.23)  1 JUN 2026 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.23)  1 JUN 2026 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -989,7 +989,11 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
  (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[6] [7]) (./declaracion_transparencia.tex) [8]
+[6]
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+ [7])
+(./declaracion_transparencia.tex) [8]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1013,25 +1017,18 @@ LaTeX Info: Redefining \% on input line 16.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 5951EBAAEA7F785B2EE43BEDF946C5FB;2669
-(rerunfilecheck)             After:  50B4C3DA6EC1BA54424341C578E30AA7;5347.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 50B4C3DA6EC1BA54424341C578E30AA7;5347.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22008 strings out of 467341
- 384710 string characters out of 5415369
+ 22022 strings out of 467341
+ 384879 string characters out of 5415369
  1046953 words of memory out of 5000000
- 50781 multiletter control sequences out of 15000+600000
- 660723 words of font info for 100 fonts, out of 8000000 for 9000
+ 50797 multiletter control sequences out of 15000+600000
+ 658520 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,79p,2365b,2005s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1039,13 +1036,12 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/local/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loca
 l/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texm
-f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fon
-ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 147287 bytes).
+2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 138559 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
+ 286 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
  77 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

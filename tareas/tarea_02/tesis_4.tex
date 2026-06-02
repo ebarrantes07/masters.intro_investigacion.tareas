@@ -1,10 +1,10 @@
 \section{Tesis 4}
 
 \subsection{Título}
-\textit{Diseño e implementación de un método para la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes} (Design and Implementation of a Method for Running MPI-Based Parallel Computing Applications in a Kubernetes Cluster). Trabajo Final de Graduación para optar por el grado de Licenciatura en Ingeniería en Ciencias de la Computación e Informática, Universidad de Costa Rica, 2024.
+\textit{Diseño e implementación de un método para la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes}.
 
 \subsection{Autor}
-Cristian Arias Chaves.
+Cristian Arias Chaves, Universidad de Costa Rica.
 
 \subsection{Resumen}
 La tesis diseña, implementa y valida un método para ejecutar aplicaciones de computación paralela basadas en MPI (\textit{Message Passing Interface}) dentro de un clúster de Kubernetes. El método resuelve los requisitos técnicos de MPI en un entorno contenedorizado (IPs y DNS estables, almacenamiento compartido, ambiente de ejecución uniforme) mediante una combinación de recursos nativos de Kubernetes: \textit{StatefulSets}, servicios \textit{headless}, volúmenes persistentes con BeeGFS e imágenes de contenedor auto-contenidas. El método es automatizado mediante un Operador de Kubernetes desarrollado en Go usando el \textit{Operator SDK}, con dos Definiciones de Recursos Personalizados (CRDs): \texttt{MpiCluster} y \texttt{MpiJob}. La validación se realiza mediante cuatro experimentos: prueba funcional básica (``Hola Mundo'' de MPI), medición del tiempo de creación del clúster, medición del rendimiento de entrada/salida de red y disco, y evaluación del rendimiento de ejecución de aplicaciones con los \textit{benchmarks} MiniFE, MiniMD y MiniXyce de la suite Mantevo. Los tres tipos de imágenes de contenedor probadas (MPICH, OpenMPI y MPICH+SLURM) demuestran que el clúster de trabajo en Kubernetes puede crearse en aproximadamente 21 segundos por nodo, con rendimientos de E/S y de ejecución de aplicaciones superiores al 70\% del rendimiento de un clúster físico equivalente en todos los casos.
@@ -14,9 +14,9 @@ Los clústeres HPC (\textit{High Performance Computing}) tradicionales son infra
 
 \subsection{Objetivos}
 
-\textbf{Objetivo General:} Diseñar e implementar un método que permita la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes, con un rendimiento de E/S y de ejecución de aplicaciones no inferior al 70\% respecto a un clúster físico equivalente, y con un tiempo de creación e inicialización de cada nodo del clúster de trabajo no superior a 1 minuto.
+Objetivo General: Diseñar e implementar un método que permita la ejecución de aplicaciones de computación paralela basadas en MPI en un clúster de Kubernetes, con un rendimiento de E/S y de ejecución de aplicaciones no inferior al 70\% respecto a un clúster físico equivalente, y con un tiempo de creación e inicialización de cada nodo del clúster de trabajo no superior a 1 minuto.
 
-\textbf{Objetivos Específicos:}
+Objetivos Específicos:
 \begin{enumerate}
     \item Identificar los requisitos técnicos para la correcta ejecución de aplicaciones MPI en un sistema distribuido y determinar los recursos de Kubernetes más adecuados para satisfacerlos.
     \item Diseñar e implementar el método propuesto usando recursos nativos de Kubernetes (\textit{StatefulSet}, servicio \textit{headless}, volumen persistente, \textit{namespace}, cuotas de recursos) e imágenes de contenedor auto-contenidas.
@@ -31,11 +31,11 @@ Los clústeres HPC (\textit{High Performance Computing}) tradicionales son infra
 La tesis formula explícitamente tres hipótesis cuantitativas en el Capítulo 1, lo que permite una evaluación objetiva de los resultados:
 
 \begin{enumerate}
-    \item \textit{El tiempo de creación e inicialización de cada nodo del clúster de trabajo no superará 1 minuto (60 segundos), y el tiempo total para iniciar la ejecución de una aplicación de computación paralela será igual o menor a $1 \times N$ minutos, donde $N$ es el número de nodos del clúster de trabajo.} \textbf{Confirmada}: el tiempo promedio fue de aproximadamente 21 segundos por nodo para las tres imágenes evaluadas.
+    \item \textit{El tiempo de creación e inicialización de cada nodo del clúster de trabajo no superará 1 minuto (60 segundos), y el tiempo total para iniciar la ejecución de una aplicación de computación paralela será igual o menor a $1 \times N$ minutos, donde $N$ es el número de nodos del clúster de trabajo.} Confirmada: el tiempo promedio fue de aproximadamente 21 segundos por nodo para las tres imágenes evaluadas.
 
-    \item \textit{El rendimiento de entrada/salida de disco y red en los nodos del clúster de trabajo de Kubernetes superará el 70\% del rendimiento alcanzado en los nodos del clúster físico de Vultr.} \textbf{Confirmada}: el rendimiento de disco fue siempre superior al 70\% (la mayoría de nodos superó el 90\%) y el rendimiento de red superó incluso el 100\% del clúster físico en todos los nodos.
+    \item \textit{El rendimiento de entrada/salida de disco y red en los nodos del clúster de trabajo de Kubernetes superará el 70\% del rendimiento alcanzado en los nodos del clúster físico de Vultr.} Confirmada: el rendimiento de disco fue siempre superior al 70\% (la mayoría de nodos superó el 90\%) y el rendimiento de red superó incluso el 100\% del clúster físico en todos los nodos.
 
-    \item \textit{El rendimiento de ejecución de aplicaciones de computación paralela basadas en MPI en el clúster de trabajo de Kubernetes superará el 70\% del rendimiento alcanzado en el clúster físico de Vultr.} \textbf{Confirmada}: todos los benchmarks alcanzaron rendimientos promedios superiores al 84\% en escalamiento fuerte y al 91\% en escalamiento débil.
+    \item \textit{El rendimiento de ejecución de aplicaciones de computación paralela basadas en MPI en el clúster de trabajo de Kubernetes superará el 70\% del rendimiento alcanzado en el clúster físico de Vultr.} Confirmada: todos los benchmarks alcanzaron rendimientos promedios superiores al 84\% en escalamiento fuerte y al 91\% en escalamiento débil.
 \end{enumerate}
 
 Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran superado 60 segundos, si el rendimiento de E/S o de ejecución hubiera caído por debajo del 70\%, o si el sistema hubiera fallado en ejecutar correctamente las aplicaciones MPI.
@@ -81,11 +81,11 @@ Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran
 
 \subsection{Crítica de la tesis}
 
-\textbf{Aspectos positivos:}
+Aspectos positivos:
 
 La tesis es un trabajo de ingeniería altamente práctico, bien ejecutado y con una contribución concreta y funcional: el operador de Kubernetes desarrollado está disponible públicamente en GitHub, lo que permite que otros investigadores e ingenieros puedan replicar y extender el trabajo. Las hipótesis son cuantitativas y verificables desde el inicio, y los experimentos están cuidadosamente diseñados con múltiples repeticiones, cálculo de desviaciones estándar y coeficientes de variación que demuestran la robustez de los resultados. La elección de BeeGFS como solución de almacenamiento compartido de alta velocidad está bien justificada frente a NFS (descartado por problemas de rendimiento en HPC). El ciclo completo de diseño, implementación, validación y benchmarking comparativo es coherente y bien documentado.
 
-\textbf{Aspectos negativos o mejorables:}
+Aspectos de posible mejora:
 
 En primer lugar, la comparación se realiza únicamente contra el mismo proveedor de nube (Vultr) sin Kubernetes, y no contra implementaciones alternativas como Slurm en hardware dedicado, \textit{Kubeflow MPI Operator} u otras soluciones ya existentes para MPI en Kubernetes. Esto limita el posicionamiento del trabajo en el estado del arte y no permite saber si el método propuesto es competitivo frente a enfoques previos.
 
