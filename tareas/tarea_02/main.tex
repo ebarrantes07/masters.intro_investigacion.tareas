@@ -1,0 +1,75 @@
+\documentclass[conference]{IEEEtran}
+
+% Paquetes necesarios
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{watermark}
+\usepackage{subfig}
+
+\allowdisplaybreaks
+
+% Paquetes para bibliografía
+\usepackage[hyphens]{url}
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex} % cambió a bibtex para evitar necesidad de biber
+
+% Especificar el archivo de bibliografía
+\addbibresource{referencias.bib}
+
+% Paquete para enlaces
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=red]{hyperref}
+
+% Configuración de idioma y codificación
+\selectlanguage{spanish}
+
+% Información del documento
+\title{Introducción a la Investigación\\Tarea 2: Tesis de Maestría}
+
+\author{
+    \IEEEauthorblockN{Emmanuel Barrantes Vargas}
+    \IEEEauthorblockN{Isaac Francisco Moreno Fuentes}\\
+    \IEEEauthorblockA{Tecnológico de Costa Rica\\
+                      Maestría en Ciencias de la Computación}
+}
+
+\begin{document}
+
+% Título
+\maketitle
+
+% Abstract
+\begin{abstract}
+ 
+\end{abstract}
+
+% Palabras clave
+\begin{IEEEkeywords}
+
+\end{IEEEkeywords}
+
+% Incluir todas las secciones
+\input{tesis_1}
+\input{tesis_2}
+\input{tesis_3}
+\input{tesis_4}
+
+\newpage
+\input{declaracion_transparencia}
+\newpage
+
+% Bibliografía
+%\nocite{*}
+%\printbibliography
+
+\end{document}
