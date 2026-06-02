@@ -4,7 +4,7 @@
 \textit{Adaptive Intelligent User Interfaces With Emotion Recognition} (Interfaces de Usuario Inteligentes y Adaptativas con Reconocimiento de Emociones).
 
 \subsection{Autor}
-Fatma Nasoz. Disertación doctoral presentada en la School of Computer Science, College of Engineering and Computer Science, University of Central Florida, Orlando, Florida. Verano 2004. Directora de tesis: Dr. Christine L. Lisetti.
+Fatma Nasoz, University of Central Florida.
 
 \subsection{Resumen}
 ``El enfoque de esta disertación es la creación de Interfaces de Usuario Inteligentes y Adaptativas para facilitar una comunicación natural y enriquecida durante la Interacción Humano-Computadora, reconociendo los estados afectivos de los usuarios (es decir, las emociones experimentadas por ellos) y respondiendo a esas emociones mediante la adaptación a la situación actual a través de un modelo de usuario afectivo creado para cada usuario. Se diseñaron y realizaron experimentos controlados en un entorno de laboratorio y en un entorno de Realidad Virtual para recolectar señales de datos fisiológicos de participantes que experimentaban emociones específicas. Se implementaron algoritmos (k-Vecinos más Cercanos [KNN], Análisis de Función Discriminante [DFA], Retropropagación de Marquardt [MBP] y Retropropagación Resiliente [RBP]) para analizar las señales de datos recolectadas y encontrar patrones fisiológicos únicos de las emociones. Se realizó un Experimento de Elicitación de Emociones con Clips de Películas para elicitar Tristeza, Enojo, Sorpresa, Miedo, Frustración y Diversión de los participantes. En general, los tres algoritmos KNN, DFA y MBP pudieron reconocer emociones con una precisión del 72.3\%, 75.0\% y 84.1\%, respectivamente. Se realizó un experimento en un Simulador de Conducción para elicitar emociones relacionadas con la conducción (pánico/miedo, frustración/enojo y aburrimiento/somnolencia). Los algoritmos KNN, MBP y RBP se utilizaron para clasificar las señales fisiológicas por emociones correspondientes. En general, KNN pudo clasificar estas tres emociones con un 66.3\%, MBP con un 76.7\% y RBP con un 91.9\% de precisión. La adaptación de la interfaz se diseñó para proporcionar retroalimentación multimodal a los usuarios sobre su estado afectivo actual y para responder a los estados emocionales negativos de los usuarios con el fin de disminuir los posibles impactos negativos de esas emociones. Se empleó la formalización de Redes de Creencias Bayesianas para desarrollar el Modelo de Usuario que permite al sistema inteligente adaptarse apropiadamente al contexto y situación actuales considerando factores dependientes del usuario, como rasgos de personalidad y preferencias.''
@@ -12,13 +12,13 @@ Fatma Nasoz. Disertación doctoral presentada en la School of Computer Science, 
 \subsection{Problema que busca resolver}
 La tesis aborda la brecha fundamental que existe en la Interacción Humano-Computadora (HCI): los sistemas informáticos son incapaces de percibir y responder a los estados emocionales de sus usuarios. Los seres humanos son afectados continuamente por sus emociones, las cuales influyen en procesos cognitivos clave como el aprendizaje, la toma de decisiones, la motivación y el desempeño. Sin embargo, las interfaces digitales convencionales ignoran completamente esta dimensión afectiva.
 
-El problema se manifiesta con especial gravedad en tres dominios de aplicación: (1) la \textbf{seguridad vial}, donde emociones como el enojo, la frustración y la somnolencia son causas principales de accidentes de tránsito; (2) el \textbf{aprendizaje y entrenamiento}, donde la ansiedad y la frustración reducen la capacidad de aprender y la autoeficacia; y (3) la \textbf{telemedicina}, donde la ausencia de canales afectivos en la comunicación médico-paciente remota dificulta el diagnóstico y el tratamiento. En todos estos contextos, una interfaz que pueda reconocer las emociones del usuario y adaptarse en consecuencia mejoraría significativamente la experiencia, la seguridad y los resultados.
+El problema se manifiesta con especial gravedad en tres dominios de aplicación: (1) la seguridad vial, donde emociones como el enojo, la frustración y la somnolencia son causas principales de accidentes de tránsito; (2) el aprendizaje y entrenamiento, donde la ansiedad y la frustración reducen la capacidad de aprender y la autoeficacia; y (3) la telemedicina, donde la ausencia de canales afectivos en la comunicación médico-paciente remota dificulta el diagnóstico y el tratamiento. En todos estos contextos, una interfaz que pueda reconocer las emociones del usuario y adaptarse en consecuencia mejoraría significativamente la experiencia, la seguridad y los resultados.
 
 \subsection{Objetivos}
 
-\textbf{Objetivo General:} Diseñar y construir un Sistema Inteligente Adaptativo que reconozca los estados afectivos de sus usuarios a partir de señales fisiológicas no invasivas y que, mediante un modelo de usuario, adapte la interfaz de forma personalizada para mejorar la Interacción Humano-Computadora en aplicaciones de seguridad vial, entrenamiento y telemedicina.
+Objetivo General: Diseñar y construir un Sistema Inteligente Adaptativo que reconozca los estados afectivos de sus usuarios a partir de señales fisiológicas no invasivas y que, mediante un modelo de usuario, adapte la interfaz de forma personalizada para mejorar la Interacción Humano-Computadora en aplicaciones de seguridad vial, entrenamiento y telemedicina.
 
-\textbf{Objetivos Específicos:}
+Objetivos Específicos:
 \begin{enumerate}
     \item Diseñar experimentos controlados para elicitar emociones específicas, recolectar señales fisiológicas de los participantes y registrar sus expresiones faciales; incluyendo un experimento en laboratorio con estímulos multimodales y un experimento de simulador de conducción en Realidad Virtual.
     \item Analizar las señales fisiológicas medidas implementando algoritmos de aprendizaje automático (KNN, DFA, MBP, RBP) para identificar patrones fisiológicos únicos asociados a cada emoción.
@@ -62,11 +62,11 @@ La investigación empleó una metodología experimental en dos fases, apoyada en
 
 \subsection{Crítica de la tesis}
 
-\textbf{Aspectos positivos:}
+Aspectos positivos:
 
 La tesis presenta una propuesta ambiciosa e integradora que combina de forma coherente múltiples disciplinas: aprendizaje automático, psicología de las emociones, Realidad Virtual y modelado de usuario. El alcance del trabajo es notable: no se limita a reconocer emociones, sino que cierra el ciclo completo hasta la adaptación de la interfaz, lo cual le otorga un valor práctico evidente. El uso de la pulsera BodyMedia SenseWear es un aporte metodológico destacado; según la propia autora, fue el primer grupo de investigación en utilizarla con fines de reconocimiento de emociones. La inclusión de un experimento en Realidad Virtual (simulador de conducción) es también una fortaleza, ya que aporta validez ecológica adicional. La estructura de la tesis es clara y sigue una progresión lógica bien construida.
 
-\textbf{Aspectos negativos o mejorables:}
+Aspectos de posible mejora:
 
 En primer lugar, la hipótesis nunca se enuncia de forma explícita, lo que dificulta evaluar con precisión qué estaba probando la investigación. Una tesis doctoral debe formular claramente sus afirmaciones verificables. En segundo lugar, los tamaños de muestra son reducidos y no se reportan con detalle suficiente en todas las secciones; esto limita la validez estadística de los resultados y su generalización a poblaciones más amplias.
 
