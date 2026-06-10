@@ -2,7 +2,7 @@ PWD /Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/isaac/Repos/masters.intro_investigacion.tareas/tareas/tarea_02/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls

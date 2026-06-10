@@ -29,12 +29,12 @@ Objetivos Específicos (inferidos):
 La hipótesis no se encuentra explícitamente en el texto pero se infiere que un modelo de Red Neuronal Convolucional (basado en ResNet50) que utilice aprendizaje por transferencia y se centre en las características de la mitad inferior del rostro podría superar las limitaciones de oclusión de los visores de RV y clasificar con precisión estados emocionales clave del estudiante. Los resultados comprobaron esta hipótesis: el modelo personalizado no solo superó a la versión predeterminada de ResNet50 y a otros modelos, sino que también demostró una alta capacidad para distinguir el aburrimiento de la neutralidad tanto en rostros completos como ocluidos \cite{shomoye2024}.
 
 \subsection{Resumen de la metodología empleada}
-La investigación empleó un enfoque de aprendizaje supervisado y aprendizaje por transferencia utilizando la arquitectura ResNet50 pre-entrenada con ImageNet. Se utilizaron dos fuentes de datos: el conjunto público AffectNet y un conjunto personalizado recolectado por el equipo mediante un estudio con 30 participantes para simular un aula de RV. La metodología incluyó \cite{shomoye2024}:
+La investigación tomó una red neuronal preentrenada (ResNet50) y la adaptó para reconocer emociones faciales en el contexto específico de aulas de Realidad Virtual. Se usaron dos fuentes de imágenes: una base de datos pública de expresiones faciales (AffectNet) y un conjunto propio recolectado con 30 participantes en un entorno simulado. La metodología incluyó \cite{shomoye2024}:
 
 \begin{itemize}
-    \item \textbf{Preprocesamiento:} Conversión de imágenes a escala de grises para reducir la carga computacional y resaltar formas; y uso de la librería dlib para detectar 68 puntos de referencia faciales y recortar el área del rostro (rostro completo y mitad inferior para simular oclusión) \cite{shomoye2024}.
-    \item \textbf{Arquitectura:} Se modificó ResNet50 descongelando los bloques 4 y 5 para un ajuste fino (\textit{fine-tuning}). Se añadieron capas de Dropout (0.5 y 0.6) y regularización L2 para controlar el sobreajuste (\textit{overfitting}) \cite{shomoye2024}.
-    \item \textbf{Entrenamiento:} Se utilizaron técnicas de aumento de datos (giros y rotaciones aleatorias), el optimizador Adam y una programación de la tasa de aprendizaje (\textit{ReduceLROnPlateau}) \cite{shomoye2024}.
+    \item \textbf{Preparación de imágenes:} Las fotografías se convirtieron a blanco y negro para simplificar el procesamiento. Luego se usó un programa de detección de puntos faciales para recortar el área del rostro, generando dos versiones de cada imagen: el rostro completo y únicamente la mitad inferior, para simular la obstrucción del visor de Realidad Virtual \cite{shomoye2024}.
+    \item \textbf{Ajuste de la red neuronal:} Se desbloquearon las capas más profundas de la red preentrenada para que pudiera especializarse en reconocer emociones en este contexto. Se incorporaron técnicas para evitar que el modelo simplemente memorizara los ejemplos de entrenamiento en lugar de aprender a generalizar a imágenes nuevas \cite{shomoye2024}.
+    \item \textbf{Entrenamiento:} Para compensar la cantidad limitada de imágenes disponibles, se generaron variaciones artificiales de cada imagen mediante volteos y rotaciones. Además, se usó un algoritmo que ajusta automáticamente la velocidad de aprendizaje de la red según su propio progreso \cite{shomoye2024}.
 \end{itemize}
 
 \subsection{Principales resultados}
@@ -42,10 +42,10 @@ La investigación empleó un enfoque de aprendizaje supervisado y aprendizaje po
 Los principales hallazgos reportados por \cite{shomoye2024} son:
 
 \begin{itemize}
-    \item \textbf{Superioridad de ResNet50:} En comparaciones iniciales, ResNet50 demostró un rendimiento superior en precisión y generalización frente a VGG19 y MobileNet para la detección de emociones en RV \cite{shomoye2024}.
-    \item \textbf{Eficacia del Modelo Personalizado:} El modelo ajustado superó sistemáticamente al ResNet50 predeterminado en todos los experimentos, mostrando una mayor robustez ante datos nuevos y ocluidos \cite{shomoye2024}.
-    \item \textbf{Detección de Aburrimiento:} Se logró diferenciar exitosamente el aburrimiento de la neutralidad, obteniendo resultados razonables incluso con la cara parcialmente cubierta \cite{shomoye2024}.
-    \item \textbf{Eficiencia Técnica:} Se confirmó que el preprocesamiento en escala de grises optimiza el entrenamiento al reducir canales de datos sin perder características esenciales de las expresiones \cite{shomoye2024}.
+    \item \textbf{Mejor arquitectura base:} De los tres tipos de redes neuronales comparados, ResNet50 mostró mayor precisión y mejor capacidad para generalizar a imágenes nuevas que las alternativas evaluadas (VGG19 y MobileNet), en el contexto específico de detectar emociones en entornos de Realidad Virtual \cite{shomoye2024}.
+    \item \textbf{Mejora con el modelo ajustado:} La versión personalizada de la red neuronal, adaptada específicamente para esta tarea, superó de forma consistente a la versión estándar en todos los experimentos, incluyendo casos donde parte del rostro estaba cubierta por el visor de Realidad Virtual \cite{shomoye2024}.
+    \item \textbf{Distinción entre aburrimiento y neutralidad:} El modelo logró diferenciar exitosamente estas dos emociones, que visualmente son muy similares, y mantuvo resultados aceptables incluso analizando únicamente la parte inferior del rostro \cite{shomoye2024}.
+    \item \textbf{Ventaja de procesar imágenes en blanco y negro:} Convertir las imágenes a escala de grises antes de procesarlas redujo la carga computacional sin que el modelo perdiera capacidad para reconocer expresiones faciales \cite{shomoye2024}.
 \end{itemize}
 
 \subsection{Crítica de la tesis}

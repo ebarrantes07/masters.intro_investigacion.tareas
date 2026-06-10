@@ -45,21 +45,21 @@ Las tres hipótesis habrían sido refutadas si los tiempos de creación hubieran
 La metodología empleada por \cite{arias2024} se describe a continuación:
 
 \begin{itemize}
-    \item \textbf{Diseño del método:} Se utilizan \textit{StatefulSets} (en lugar de \textit{Deployments}) combinados con un servicio \textit{headless} para garantizar DNS e IPs estables a cada nodo. El almacenamiento compartido se implementa con BeeGFS (sistema de archivos paralelo de alto rendimiento) montado como volumen persistente. Los recursos se aíslan en un \textit{namespace} con cuotas. Cada nodo ejecuta una imagen de contenedor auto-contenida que incluye el sistema operativo, servidor SSH, y las librerías de MPI requeridas.
+    \item \textbf{Diseño del método:} Para resolver los requisitos técnicos de la computación paralela dentro de Kubernetes, se usaron recursos especializados de la plataforma que garantizan que cada servidor tenga una dirección de red estable y un nombre fijo, necesario para que los procesos paralelos puedan comunicarse entre sí. El almacenamiento compartido entre servidores se implementó con un sistema de archivos de alto rendimiento diseñado para computación paralela (BeeGFS). Cada servidor ejecuta un contenedor auto-contenido que incluye el sistema operativo y las librerías necesarias para correr los programas paralelos.
 
-    \item \textbf{Implementación del Operador:} Se desarrolló un Operador de Kubernetes en Go usando el \textit{Operator SDK}, con dos CRDs: \texttt{MpiCluster} (define el clúster de trabajo: número de nodos, imagen, almacenamiento, recursos) y \texttt{MpiJob} (define un trabajo a ejecutar: nombre del trabajo, clúster destino, comando MPI). El operador gestiona todo el ciclo de vida del clúster automáticamente.
+    \item \textbf{Automatización mediante un programa gestor:} Se desarrolló un programa de automatización que gestiona todo el ciclo de vida del clúster: crearlo, configurarlo y eliminarlo. Este programa permite al usuario definir la configuración del clúster (cantidad de servidores, tipo de software y almacenamiento) y los trabajos a ejecutar, sin necesidad de intervención manual en cada paso.
 
-    \item \textbf{Imágenes de contenedor evaluadas:} MPICH base, OpenMPI base, y MPICH+SLURM (gestor de colas de trabajos).
+    \item \textbf{Configuraciones de software evaluadas:} Se probaron tres variantes de software para ejecutar programas paralelos: dos implementaciones estándar del protocolo de comunicación entre procesos (MPICH y OpenMPI), y una tercera que además incluye un gestor de colas de trabajos para entornos más complejos.
 
-    \item \textbf{Infraestructura:} Clúster de Kubernetes en Vultr (proveedor de nube), con 8 \textit{worker nodes} de 15 núcleos y 30 GB RAM cada uno. Clúster de referencia: los mismos \textit{worker nodes} de Vultr sin Kubernetes.
+    \item \textbf{Infraestructura:} El clúster en Kubernetes se montó en la nube sobre ocho servidores de 15 núcleos y 30 GB de memoria RAM cada uno. Como referencia de comparación se usó el mismo proveedor de nube pero con los mismos servidores configurados sin Kubernetes, para simular un clúster físico equivalente.
 
-    \item \textbf{Experimentos:}
+    \item \textbf{Experimentos de validación:}
     \begin{enumerate}
-        \item \textit{Validación funcional}: clúster local con kind (3 nodos), ejecución de MPI Hola Mundo.
-        \item \textit{Tiempo de creación}: 3 repeticiones por imagen, 8 nodos, medición en segundos.
-        \item \textit{E/S disco}: herramienta DD de Ubuntu, archivo de 500 MB, velocidad en MB/s, 3 repeticiones.
-        \item \textit{E/S red}: herramienta iperf, velocidad en Gbps durante 5 segundos, 3 repeticiones.
-        \item \textit{Rendimiento de aplicaciones}: suite Mantevo (MiniFE, MiniMD, MiniXyce), escalamiento fuerte (tamaño fijo, más \textit{ranks}) y débil (tamaño proporcional, más \textit{ranks}), de 1 a 120 \textit{ranks} (8 nodos × 15 núcleos).
+        \item Prueba funcional básica: se verificó que el clúster ejecutara correctamente un programa paralelo sencillo en todos los servidores.
+        \item Tiempo de arranque: se midió cuántos segundos tarda en quedar listo cada servidor del clúster.
+        \item Velocidad de disco: se midió la velocidad de lectura y escritura de archivos en disco en cada servidor.
+        \item Velocidad de red: se midió la velocidad de transferencia de datos entre servidores.
+        \item Rendimiento de aplicaciones: se ejecutaron tres programas de simulación científica variando la cantidad de procesos paralelos activos (de 1 a 120), para comparar el rendimiento en Kubernetes contra el del servidor físico de referencia.
     \end{enumerate}
 \end{itemize}
 
@@ -68,33 +68,19 @@ La metodología empleada por \cite{arias2024} se describe a continuación:
 Los principales hallazgos reportados por \cite{arias2024} son:
 
 \begin{itemize}
-    \item \textbf{Tiempo de creación:} Las tres imágenes lograron tiempos promedio de $\approx$21 segundos por nodo (MPICH: 21.58s, OpenMPI: 21.13s, SLURM: 21.13s), muy por debajo del límite de 60 segundos. El primer nodo tardó más ($\approx$26--29s) por ser el encargado de generar las claves SSH del clúster.
+    \item \textbf{Tiempo de arranque del clúster:} Las tres configuraciones de software probadas lograron tiempos promedio de aproximadamente 21 segundos por servidor, muy por debajo del límite de 60 segundos establecido como criterio de éxito. El primer servidor tardó un poco más (entre 26 y 29 segundos) porque es el encargado de generar las credenciales de seguridad para todos los demás nodos del clúster.
 
-    \item \textbf{E/S de disco:} El rendimiento del clúster de trabajo frente al clúster de Vultr fue superior al 70\% en todos los nodos; la mayoría superó el 90\%. El coeficiente de variación máximo fue del 10.35\%, indicando datos homogéneos.
+    \item \textbf{Velocidad de lectura y escritura en disco:} El rendimiento del clúster en Kubernetes superó el 70\% del rendimiento del servidor físico de referencia en todos los nodos; la mayoría alcanzó más del 90\%. Los resultados fueron consistentes entre repeticiones, lo que indica estabilidad del sistema.
 
-    \item \textbf{E/S de red:} El clúster de trabajo superó el rendimiento del clúster de Vultr en todos los nodos (rendimiento entre 102\% y 135\%), posiblemente porque las pruebas se realizaron en horas distintas cuando la red del proveedor estaba saturada, o porque el CNI Calico en modo \textit{Cross-subnet} transmite paquetes de forma más eficiente.
+    \item \textbf{Velocidad de transferencia de datos por red:} El clúster en Kubernetes superó al servidor físico de referencia en todos los nodos, con rendimientos de entre el 102\% y el 135\%. Esto se atribuye a que las pruebas del servidor físico posiblemente se realizaron en momentos de mayor congestión de red, o a que el componente de red de Kubernetes transmite datos de forma más eficiente en esa configuración.
 
-    \item \textbf{MiniFE (escalamiento fuerte):} Rendimiento promedio del clúster de Kubernetes: 97.48\% (mínimo 86\%). Las curvas de \textit{speedup} de ambos entornos son prácticamente idénticas, especialmente a 2, 4 y 8 nodos.
+    \item \textbf{Rendimiento ejecutando simulaciones --- MiniFE:} Con un programa de simulación de elementos finitos, el clúster en Kubernetes alcanzó un rendimiento promedio del 97.48\% respecto al servidor físico cuando el tamaño del problema era fijo y se aumentaban los procesos paralelos, y del 91.01\% cuando el tamaño del problema crecía junto con los procesos. En ambos casos el comportamiento fue casi idéntico al del servidor físico.
 
-    \item \textbf{MiniFE (escalamiento débil):} Rendimiento promedio: 91.01\% (mínimo 76\%).
-
-    \item \textbf{MiniMD (escalamiento fuerte):} Rendimiento promedio: 84.76\% (mínimo 65.3\%, valor atípico con 45 \textit{ranks}). Este fue el único resultado inferior al 70\% en todo el estudio, registrado en una sola configuración.
-
-    \item \textbf{MiniMD (escalamiento débil):} Rendimiento promedio: 97.58\% (mínimo 78.96\%). Las curvas de eficiencia de ambos entornos son prácticamente idénticas con 6, 7 y 8 nodos.
+    \item \textbf{Rendimiento ejecutando simulaciones --- MiniMD:} Con un simulador de dinámica molecular, el promedio fue del 84.76\% con problema de tamaño fijo y del 97.58\% con tamaño proporcional. El único resultado por debajo del 70\% en todo el estudio fue un caso aislado con 45 procesos paralelos en esta prueba (65.3\%), que la tesis reconoce como atípico sin ofrecer una explicación técnica definitiva.
 \end{itemize}
 
 \subsection{Crítica de la tesis}
-
-Aspectos positivos:
-
-La tesis es un trabajo de ingeniería altamente práctico, bien ejecutado y con una contribución concreta y funcional: el operador de Kubernetes desarrollado está disponible públicamente en GitHub, lo que permite que otros investigadores e ingenieros puedan replicar y extender el trabajo. Las hipótesis son cuantitativas y verificables desde el inicio, y los experimentos están cuidadosamente diseñados con múltiples repeticiones, cálculo de desviaciones estándar y coeficientes de variación que demuestran la robustez de los resultados. La elección de BeeGFS como solución de almacenamiento compartido de alta velocidad está bien justificada frente a NFS (descartado por problemas de rendimiento en HPC). El ciclo completo de diseño, implementación, validación y benchmarking comparativo es coherente y bien documentado.
-
-Aspectos de posible mejora:
-
-En primer lugar, la comparación se realiza únicamente contra el mismo proveedor de nube (Vultr) sin Kubernetes, y no contra implementaciones alternativas como Slurm en hardware dedicado, \textit{Kubeflow MPI Operator} u otras soluciones ya existentes para MPI en Kubernetes. Esto limita el posicionamiento del trabajo en el estado del arte y no permite saber si el método propuesto es competitivo frente a enfoques previos.
-
-En segundo lugar, el resultado atípico de MiniMD con 45 \textit{ranks} (65.3\%, único valor por debajo del 70\%) no se investiga en profundidad. La tesis lo reconoce como anómalo pero no ofrece una explicación técnica satisfactoria, lo que deja una duda sobre la robustez del método ante ciertas configuraciones de nodos.
-
-En tercer lugar, la tesis no analiza el \textit{overhead} de recursos del plano de control de Kubernetes (CPU y memoria del \textit{control plane}) ni los límites de escalabilidad del operador. Esto es relevante para aplicaciones en producción con clústeres de decenas o cientos de nodos.
-
-En cuarto lugar, el umbral del 70\% como criterio de éxito no está justificado con referencias a estándares del área de HPC en la nube. Sin esa referencia, es difícil saber si el umbral es exigente, conservador o arbitrario. Finalmente, el operador no implementa características críticas para entornos de producción como tolerancia a fallos, recuperación ante caídas de nodos ni reprogramación automática de trabajos, lo que limita su aplicabilidad más allá del contexto de investigación.
+\begin{itemize}
+    \item \textbf{Aspectos positivos:} Las secciones siguen una secuencia lógica clara de diseño, implementación y validación, coherente con el tipo de tesis de ingeniería aplicada. Las tres hipótesis son cuantitativas y verificables, se corresponden directamente con los objetivos específicos y las conclusiones las confirman de forma explícita, cerrando el ciclo del trabajo con rigor. El título describe con precisión el alcance del método propuesto y el alcance es consistente con el trabajo relacionado: la tesis posiciona correctamente la brecha entre el HPC tradicional y el ecosistema Kubernetes antes de proponer su solución, lo que justifica la pertinencia del trabajo dentro de la literatura existente.
+    \item \textbf{Aspectos de posible mejora:} En primer lugar, la comparación se realiza únicamente contra el mismo proveedor de nube sin Kubernetes, sin contrastar el método frente a soluciones alternativas existentes como el \textit{Kubeflow MPI Operator} o Slurm; esto limita el posicionamiento del trabajo en el estado del arte y debilita las conclusiones respecto a su ventaja competitiva. En segundo lugar, el criterio de éxito del 70\% de rendimiento no se fundamenta con referencias a estándares del área de HPC en la nube, por lo que no queda claro si el umbral es exigente o conservador dentro de la literatura. Por último, el resultado atípico de MiniMD con 45 \textit{ranks} (65.3\%, único valor inferior al 70\%) no recibe una explicación técnica satisfactoria, lo que genera una duda sobre la robustez del método ante ciertas configuraciones de nodos.
+\end{itemize}
