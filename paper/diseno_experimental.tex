@@ -1,0 +1,107 @@
+\section{Diseño Experimental Propuesto}
+
+Dado que el Marco de Aprendizaje Inclusivo y Adaptativo (MAIA) constituye una
+arquitectura de referencia y no un sistema desplegado, su validación se plantea
+como un protocolo escalonado que progresa desde la evaluación aislada de cada
+módulo hasta la validación del sistema integrado en el aula. Esta gradación es
+coherente con el diseño desacoplado por fusión tardía descrito en la Propuesta,
+y permite distinguir con claridad qué propiedades pueden verificarse de forma
+temprana sobre datos etiquetados y cuáles requieren un despliegue real.
+
+% ------------------------------------------------------------
+\subsection{Hipótesis de Validación}
+% ------------------------------------------------------------
+
+El desempeño esperado de MAIA se expresa mediante tres hipótesis falsables, una
+por cada módulo central de la arquitectura:
+
+\begin{itemize}
+    \item \textbf{H1 (Seguimiento cognitivo).} El clasificador cognitivo,
+    basado en un modelo BERT ajustado finamente, alcanza una precisión igual o
+    superior al 85\,\% en los seis niveles de la Taxonomía de Bloom sobre un
+    corpus curricular costarricense en español, tomando como referencia el
+    83\,\% y 89\,\% reportados por Das et al.~\cite{Das2020} en inglés.
+
+    \item \textbf{H2 (Percepción afectiva).} El módulo de percepción afectiva
+    multimodal identifica los estados de frustración, aburrimiento y atención
+    con una precisión igual o superior al 80\,\% y una latencia máxima de
+    200\,ms por fotograma sobre el hardware objetivo, umbral dentro del cual la
+    retroalimentación se percibe como continua~\cite{AISTY2024}.
+
+    \item \textbf{H3 (Control docente).} El sistema opera de forma autónoma en
+    al menos el 70\,\% de las sesiones, entendiendo por autonomía aquellas que
+    concluyen sin superar el umbral de impacto configurable que activa la
+    intervención del docente.
+\end{itemize}
+
+% ------------------------------------------------------------
+\subsection{Fase 1: Validación de Componentes}
+% ------------------------------------------------------------
+
+La primera fase evalúa cada módulo de manera aislada y sin participación de
+estudiantes, sobre conjuntos de datos etiquetados, lo que permite iterar sobre
+los modelos sin riesgo ético. El módulo de seguimiento cognitivo se evalúa sobre
+un corpus de ítems del currículo del Ministerio de Educación Pública (MEP)
+anotados por nivel de Bloom; para garantizar la calidad de las etiquetas se
+propone una doble anotación por especialistas curriculares y la medición del
+acuerdo entre anotadores mediante el coeficiente kappa de
+Cohen~\cite{Cohen1960}. El desempeño se cuantifica mediante la precisión global
+y la medida F1 promediada por clase (F1 macro), apropiada ante el desbalance
+esperado entre los seis niveles de Bloom, complementadas con la matriz de
+confusión para identificar confusiones sistemáticas entre niveles cognitivos
+adyacentes. Como línea base de comparación se emplean clasificadores clásicos de
+menor complejidad, replicando el enfoque de Das et al.~\cite{Das2020}. El módulo
+de percepción afectiva se valida sobre un repositorio público de expresiones
+faciales en contexto educativo, tomando como línea base una configuración basada
+únicamente en visión que se contrasta con la configuración multimodal completa,
+de modo que se justifique empíricamente la estrategia de fusión tardía. Para
+este módulo se reportan la precisión y la medida F1 de cada estado afectivo,
+junto con la latencia de inferencia por fotograma ---expresada en percentiles,
+mediana y percentil 95--- sobre el hardware objetivo, con el fin de verificar el
+umbral de 200\,ms establecido en la hipótesis H2. En ambos módulos las
+particiones de entrenamiento y prueba se separan por estudiante para evitar
+fugas de identidad.
+
+% ------------------------------------------------------------
+\subsection{Fase 2: Validación de Integración}
+% ------------------------------------------------------------
+
+La segunda fase examina el sistema completo en sesiones controladas, con el
+objetivo de medir la latencia de extremo a extremo, la proporción de sesiones
+autónomas (hipótesis H3), el número de intervenciones docentes por sesión y la
+recompensa acumulada del agente de refuerzo como indicador de la estabilidad del
+bucle de adaptación con control docente. La línea base de esta fase es la
+comparación entre el motor de adaptación operando como aprendizaje por refuerzo
+puro frente al motor inicializado con la política de reglas pedagógicas del MEP,
+con el fin de evidenciar que dicha política mitiga el problema de arranque en
+frío descrito en la Propuesta.
+
+% ------------------------------------------------------------
+\subsection{Fase 3: Estudio Ecológico en Aulas Integradas}
+% ------------------------------------------------------------
+
+La fase final consiste en un cuasi-experimento en aulas reales que contrasta el
+uso de MAIA frente a una condición de instrucción no adaptativa. Las variables
+dependientes incluyen los indicadores de logro curricular, el compromiso del
+estudiante, la carga de trabajo percibida por el docente ---medida con el Índice
+de Carga de Tarea de la NASA (NASA Task Load Index,
+NASA-TLX)~\cite{HartStaveland1988}--- y la usabilidad del sistema ---evaluada con
+la Escala de Usabilidad del Sistema (System Usability Scale,
+SUS)~\cite{Brooke1996}. Dado que el tamaño de muestra esperado en este contexto
+es reducido, el análisis estadístico privilegia pruebas no paramétricas y el
+reporte del tamaño del efecto por encima de la mera significancia estadística.
+
+% ------------------------------------------------------------
+\subsection{Consideraciones Éticas y Amenazas a la Validez}
+% ------------------------------------------------------------
+
+Por involucrar la participación de seres humanos en la investigación, y de
+manera especialmente sensible por tratarse de una población vulnerable, el
+protocolo requiere aprobación de un comité de ética, consentimiento informado de
+los responsables y asentimiento de los estudiantes, y el procesamiento de datos sensibles en el borde
+(\textit{edge computing}) conforme a la Ley N\textsuperscript{o}\,8968. Entre las
+principales amenazas a la validez se anticipan el efecto de novedad, el sesgo del
+docente al aprobar o rechazar decisiones ---que retroalimenta directamente al
+motor de adaptación---, el posible sesgo del modelo afectivo entre estudiantes
+con distintos perfiles de expresividad, y la limitada generalización derivada de
+la heterogeneidad de hardware entre instituciones.

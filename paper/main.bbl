@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,65 +23,134 @@
 
 \bibitem{PEN2025}
 \BIBentryALTinterwordspacing
-{Programa Estado de la Naci{\'o}n}, \emph{D{\'e}cimo Estado de la Educaci{\'o}n 2025}.\hskip 1em plus 0.5em minus 0.4em\relax San Jos{\'e}, Costa Rica: CONARE-PEN, 2025, accedido: 17 de marzo de 2026. [Online]. Available: \url{https://repositorio.conare.ac.cr/items/762885cb-93f7-4b5a-8ca6-cdcc2ca8e5df}
-\BIBentrySTDinterwordspacing
-
-\bibitem{MEP2026}
-\BIBentryALTinterwordspacing
-{Ministerio de Educaci{\'o}n P{\'u}blica de Costa Rica}, \emph{Inteligencia Artificial en clase: Gu{\'i}a para docentes}, MEP, UNESCO, Naciones Unidas, ULACIT, San Jos{\'e}, Costa Rica, 2026, accedido: 17 de marzo de 2026. [Online]. Available: \url{https://www.mep.go.cr/sites/default/files/2026-02/GuiaDocenteIA.pdf}
+{Programa Estado de la Naci{\'o}n}, \emph{D{\'e}cimo Informe Estado de la
+  Educaci{\'o}n 2025}.\hskip 1em plus 0.5em minus 0.4em\relax San Jos{\'e},
+  Costa Rica: CONARE-PEN, 2025, accedido: 17 de marzo de 2026. [Online].
+  Available:
+  \url{https://repositorio.conare.ac.cr/items/762885cb-93f7-4b5a-8ca6-cdcc2ca8e5df}
 \BIBentrySTDinterwordspacing
 
 \bibitem{MEP2022stats}
 \BIBentryALTinterwordspacing
-------, ``Servicios de educaci{\'o}n especial 2014--2021,'' Departamento de An{\'a}lisis Estad{\'i}stico, MEP, San Jos{\'e}, Costa Rica, Tech. Rep., 2022. [Online]. Available: \url{https://www.mep.go.cr/sites/default/files/2024-05/serviciosdeeducacionespecial-2014-2021.pdf}
+{Ministerio de Educaci{\'o}n P{\'u}blica de Costa Rica}, ``Servicios de
+  educaci{\'o}n especial 2014--2021,'' Departamento de An{\'a}lisis
+  Estad{\'i}stico, MEP, San Jos{\'e}, Costa Rica, Tech. Rep., 2022. [Online].
+  Available:
+  \url{https://www.mep.go.cr/sites/default/files/2024-05/serviciosdeeducacionespecial-2014-2021.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ley8968}
 \BIBentryALTinterwordspacing
-{Asamblea Legislativa de Costa Rica}, ``Ley n{\textdegree} 8968: Protecci{\'o}n de la persona frente al tratamiento de sus datos personales,'' Sistema Costarricense de Informaci{\'o}n Jur{\'i}dica, 2011. [Online]. Available: \url{https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC}
+{Asamblea Legislativa de Costa Rica}, ``Ley n{\textdegree} 8968: Protecci{\'o}n
+  de la persona frente al tratamiento de sus datos personales,'' Sistema
+  Costarricense de Informaci{\'o}n Jur{\'i}dica, 2011. [Online]. Available:
+  \url{https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ahmed2025}
-S.~Ahmed, M.~S. Rahman, M.~S. Kaiser, and A.~S. M.~S. Hosen, ``Advancing personalized and inclusive education for students with disability through artificial intelligence: Perspectives, challenges, and opportunities,'' \emph{Digital}, vol.~5, no.~2, p.~11, 2025.
+S.~Ahmed, M.~S. Rahman, M.~S. Kaiser, and A.~S. M.~S. Hosen, ``Advancing
+  personalized and inclusive education for students with disability through
+  artificial intelligence: Perspectives, challenges, and opportunities,''
+  \emph{Digital}, vol.~5, no.~2, p.~11, 2025.
 
 \bibitem{Farhah2025}
-N.~Farhah, A.~Wadood, A.~A. Alqarni, M.~I. Uddin, and T.~H.~H. Aldhyani, ``Enhancing adaptive learning with generative {AI} for tailored educational support for students with disabilities,'' \emph{Journal of Disability Research}, 2025.
+N.~Farhah, A.~Wadood, A.~A. Alqarni, M.~I. Uddin, and T.~H.~H. Aldhyani,
+  ``Enhancing adaptive learning with generative {AI} for tailored educational
+  support for students with disabilities,'' \emph{Journal of Disability
+  Research}, 2025.
 
 \bibitem{Jadan2024}
-J.~Jad{\'a}n-Guerrero, K.~Tamayo-Narvaez, E.~M{\'e}ndez, and M.~Valenzuela, ``Adaptive learning environments: Integrating artificial intelligence for special education advances,'' in \emph{Communications in Computer and Information Science}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2024.
+J.~Jad{\'a}n-Guerrero, K.~Tamayo-Narvaez, E.~M{\'e}ndez, and M.~Valenzuela,
+  ``Adaptive learning environments: Integrating artificial intelligence for
+  special education advances,'' in \emph{Communications in Computer and
+  Information Science}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2024.
 
 \bibitem{Bhimavarapu2025}
-U.~Bhimavarapu, ``Empowering students with disabilities in education through {AI}-driven approaches,'' in \emph{Advances in Educational Technologies and Instructional Design}.\hskip 1em plus 0.5em minus 0.4em\relax IGI Global, 2025.
+U.~Bhimavarapu, ``Empowering students with disabilities in education through
+  {AI}-driven approaches,'' in \emph{Advances in Educational Technologies and
+  Instructional Design}.\hskip 1em plus 0.5em minus 0.4em\relax IGI Global,
+  2025.
 
 \bibitem{Dutt2024}
-S.~Dutt and N.~J. Ahuja, ``Intelligent tutoring effects on induced emotions and cognitive load of learning-disabled learners,'' \emph{Disability and Rehabilitation: Assistive Technology}, 2024.
+S.~Dutt and N.~J. Ahuja, ``Intelligent tutoring effects on induced emotions and
+  cognitive load of learning-disabled learners,'' \emph{Disability and
+  Rehabilitation: Assistive Technology}, 2024.
 
 \bibitem{AISTY2024}
 \BIBentryALTinterwordspacing
-A.~S.~M. Jaya and M.~H. F.~M. Fauadi, ``{AISTY}: An explainable {AI}-driven vision-based adaptive learning system for children with autism spectrum disorder,'' \emph{International Journal of Research and Innovation in Social Science}, 2024. [Online]. Available: \url{https://repository.gyaanarth.com/ijriss/9/10/aisty-an-explainable-ai-driven-vision-based-adaptive-learning-system-for-children-with-autism-spectrum-disorder-1663}
+A.~S.~M. Jaya and M.~H. F.~M. Fauadi, ``{AISTY}: An explainable {AI}-driven
+  vision-based adaptive learning system for children with autism spectrum
+  disorder,'' \emph{International Journal of Research and Innovation in Social
+  Science}, 2024. [Online]. Available:
+  \url{https://repository.gyaanarth.com/ijriss/9/10/aisty-an-explainable-ai-driven-vision-based-adaptive-learning-system-for-children-with-autism-spectrum-disorder-1663}
 \BIBentrySTDinterwordspacing
 
 \bibitem{bloom1956}
-B.~S. Bloom, \emph{Taxonomy of Educational Objectives: The Classification of Educational Goals. Handbook {I}: Cognitive Domain}.\hskip 1em plus 0.5em minus 0.4em\relax New York: David McKay Company, Inc., 1956.
+B.~S. Bloom, \emph{Taxonomy of Educational Objectives: The Classification of
+  Educational Goals. Handbook {I}: Cognitive Domain}.\hskip 1em plus 0.5em
+  minus 0.4em\relax New York: David McKay Company, Inc., 1956.
 
 \bibitem{Das2020}
-S.~Das, S.~K. Das~Mandal, and A.~Basu, ``Identification of cognitive learning complexity of assessment questions using multi-class text classification,'' \emph{Contemporary Educational Technology}, 2020.
+S.~Das, S.~K. Das~Mandal, and A.~Basu, ``Identification of cognitive learning
+  complexity of assessment questions using multi-class text classification,''
+  \emph{Contemporary Educational Technology}, 2020.
 
 \bibitem{Barros2025}
-J.~B.~S. Barros, M.~Goldmeyer, and F.~Lovemberger, ``Taxonomia de {Bloom} e {IA} na educa{\c{c}}\~{a}o: do pensamento cognitivo {\`a} constru{\c{c}}\~{a}o criativa do conhecimento,'' \emph{Anais do {IV ENLICSUL}}, 2025.
+J.~B.~S. Barros, M.~Goldmeyer, and F.~Lovemberger, ``Taxonomia de {Bloom} e
+  {IA} na educa{\c{c}}\~{a}o: do pensamento cognitivo {\`a}
+  constru{\c{c}}\~{a}o criativa do conhecimento,'' \emph{Anais do {IV
+  ENLICSUL}}, 2025.
 
 \bibitem{Kwan2025}
-P.~Kwan, R.~Kadel, T.~D. Memon, and S.~S. Hashmi, ``Reimagining flipped learning via {Bloom's} taxonomy and student--teacher--{GenAI} interactions,'' \emph{Education Sciences}, 2025.
+P.~Kwan, R.~Kadel, T.~D. Memon, and S.~S. Hashmi, ``Reimagining flipped
+  learning via {Bloom's} taxonomy and student--teacher--{GenAI} interactions,''
+  \emph{Education Sciences}, 2025.
 
 \bibitem{BravoCondoy2025}
-E.~F. Bravo~Condoy, R.~O. Bravo~Loaiza, M.~K. Rivera~G{\'a}rate, and C.~J. Cavezas~Fern{\'a}ndez, ``Inteligencia artificial y tecnolog{\'i}as emergentes en el aprendizaje personalizado,'' \emph{Preprint}, 2025.
+E.~F. Bravo~Condoy, R.~O. Bravo~Loaiza, M.~K. Rivera~G{\'a}rate, and C.~J.
+  Cavezas~Fern{\'a}ndez, ``Inteligencia artificial y tecnolog{\'i}as emergentes
+  en el aprendizaje personalizado,'' \emph{Preprint}, 2025.
+
+\bibitem{MEP2026}
+\BIBentryALTinterwordspacing
+{Ministerio de Educaci{\'o}n P{\'u}blica de Costa Rica}, \emph{Inteligencia
+  Artificial en clase: Gu{\'i}a para docentes}, MEP, UNESCO, Naciones Unidas,
+  ULACIT, San Jos{\'e}, Costa Rica, 2026, accedido: 17 de marzo de 2026.
+  [Online]. Available:
+  \url{https://www.mep.go.cr/sites/default/files/2026-02/GuiaDocenteIA.pdf}
+\BIBentrySTDinterwordspacing
 
 \bibitem{MICITT2024}
 \BIBentryALTinterwordspacing
-{Ministerio de Ciencia, Innovaci{\'o}n, Tecnolog{\'i}a y Telecomunicaciones (MICITT)}, ``Estrategia nacional de inteligencia artificial de costa rica 2024--2027,'' MICITT, San Jos{\'e}, Costa Rica, Tech. Rep., 2024. [Online]. Available: \url{https://www.micitt.go.cr/sites/default/files/2024-10/Estrategia%20Nacional%20de%20Inteligencia%20Artificial%20de%20Costa%20Rica%20ESP.pdf}
+{Ministerio de Ciencia, Innovaci{\'o}n, Tecnolog{\'i}a y Telecomunicaciones
+  (MICITT)}, ``Estrategia nacional de inteligencia artificial de costa rica
+  2024--2027,'' MICITT, San Jos{\'e}, Costa Rica, Tech. Rep., 2024. [Online].
+  Available:
+  \url{https://www.micitt.go.cr/sites/default/files/2024-10/Estrategia%20Nacional%20de%20Inteligencia%20Artificial%20de%20Costa%20Rica%20ESP.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Cohen1960}
+J.~Cohen, ``A coefficient of agreement for nominal scales,'' \emph{Educational
+  and Psychological Measurement}, vol.~20, no.~1, pp. 37--46, 1960.
+
+\bibitem{HartStaveland1988}
+S.~G. Hart and L.~E. Staveland, ``Development of {NASA-TLX} (task load index):
+  Results of empirical and theoretical research,'' in \emph{Human Mental
+  Workload}, ser. Advances in Psychology, P.~A. Hancock and N.~Meshkati,
+  Eds.\hskip 1em plus 0.5em minus 0.4em\relax North-Holland, 1988, vol.~52, pp.
+  139--183.
+
+\bibitem{Brooke1996}
+J.~Brooke, ``{SUS}: A `quick and dirty' usability scale,'' in \emph{Usability
+  Evaluation in Industry}, P.~W. Jordan, B.~Thomas, B.~A. Weerdmeester, and
+  I.~L. McClelland, Eds.\hskip 1em plus 0.5em minus 0.4em\relax London: Taylor
+  \& Francis, 1996, pp. 189--194.
+
 \bibitem{tec2025politicasIA}
-M.~A. Herrera, S.~C. Ram{\'i}rez, and H.~E. Vargas, ``Pol{\'i}ticas de uso de la {IA} para trabajos acad{\'e}micos de investigaci{\'o}n,'' Unidad de Posgrado de la Escuela de Ingenier{\'i}a en Computaci{\'o}n, Tecnol{\'o}gico de Costa Rica, Lineamientos {\'e}ticos, feb 2025, propuesto el 3 de febrero de 2025.
+M.~A. Herrera, S.~C. Ram{\'i}rez, and H.~E. Vargas, ``Pol{\'i}ticas de uso de
+  la {IA} para trabajos acad{\'e}micos de investigaci{\'o}n,'' Unidad de
+  Posgrado de la Escuela de Ingenier{\'i}a en Computaci{\'o}n, Tecnol{\'o}gico
+  de Costa Rica, Lineamientos {\'e}ticos, feb 2025, propuesto el 3 de febrero
+  de 2025.
 
 \end{thebibliography}
